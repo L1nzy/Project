@@ -1,0 +1,10 @@
+uuid: 0239c159-d9ea-4388-bca2-bb62dde19eb3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.horizontal_long_format
+label: 'Horizontal long format'
+targetEntityType: node
+cache: true

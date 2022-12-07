@@ -1,8 +1,9 @@
-uuid: 3a5a663b-8be8-40ca-8572-c834b52073b4
+uuid: 42f925f2-92d9-4583-8f1b-966f92c12a7c
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.standart_news_format
     - field.field.node.news.field_category
     - field.field.node.news.field_description
     - field.field.node.news.field_image
@@ -11,12 +12,17 @@ dependencies:
     - node.type.news
   module:
     - image
+    - layout_builder
     - text
     - user
-id: node.news.default
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.news.standart_news_format
 targetEntityType: node
 bundle: news
-mode: default
+mode: standart_news_format
 content:
   field_category:
     type: entity_reference_label
@@ -24,14 +30,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_description:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_image:
     type: image
@@ -45,7 +51,7 @@ content:
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
 hidden:
   field_must_read: true

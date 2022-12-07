@@ -1,0 +1,10 @@
+uuid: b147ae84-c2f4-4198-b296-42246c702489
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.standart_news_format
+label: 'Standart news format'
+targetEntityType: node
+cache: true
