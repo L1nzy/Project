@@ -1,0 +1,23 @@
+uuid: 696ba8f6-13f2-4209-b55c-6ea484f5c144
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_must_read
+    - node.type.news
+id: node.news.field_must_read
+field_name: field_must_read
+entity_type: node
+bundle: news
+label: 'must read'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
