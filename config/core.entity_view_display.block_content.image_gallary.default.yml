@@ -1,0 +1,37 @@
+uuid: 65370573-d206-4991-b509-3a76c422dc58
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_gallary
+    - field.field.block_content.image_gallary.field_gallary_item
+    - field.field.block_content.image_gallary.field_link_at_page
+  module:
+    - link
+id: block_content.image_gallary.default
+targetEntityType: block_content
+bundle: image_gallary
+mode: default
+content:
+  field_gallary_item:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_link_at_page:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

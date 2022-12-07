@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.news.field_category
     - field.field.node.news.field_description
+    - field.field.node.news.field_editor_picks
     - field.field.node.news.field_image
     - field.field.node.news.field_must_read
     - field.field.node.news.field_top_news
@@ -49,5 +50,6 @@ content:
     weight: 1
     region: content
 hidden:
+  field_editor_picks: true
   field_must_read: true
   field_top_news: true

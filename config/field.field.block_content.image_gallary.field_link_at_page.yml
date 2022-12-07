@@ -1,0 +1,23 @@
+uuid: 957b054a-269d-413b-9cb2-5c3fd5842f99
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_gallary
+    - field.storage.block_content.field_link_at_page
+  module:
+    - link
+id: block_content.image_gallary.field_link_at_page
+field_name: field_link_at_page
+entity_type: block_content
+bundle: image_gallary
+label: 'Link at page'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

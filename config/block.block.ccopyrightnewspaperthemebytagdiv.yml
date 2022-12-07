@@ -11,7 +11,7 @@ dependencies:
 id: ccopyrightnewspaperthemebytagdiv
 theme: bartik
 region: footer_fifth
-weight: -2
+weight: -3
 provider: null
 plugin: 'block_content:bcaf2703-f305-4cd9-9402-1ce736441cca'
 settings:

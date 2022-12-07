@@ -1,0 +1,29 @@
+uuid: 325fd462-7bb2-4011-9d31-3dca2de5d97f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_gallary
+    - field.storage.block_content.field_gallary_item
+    - media.type.image
+id: block_content.image_gallary.field_gallary_item
+field_name: field_gallary_item
+entity_type: block_content
+bundle: image_gallary
+label: 'gallary item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
