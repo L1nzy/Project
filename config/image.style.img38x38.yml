@@ -1,0 +1,15 @@
+uuid: 5a9e5af3-e83d-428e-acef-7720700ea992
+langcode: en
+status: true
+dependencies: {  }
+name: img38x38
+label: img38x38
+effects:
+  26760c93-93e9-4d69-a39c-91d163ca9bf4:
+    uuid: 26760c93-93e9-4d69-a39c-91d163ca9bf4
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 38
+      height: 38
+      anchor: center-center

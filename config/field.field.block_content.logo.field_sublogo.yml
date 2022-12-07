@@ -1,0 +1,19 @@
+uuid: 81d2dd79-77b5-4084-8d70-666e28206ae6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.logo
+    - field.storage.block_content.field_sublogo
+id: block_content.logo.field_sublogo
+field_name: field_sublogo
+entity_type: block_content
+bundle: logo
+label: Sublogo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
