@@ -1,0 +1,10 @@
+uuid: 4ccb2aa0-d1de-4ca9-b1da-91751fd6609b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.vertical_long_format
+label: 'Vertical long format'
+targetEntityType: node
+cache: true

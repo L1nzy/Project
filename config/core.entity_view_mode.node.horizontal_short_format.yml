@@ -1,0 +1,10 @@
+uuid: dc913722-7b92-4259-8d26-60cd35990ab9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.horizontal_short_format
+label: 'Horizontal short format'
+targetEntityType: node
+cache: true

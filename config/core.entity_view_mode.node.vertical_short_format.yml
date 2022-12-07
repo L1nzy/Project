@@ -1,0 +1,10 @@
+uuid: 5f6e6a5a-2777-4ff3-8a21-38f25745dd57
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.vertical_short_format
+label: 'Vertical short format'
+targetEntityType: node
+cache: true

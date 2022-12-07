@@ -1,0 +1,44 @@
+uuid: 5d282c7c-2490-4535-a8d3-f9fdffecbb14
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.vertical_short_format
+    - field.field.node.news.field_category
+    - field.field.node.news.field_description
+    - field.field.node.news.field_image
+    - field.field.node.news.field_must_read
+    - field.field.node.news.field_top_news
+    - node.type.news
+  module:
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.news.vertical_short_format
+targetEntityType: node
+bundle: news
+mode: vertical_short_format
+content:
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_category: true
+  field_description: true
+  field_must_read: true
+  field_top_news: true
