@@ -19,7 +19,8 @@
         "drupal/admin_toolbar": "^3.3",
         "drupal/core-composer-scaffold": "^9.3",
         "drupal/core-project-message": "^9.3",
-        "drupal/core-recommended": "^9.3"
+        "drupal/core-recommended": "^9.3",
+        "drupal/views_slideshow": "^4.8"
     },
     "conflict": {
         "drupal/drupal": "*"
