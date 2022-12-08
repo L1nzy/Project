@@ -22,7 +22,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Latest news 3 items'
+      title: 'Latest news'
       fields:
         title:
           id: title
@@ -75,7 +75,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 3
+          items_per_page: 15
       exposed_form:
         type: basic
         options:

@@ -1,0 +1,40 @@
+uuid: 8b1e8fa2-96e4-45fb-864b-690911a1033a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_gallary
+    - field.field.block_content.image_gallary.field_gallary_item
+    - field.field.block_content.image_gallary.field_link_at_page
+  module:
+    - link
+    - media_library
+id: block_content.image_gallary.default
+targetEntityType: block_content
+bundle: image_gallary
+mode: default
+content:
+  field_gallary_item:
+    type: media_library_widget
+    weight: 27
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_link_at_page:
+    type: link_default
+    weight: 28
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

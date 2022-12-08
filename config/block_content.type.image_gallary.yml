@@ -1,0 +1,8 @@
+uuid: dd29db68-e7cf-4910-bcdd-fb657fe82496
+langcode: en
+status: true
+dependencies: {  }
+id: image_gallary
+label: 'Image gallary'
+revision: 0
+description: ''
