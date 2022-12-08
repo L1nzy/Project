@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.horizontal_long_format
     - field.field.node.news.field_category
     - field.field.node.news.field_description
+    - field.field.node.news.field_editor_picks
     - field.field.node.news.field_image
     - field.field.node.news.field_must_read
     - field.field.node.news.field_top_news
@@ -47,5 +48,6 @@ content:
     region: content
 hidden:
   field_category: true
+  field_editor_picks: true
   field_must_read: true
   field_top_news: true
