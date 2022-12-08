@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.news.field_category
     - field.field.node.news.field_description
+    - field.field.node.news.field_editor_picks
     - field.field.node.news.field_image
     - field.field.node.news.field_must_read
     - field.field.node.news.field_top_news
@@ -18,14 +19,6 @@ targetEntityType: node
 bundle: news
 mode: default
 content:
-  field_category:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 2
-    region: content
   field_description:
     type: text_default
     label: hidden
@@ -48,5 +41,7 @@ content:
     weight: 2
     region: content
 hidden:
+  field_category: true
+  field_editor_picks: true
   field_must_read: true
   field_top_news: true

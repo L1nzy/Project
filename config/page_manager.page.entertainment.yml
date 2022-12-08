@@ -1,0 +1,12 @@
+uuid: 27273372-87e4-4d65-891e-72c14ad9da17
+langcode: en
+status: true
+dependencies: {  }
+id: entertainment
+label: Entertainment
+description: ''
+use_admin_theme: false
+path: /entertainment-page
+access_logic: and
+access_conditions: {  }
+parameters: {  }

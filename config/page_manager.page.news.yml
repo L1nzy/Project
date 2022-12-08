@@ -1,0 +1,12 @@
+uuid: f6d9dc50-d8ed-4be1-a818-957cf81ce491
+langcode: en
+status: true
+dependencies: {  }
+id: news
+label: News
+description: ''
+use_admin_theme: false
+path: /newspaper_life_news
+access_logic: and
+access_conditions: {  }
+parameters: {  }

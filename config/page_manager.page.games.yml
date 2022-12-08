@@ -1,0 +1,12 @@
+uuid: 43850381-41c3-4bce-bc57-8d79936d9f93
+langcode: en
+status: true
+dependencies: {  }
+id: games
+label: Games
+description: ''
+use_admin_theme: false
+path: /games-page
+access_logic: and
+access_conditions: {  }
+parameters: {  }

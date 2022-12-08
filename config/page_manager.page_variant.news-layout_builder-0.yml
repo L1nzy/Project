@@ -1,0 +1,151 @@
+uuid: 94417875-f0d2-4c8e-803e-226ffea6620d
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.news
+    - views.view.celebrities
+    - views.view.fashion
+    - views.view.featured
+    - views.view.food_drink
+    - views.view.latest_news
+    - views.view.technology
+    - views.view.top_news
+    - views.view.tv
+  module:
+    - layout_builder
+    - layout_discovery
+    - views
+id: news-layout_builder-0
+label: 'Layout Builder'
+weight: 0
+variant: layout_builder
+variant_settings:
+  id: layout_builder
+  label: null
+  weight: 0
+  uuid: 2f4a0744-ac8f-4a19-b922-3aaf639589c2
+  sections:
+    -
+      layout_id: layout_twocol_section
+      layout_settings:
+        label: 'sidebar and content'
+        context_mapping: {  }
+        column_widths: 50-50
+      components:
+        de1f3a25-f3a0-480e-b1db-5dfff56805f6:
+          uuid: de1f3a25-f3a0-480e-b1db-5dfff56805f6
+          region: first
+          configuration:
+            id: 'views_block:latest_news-block_1'
+            label: ''
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 0
+          additional: {  }
+        b07c2883-46f0-4da2-9362-fa1f8c23fd7f:
+          uuid: b07c2883-46f0-4da2-9362-fa1f8c23fd7f
+          region: second
+          configuration:
+            id: 'views_block:top_news-block_1'
+            label: ''
+            label_display: '0'
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 0
+          additional: {  }
+        9f6c8441-43c9-48bc-ad55-24bf9684f56e:
+          uuid: 9f6c8441-43c9-48bc-ad55-24bf9684f56e
+          region: second
+          configuration:
+            id: 'views_block:featured-block_1'
+            label: ''
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 1
+          additional: {  }
+        c42ce08a-5ca5-4ae6-aa9a-4d9c8d24e5f5:
+          uuid: c42ce08a-5ca5-4ae6-aa9a-4d9c8d24e5f5
+          region: second
+          configuration:
+            id: 'views_block:fashion-block_1'
+            label: ''
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 2
+          additional: {  }
+        4a85d9a7-b07c-415b-a272-c555d7c46a6d:
+          uuid: 4a85d9a7-b07c-415b-a272-c555d7c46a6d
+          region: second
+          configuration:
+            id: 'views_block:technology-block_1'
+            label: ''
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 3
+          additional: {  }
+        9a469a47-980a-47f0-9d28-158a9bac8d90:
+          uuid: 9a469a47-980a-47f0-9d28-158a9bac8d90
+          region: second
+          configuration:
+            id: 'views_block:tv-block_1'
+            label: ''
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 4
+          additional: {  }
+        e8ed4a45-f946-4b08-b5e3-9bf6557d2bd2:
+          uuid: e8ed4a45-f946-4b08-b5e3-9bf6557d2bd2
+          region: second
+          configuration:
+            id: 'views_block:food_drink-block_1'
+            label: ''
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 5
+          additional: {  }
+        4c45b547-f091-4d88-a6d2-c583310bcf36:
+          uuid: 4c45b547-f091-4d88-a6d2-c583310bcf36
+          region: second
+          configuration:
+            id: 'views_block:celebrities-block_1'
+            label: ''
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 6
+          additional: {  }
+      third_party_settings: {  }
+    -
+      layout_id: layout_onecol
+      layout_settings:
+        label: content
+        context_mapping: {  }
+      components: {  }
+      third_party_settings: {  }
+page: news
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

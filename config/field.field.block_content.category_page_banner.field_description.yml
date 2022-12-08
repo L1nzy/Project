@@ -1,0 +1,21 @@
+uuid: 9ac72ce5-1686-4e6f-bf54-5be12fc17d00
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.category_page_banner
+    - field.storage.block_content.field_description
+  module:
+    - text
+id: block_content.category_page_banner.field_description
+field_name: field_description
+entity_type: block_content
+bundle: category_page_banner
+label: description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

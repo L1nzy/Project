@@ -1,0 +1,12 @@
+uuid: 3b690ea0-cd77-4b61-a28f-162368b05d19
+langcode: en
+status: true
+dependencies: {  }
+id: food_drink
+label: 'Food & Drink'
+description: ''
+use_admin_theme: false
+path: /food-page
+access_logic: and
+access_conditions: {  }
+parameters: {  }

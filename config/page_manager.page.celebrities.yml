@@ -1,0 +1,12 @@
+uuid: 42416762-5399-424f-a78d-d4734d719e5b
+langcode: en
+status: true
+dependencies: {  }
+id: celebrities
+label: Celebrities
+description: ''
+use_admin_theme: false
+path: /celebrities-page
+access_logic: and
+access_conditions: {  }
+parameters: {  }

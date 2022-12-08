@@ -1,0 +1,105 @@
+uuid: 51783e05-9fdd-4793-975e-7c27cab89c69
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.music
+    - views.view.latest_news
+    - views.view.music
+    - views.view.must_read
+  content:
+    - 'block_content:category_page_banner:46163f99-954a-4cb0-b59b-ce8a896ef8f1'
+  module:
+    - block_content
+    - layout_builder
+    - layout_discovery
+    - views
+id: music-layout_builder-0
+label: 'Layout Builder'
+weight: 0
+variant: layout_builder
+variant_settings:
+  id: layout_builder
+  label: null
+  weight: 0
+  uuid: b8ad7175-5598-4d61-8679-8532561de5f5
+  sections:
+    -
+      layout_id: layout_onecol
+      layout_settings:
+        label: 'baner section'
+        context_mapping: {  }
+      components:
+        10684fe6-c609-4b4e-b9b8-76da5b860b0c:
+          uuid: 10684fe6-c609-4b4e-b9b8-76da5b860b0c
+          region: content
+          configuration:
+            id: 'block_content:46163f99-954a-4cb0-b59b-ce8a896ef8f1'
+            label: 'Music baner'
+            label_display: '0'
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
+            context_mapping: {  }
+          weight: 0
+          additional: {  }
+      third_party_settings: {  }
+    -
+      layout_id: layout_twocol_section
+      layout_settings:
+        label: ' content and sidebar'
+        context_mapping: {  }
+        column_widths: 50-50
+      components:
+        9d63e94a-338e-44b5-bb9f-2ac977ab8f42:
+          uuid: 9d63e94a-338e-44b5-bb9f-2ac977ab8f42
+          region: first
+          configuration:
+            id: 'views_block:music-block_1'
+            label: ''
+            label_display: '0'
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 0
+          additional: {  }
+        d0436f57-2ff0-424f-a18d-90764ef63601:
+          uuid: d0436f57-2ff0-424f-a18d-90764ef63601
+          region: second
+          configuration:
+            id: 'views_block:latest_news-block_2'
+            label: ''
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: '3'
+          weight: 0
+          additional: {  }
+        dd571d3e-ede1-4a11-af1d-3137c3ecbe0e:
+          uuid: dd571d3e-ede1-4a11-af1d-3137c3ecbe0e
+          region: second
+          configuration:
+            id: 'views_block:must_read-block_1'
+            label: 'Must read'
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: 'Must read'
+            items_per_page: '2'
+          weight: 1
+          additional: {  }
+      third_party_settings: {  }
+    -
+      layout_id: layout_onecol
+      layout_settings:
+        label: content
+        context_mapping: {  }
+      components: {  }
+      third_party_settings: {  }
+page: music
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

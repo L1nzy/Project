@@ -1,0 +1,105 @@
+uuid: e8769e8f-3b19-4ea1-8a9e-9929db015f13
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.fashion
+    - views.view.fashion_page
+    - views.view.latest_news
+    - views.view.must_read
+  content:
+    - 'block_content:category_page_banner:1ad16644-cc07-475a-8ef3-5e145af25e66'
+  module:
+    - block_content
+    - layout_builder
+    - layout_discovery
+    - views
+id: fashion-layout_builder-0
+label: 'Layout Builder'
+weight: 0
+variant: layout_builder
+variant_settings:
+  id: layout_builder
+  label: null
+  weight: 0
+  uuid: b178320b-2f2e-46e8-995e-9e2827d8e8a0
+  sections:
+    -
+      layout_id: layout_onecol
+      layout_settings:
+        label: 'baner section'
+        context_mapping: {  }
+      components:
+        6f234b46-4ee5-4116-ab22-9aae8a95d338:
+          uuid: 6f234b46-4ee5-4116-ab22-9aae8a95d338
+          region: content
+          configuration:
+            id: 'block_content:1ad16644-cc07-475a-8ef3-5e145af25e66'
+            label: 'Fashion baner'
+            label_display: '0'
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
+            context_mapping: {  }
+          weight: 0
+          additional: {  }
+      third_party_settings: {  }
+    -
+      layout_id: layout_twocol_section
+      layout_settings:
+        label: ' content and sidebar'
+        context_mapping: {  }
+        column_widths: 50-50
+      components:
+        80066172-4b86-4a63-a2cf-fbf02bf4a4c0:
+          uuid: 80066172-4b86-4a63-a2cf-fbf02bf4a4c0
+          region: first
+          configuration:
+            id: 'views_block:fashion_page-block_1'
+            label: 'Fashion '
+            label_display: '0'
+            provider: views
+            context_mapping: {  }
+            views_label: 'Fashion '
+            items_per_page: none
+          weight: 0
+          additional: {  }
+        2afef641-5b49-4119-93d6-3393ee44a330:
+          uuid: 2afef641-5b49-4119-93d6-3393ee44a330
+          region: second
+          configuration:
+            id: 'views_block:latest_news-block_1'
+            label: ''
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: '3'
+          weight: 0
+          additional: {  }
+        c6399c65-21c9-4bed-bfa7-77f2899f7c6a:
+          uuid: c6399c65-21c9-4bed-bfa7-77f2899f7c6a
+          region: second
+          configuration:
+            id: 'views_block:must_read-block_1'
+            label: 'Must read'
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: 'Must read'
+            items_per_page: '2'
+          weight: 1
+          additional: {  }
+      third_party_settings: {  }
+    -
+      layout_id: layout_onecol
+      layout_settings:
+        label: content
+        context_mapping: {  }
+      components: {  }
+      third_party_settings: {  }
+page: fashion
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }
