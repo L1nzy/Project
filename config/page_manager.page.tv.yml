@@ -1,0 +1,12 @@
+uuid: d4644756-9732-4df8-be9b-3d8699ae8659
+langcode: en
+status: true
+dependencies: {  }
+id: tv
+label: TV
+description: ''
+use_admin_theme: false
+path: /tv-full-page
+access_logic: and
+access_conditions: {  }
+parameters: {  }

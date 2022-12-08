@@ -1,0 +1,12 @@
+uuid: 2cdbd99c-d81a-42fd-9a79-a616843bc8fc
+langcode: en
+status: true
+dependencies: {  }
+id: technology
+label: Technology
+description: ''
+use_admin_theme: false
+path: /technology-full-page
+access_logic: and
+access_conditions: {  }
+parameters: {  }

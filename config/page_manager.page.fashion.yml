@@ -1,0 +1,12 @@
+uuid: a0c48faa-b298-48ff-9856-249588bb8a46
+langcode: en
+status: true
+dependencies: {  }
+id: fashion
+label: Fashion
+description: ''
+use_admin_theme: false
+path: /fashion-full-page
+access_logic: and
+access_conditions: {  }
+parameters: {  }

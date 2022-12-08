@@ -1,0 +1,8 @@
+uuid: 4d92a448-45b2-4088-b3ed-061c265d2722
+langcode: en
+status: true
+dependencies: {  }
+id: category_page_banner
+label: 'Category page banner'
+revision: 0
+description: ''

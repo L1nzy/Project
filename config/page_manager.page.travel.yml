@@ -1,0 +1,12 @@
+uuid: e9cb2b2f-0477-4b17-9f30-e296defd551f
+langcode: en
+status: true
+dependencies: {  }
+id: travel
+label: Travel
+description: ''
+use_admin_theme: false
+path: /travel-page
+access_logic: and
+access_conditions: {  }
+parameters: {  }
