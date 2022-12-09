@@ -1,0 +1,21 @@
+uuid: 3572e121-cfad-4eba-b2ca-1d666eaca2e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.titele_description_formated_text
+    - field.storage.block_content.field_link
+  module:
+    - text
+id: block_content.titele_description_formated_text.field_link
+field_name: field_link
+entity_type: block_content
+bundle: titele_description_formated_text
+label: link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

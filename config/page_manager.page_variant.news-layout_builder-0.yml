@@ -145,6 +145,13 @@ variant_settings:
         context_mapping: {  }
       components: {  }
       third_party_settings: {  }
+    -
+      layout_id: layout_onecol
+      layout_settings:
+        label: 'About us'
+        context_mapping: {  }
+      components: {  }
+      third_party_settings: {  }
 page: news
 selection_criteria: {  }
 selection_logic: and

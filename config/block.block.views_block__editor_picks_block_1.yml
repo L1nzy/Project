@@ -1,21 +1,21 @@
-uuid: dc34c6c3-db91-43d8-a93c-485266903c2f
+uuid: 0d774ee1-f455-492f-8c0f-87e7963c12e7
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.technology
+    - views.view.editor_picks
   module:
     - views
   theme:
     - bartik
-id: views_block__technology_block_1
+id: views_block__editor_picks_block_1
 theme: bartik
-region: content
-weight: -2
+region: featured_bottom_second
+weight: -5
 provider: null
-plugin: 'views_block:technology-block_1'
+plugin: 'views_block:editor_picks-block_1'
 settings:
-  id: 'views_block:technology-block_1'
+  id: 'views_block:editor_picks-block_1'
   label: ''
   label_display: visible
   provider: views
