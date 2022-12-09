@@ -1,4 +1,4 @@
-uuid: ecd6d2e4-3409-4b1a-9414-7becd49c257c
+uuid: 7e011953-066e-44ed-9043-cc348581dd4c
 langcode: en
 status: true
 dependencies:
@@ -8,8 +8,8 @@ dependencies:
   module:
     - node
     - user
-id: editor_picks
-label: 'Editor Picks'
+id: must_read_short
+label: 'Must read short'
 module: views
 description: ''
 tag: ''
@@ -22,7 +22,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Editor Picks'
+      title: 'Must read short'
       fields:
         title:
           id: title
@@ -138,10 +138,10 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        field_editor_picks_value:
-          id: field_editor_picks_value
-          table: node__field_editor_picks
-          field: field_editor_picks_value
+        field_must_read_value:
+          id: field_must_read_value
+          table: node__field_must_read
+          field: field_must_read_value
           relationship: none
           group_type: group
           admin_label: ''
