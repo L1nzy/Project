@@ -1,9 +1,9 @@
-uuid: f6d9dc50-d8ed-4be1-a818-957cf81ce491
+uuid: f6f943b9-d8d7-4635-b900-c49d632054f3
 langcode: en
 status: true
 dependencies: {  }
-id: news
-label: News
+id: news_page
+label: 'News page'
 description: ''
 use_admin_theme: false
 path: /newspaper_life_news
