@@ -8,6 +8,7 @@ dependencies:
     - views.view.latest_news
     - views.view.must_read
   content:
+    - 'block_content:block_with_advertising:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
     - 'block_content:category_page_banner:11545f42-0dfa-4112-80bc-73dabf9f89cc'
   module:
     - block_content
@@ -97,7 +98,21 @@ variant_settings:
       layout_settings:
         label: content
         context_mapping: {  }
-      components: {  }
+      components:
+        7df29e7d-908c-41c6-8f93-1ac6d9e22484:
+          uuid: 7df29e7d-908c-41c6-8f93-1ac6d9e22484
+          region: content
+          configuration:
+            id: 'block_content:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
+            label: Advertising970x250
+            label_display: '0'
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
+            context_mapping: {  }
+          weight: 0
+          additional: {  }
       third_party_settings: {  }
 page: celebrities
 selection_criteria: {  }

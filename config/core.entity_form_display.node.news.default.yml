@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.news.comment
     - field.field.node.news.field_category
     - field.field.node.news.field_description
     - field.field.node.news.field_editor_picks
@@ -12,6 +13,7 @@ dependencies:
     - image.style.thumbnail
     - node.type.news
   module:
+    - comment
     - image
     - path
     - text
@@ -20,6 +22,12 @@ targetEntityType: node
 bundle: news
 mode: default
 content:
+  comment:
+    type: comment_default
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 4

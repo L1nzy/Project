@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.standart_news_format
+    - field.field.node.news.comment
     - field.field.node.news.field_category
     - field.field.node.news.field_description
     - field.field.node.news.field_editor_picks
@@ -55,6 +56,7 @@ content:
     weight: 3
     region: content
 hidden:
+  comment: true
   field_editor_picks: true
   field_must_read: true
   field_top_news: true
