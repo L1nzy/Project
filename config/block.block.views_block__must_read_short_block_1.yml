@@ -1,0 +1,24 @@
+uuid: afa62c4c-f2fa-46da-a236-9849b94a10d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.must_read_short
+  module:
+    - views
+  theme:
+    - bartik
+id: views_block__must_read_short_block_1
+theme: bartik
+region: featured_bottom_second
+weight: -5
+provider: null
+plugin: 'views_block:must_read_short-block_1'
+settings:
+  id: 'views_block:must_read_short-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

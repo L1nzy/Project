@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.vertical_long_format
+    - field.field.node.news.comment
     - field.field.node.news.field_category
     - field.field.node.news.field_description
     - field.field.node.news.field_editor_picks
     - field.field.node.news.field_image
     - field.field.node.news.field_must_read
+    - field.field.node.news.field_reviewed
     - field.field.node.news.field_top_news
     - node.type.news
   module:
@@ -47,7 +49,9 @@ content:
     weight: 2
     region: content
 hidden:
+  comment: true
   field_category: true
   field_editor_picks: true
   field_must_read: true
+  field_reviewed: true
   field_top_news: true

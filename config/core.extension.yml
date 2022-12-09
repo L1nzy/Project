@@ -52,6 +52,8 @@ module:
   toolbar: 0
   tour: 0
   user: 0
+  views_slideshow: 0
+  views_slideshow_cycle: 0
   views_ui: 0
   views: 10
 theme:

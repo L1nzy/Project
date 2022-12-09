@@ -8,6 +8,7 @@ dependencies:
     - views.view.music
     - views.view.must_read
   content:
+    - 'block_content:block_with_advertising:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
     - 'block_content:category_page_banner:46163f99-954a-4cb0-b59b-ce8a896ef8f1'
   module:
     - block_content
@@ -97,7 +98,21 @@ variant_settings:
       layout_settings:
         label: content
         context_mapping: {  }
-      components: {  }
+      components:
+        8bdea8eb-81e6-41dd-be55-ad5cbd5fb254:
+          uuid: 8bdea8eb-81e6-41dd-be55-ad5cbd5fb254
+          region: content
+          configuration:
+            id: 'block_content:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
+            label: Advertising970x250
+            label_display: '0'
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
+            context_mapping: {  }
+          weight: 0
+          additional: {  }
       third_party_settings: {  }
 page: music
 selection_criteria: {  }
