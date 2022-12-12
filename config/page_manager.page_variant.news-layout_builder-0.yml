@@ -5,10 +5,13 @@ dependencies:
   config:
     - page_manager.page.news
     - views.view.celebrities
+    - views.view.editor_picks
     - views.view.fashion
     - views.view.featured
     - views.view.food_drink
+    - views.view.hot_topics
     - views.view.latest_news
+    - views.view.must_read_short
     - views.view.technology
     - views.view.top_news
     - views.view.tv
