@@ -1,4 +1,4 @@
-uuid: 699d0f0f-bc89-4bca-984e-66aae94d9fb4
+uuid: 0e4449d8-2455-4629-9c3a-789ab5367038
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - entity_reference_revisions
     - node
     - paragraphs
-id: node.field_share_networks
-field_name: field_share_networks
+id: node.field_content
+field_name: field_content
 entity_type: node
 type: entity_reference_revisions
 settings:

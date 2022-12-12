@@ -1,9 +1,9 @@
-uuid: 3cafbecd-0d9b-41aa-bba3-f7b1688b4ab5
+uuid: 8528f042-99ee-4760-919e-4765e8d7a1f9
 langcode: en
 status: true
 dependencies: {  }
-id: news_with_background_image
-label: 'News with background image'
+id: title_description_
+label: 'Title + description '
 icon_uuid: null
 icon_default: null
 description: ''
