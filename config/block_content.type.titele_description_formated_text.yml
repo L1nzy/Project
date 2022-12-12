@@ -1,0 +1,8 @@
+uuid: f135a667-3d4a-42b2-93a7-16f37bbf9d63
+langcode: en
+status: true
+dependencies: {  }
+id: titele_description_formated_text
+label: 'titele + description + formated text'
+revision: 0
+description: ''

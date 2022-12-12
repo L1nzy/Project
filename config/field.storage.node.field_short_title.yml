@@ -1,0 +1,21 @@
+uuid: 0d64e64a-4247-43e5-8747-0bd9e497afca
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_short_title
+field_name: field_short_title
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

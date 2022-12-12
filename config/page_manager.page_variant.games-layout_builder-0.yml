@@ -1,0 +1,120 @@
+uuid: a1764642-299c-4e3c-aaae-8c63f18346e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.games
+    - views.view.games
+    - views.view.latest_news
+    - views.view.must_read
+  content:
+    - 'block_content:block_with_advertising:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
+    - 'block_content:category_page_banner:9ccea91a-13e4-42da-82a3-0b7243d6fa3c'
+  module:
+    - block_content
+    - layout_builder
+    - layout_discovery
+    - views
+id: games-layout_builder-0
+label: 'Layout Builder'
+weight: 0
+variant: layout_builder
+variant_settings:
+  id: layout_builder
+  label: null
+  weight: 0
+  uuid: 253d9b1c-f9e2-4ff7-a8a5-cbf1c5036e4c
+  sections:
+    -
+      layout_id: layout_onecol
+      layout_settings:
+        label: 'baner section'
+        context_mapping: {  }
+      components:
+        fe724838-c1df-487d-9870-03206de9b528:
+          uuid: fe724838-c1df-487d-9870-03206de9b528
+          region: content
+          configuration:
+            id: 'block_content:9ccea91a-13e4-42da-82a3-0b7243d6fa3c'
+            label: 'Games baner'
+            label_display: '0'
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
+            context_mapping: {  }
+          weight: 0
+          additional: {  }
+      third_party_settings: {  }
+    -
+      layout_id: layout_twocol_section
+      layout_settings:
+        label: ' content and sidebar'
+        context_mapping: {  }
+        column_widths: 50-50
+      components:
+        b3bf81e7-a3eb-4af0-bc9e-1774b3f79b7f:
+          uuid: b3bf81e7-a3eb-4af0-bc9e-1774b3f79b7f
+          region: first
+          configuration:
+            id: 'views_block:games-block_1'
+            label: ''
+            label_display: '0'
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 0
+          additional: {  }
+        4c73d32f-614f-47e1-b022-50b2e594ccb2:
+          uuid: 4c73d32f-614f-47e1-b022-50b2e594ccb2
+          region: second
+          configuration:
+            id: 'views_block:latest_news-block_1'
+            label: ''
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: '3'
+          weight: 0
+          additional: {  }
+        8aa40940-f053-4be8-a4a0-2f62df70a0a6:
+          uuid: 8aa40940-f053-4be8-a4a0-2f62df70a0a6
+          region: second
+          configuration:
+            id: 'views_block:must_read-block_1'
+            label: 'Must read'
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: 'Must read'
+            items_per_page: '2'
+          weight: 1
+          additional: {  }
+      third_party_settings: {  }
+    -
+      layout_id: layout_onecol
+      layout_settings:
+        label: content
+        context_mapping: {  }
+      components:
+        55cb5da7-5717-49d0-be5b-3c87afef1ca6:
+          uuid: 55cb5da7-5717-49d0-be5b-3c87afef1ca6
+          region: content
+          configuration:
+            id: 'block_content:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
+            label: Advertising970x250
+            label_display: '0'
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
+            context_mapping: {  }
+          weight: 0
+          additional: {  }
+      third_party_settings: {  }
+page: games
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

@@ -1,0 +1,29 @@
+uuid: 4006d1a1-2bd5-4da0-bd25-941fbb1fc6fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.category_page_banner
+    - field.storage.block_content.field_taxonomy_category
+    - taxonomy.vocabulary.categories
+id: block_content.category_page_banner.field_taxonomy_category
+field_name: field_taxonomy_category
+entity_type: block_content
+bundle: category_page_banner
+label: 'taxonomy category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      categories: categories
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

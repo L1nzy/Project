@@ -1,15 +1,15 @@
-uuid: a400a610-d202-43b9-bfdd-fea796e739c3
+uuid: bbd64c27-a985-495b-b7fa-ea6787d2c3ad
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_top_news
+    - field.storage.node.field_editor_picks
     - node.type.news
-id: node.news.field_top_news
-field_name: field_top_news
+id: node.news.field_editor_picks
+field_name: field_editor_picks
 entity_type: node
 bundle: news
-label: 'top news'
+label: 'editor picks'
 description: ''
 required: false
 translatable: false

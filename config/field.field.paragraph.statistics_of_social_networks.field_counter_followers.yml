@@ -1,0 +1,23 @@
+uuid: 6f169b4c-1caa-4413-b8e6-b731a778a995
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_counter_followers
+    - paragraphs.paragraphs_type.statistics_of_social_networks
+id: paragraph.statistics_of_social_networks.field_counter_followers
+field_name: field_counter_followers
+entity_type: paragraph
+bundle: statistics_of_social_networks
+label: 'counter followers'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

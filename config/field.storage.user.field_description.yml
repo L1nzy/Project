@@ -1,15 +1,16 @@
-uuid: 3e3d3a75-37c1-440d-a1f5-a7d1287142a3
+uuid: 9bcf1ca1-4964-41c5-95b5-6955aee898ff
 langcode: en
 status: true
 dependencies:
   module:
-    - node
-id: node.field_top_news
-field_name: field_top_news
-entity_type: node
-type: boolean
+    - text
+    - user
+id: user.field_description
+field_name: field_description
+entity_type: user
+type: text_long
 settings: {  }
-module: core
+module: text
 locked: false
 cardinality: 1
 translatable: true

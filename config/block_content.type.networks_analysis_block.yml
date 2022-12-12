@@ -1,0 +1,8 @@
+uuid: 6478f1dd-8b6e-494b-bc5d-09fc61cbad58
+langcode: en
+status: true
+dependencies: {  }
+id: networks_analysis_block
+label: 'Networks analysis block'
+revision: 0
+description: ''

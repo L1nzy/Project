@@ -1,0 +1,12 @@
+uuid: 914afb4c-f201-4724-9255-cbea9818fd64
+langcode: en
+status: true
+dependencies: {  }
+id: movies
+label: Movies
+description: ''
+use_admin_theme: false
+path: /movies-page
+access_logic: and
+access_conditions: {  }
+parameters: {  }

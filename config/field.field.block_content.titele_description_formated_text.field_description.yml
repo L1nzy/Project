@@ -1,0 +1,21 @@
+uuid: d1398a52-1ce2-4bc0-9bb5-d4fa6b1860a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.titele_description_formated_text
+    - field.storage.block_content.field_description
+  module:
+    - text
+id: block_content.titele_description_formated_text.field_description
+field_name: field_description
+entity_type: block_content
+bundle: titele_description_formated_text
+label: description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

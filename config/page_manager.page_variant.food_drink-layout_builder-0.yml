@@ -1,0 +1,120 @@
+uuid: 5c9ecb2f-2c56-4200-8bd5-1edbc00b7e8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.food_drink
+    - views.view.food_and_drink
+    - views.view.latest_news
+    - views.view.must_read
+  content:
+    - 'block_content:block_with_advertising:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
+    - 'block_content:category_page_banner:51330d72-8428-4ac6-9a84-20f7f1b3208b'
+  module:
+    - block_content
+    - layout_builder
+    - layout_discovery
+    - views
+id: food_drink-layout_builder-0
+label: 'Layout Builder'
+weight: 0
+variant: layout_builder
+variant_settings:
+  id: layout_builder
+  label: null
+  weight: 0
+  uuid: 42cff988-13c0-49e1-87dc-e432e277b349
+  sections:
+    -
+      layout_id: layout_onecol
+      layout_settings:
+        label: 'baner section'
+        context_mapping: {  }
+      components:
+        0b5415bf-d4f2-47d1-8373-ada4de62acba:
+          uuid: 0b5415bf-d4f2-47d1-8373-ada4de62acba
+          region: content
+          configuration:
+            id: 'block_content:51330d72-8428-4ac6-9a84-20f7f1b3208b'
+            label: 'Food & Drink baner'
+            label_display: '0'
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
+            context_mapping: {  }
+          weight: 0
+          additional: {  }
+      third_party_settings: {  }
+    -
+      layout_id: layout_twocol_section
+      layout_settings:
+        label: ' content and sidebar'
+        context_mapping: {  }
+        column_widths: 50-50
+      components:
+        f9e067a3-9e20-4c0e-ab1c-b7ddc132c816:
+          uuid: f9e067a3-9e20-4c0e-ab1c-b7ddc132c816
+          region: first
+          configuration:
+            id: 'views_block:food_and_drink-block_1'
+            label: ''
+            label_display: '0'
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 0
+          additional: {  }
+        e866f710-b366-49da-93fb-08391e7e4417:
+          uuid: e866f710-b366-49da-93fb-08391e7e4417
+          region: second
+          configuration:
+            id: 'views_block:latest_news-block_1'
+            label: ''
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: '3'
+          weight: 0
+          additional: {  }
+        049fba99-3ac8-4228-9f13-86ccd8ced941:
+          uuid: 049fba99-3ac8-4228-9f13-86ccd8ced941
+          region: second
+          configuration:
+            id: 'views_block:must_read-block_1'
+            label: 'Must read'
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: 'Must read'
+            items_per_page: none
+          weight: 1
+          additional: {  }
+      third_party_settings: {  }
+    -
+      layout_id: layout_onecol
+      layout_settings:
+        label: content
+        context_mapping: {  }
+      components:
+        8f8d89b8-f6b5-45f5-8bfd-57b1d5b9cc9b:
+          uuid: 8f8d89b8-f6b5-45f5-8bfd-57b1d5b9cc9b
+          region: content
+          configuration:
+            id: 'block_content:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
+            label: Advertising970x250
+            label_display: '0'
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
+            context_mapping: {  }
+          weight: 0
+          additional: {  }
+      third_party_settings: {  }
+page: food_drink
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

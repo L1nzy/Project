@@ -1,0 +1,182 @@
+uuid: c02e4c21-ed63-4111-ae3d-aa5d377eeede
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.news_page
+    - views.view.celebrities_short
+    - views.view.fashion_short
+    - views.view.featured
+    - views.view.food_drink
+    - views.view.latest_news
+    - views.view.music_festival
+    - views.view.technology_page
+    - views.view.top_news
+    - views.view.tv_short
+  content:
+    - 'block_content:networks_analysis_block:bfbffcd1-40e4-4759-9dcf-ea8db9ff3817'
+  module:
+    - block_content
+    - layout_builder
+    - layout_discovery
+    - views
+id: news_page-layout_builder-0
+label: 'Layout Builder'
+weight: 0
+variant: layout_builder
+variant_settings:
+  id: layout_builder
+  label: null
+  weight: 0
+  uuid: e2d96ae9-4b2b-4fe4-bfb3-ad365bd5535e
+  sections:
+    -
+      layout_id: layout_twocol_section
+      layout_settings:
+        label: 'sidebar and content'
+        context_mapping: {  }
+        column_widths: 50-50
+      components:
+        e3f274e3-b35a-4b68-a182-88c99d26265b:
+          uuid: e3f274e3-b35a-4b68-a182-88c99d26265b
+          region: first
+          configuration:
+            id: 'views_block:latest_news-block_1'
+            label: ''
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 0
+          additional: {  }
+        0eea1a05-fae0-4293-b6d0-7c7e52c0a05f:
+          uuid: 0eea1a05-fae0-4293-b6d0-7c7e52c0a05f
+          region: second
+          configuration:
+            id: 'views_block:top_news-block_1'
+            label: ''
+            label_display: '0'
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 0
+          additional: {  }
+        6c5362a3-73f9-43e1-a0b9-7f8b2d304c9f:
+          uuid: 6c5362a3-73f9-43e1-a0b9-7f8b2d304c9f
+          region: second
+          configuration:
+            id: 'views_block:featured-block_1'
+            label: ''
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 1
+          additional: {  }
+        107899a4-1b33-4142-ba50-fd6988692d71:
+          uuid: 107899a4-1b33-4142-ba50-fd6988692d71
+          region: second
+          configuration:
+            id: 'views_block:fashion_short-block_1'
+            label: ''
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 2
+          additional: {  }
+        727ad22f-c38f-4063-8a19-e1b7f75fd1aa:
+          uuid: 727ad22f-c38f-4063-8a19-e1b7f75fd1aa
+          region: second
+          configuration:
+            id: 'views_block:technology_page-block_1'
+            label: ''
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: '4'
+          weight: 3
+          additional: {  }
+        56ed14b3-cf98-4377-9098-c47723fb46cc:
+          uuid: 56ed14b3-cf98-4377-9098-c47723fb46cc
+          region: second
+          configuration:
+            id: 'views_block:tv_short-block_1'
+            label: TV
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: TV
+            items_per_page: none
+          weight: 4
+          additional: {  }
+        b5065b53-bfdf-41ef-945e-0091956cf90f:
+          uuid: b5065b53-bfdf-41ef-945e-0091956cf90f
+          region: second
+          configuration:
+            id: 'views_block:food_drink-block_1'
+            label: ''
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 5
+          additional: {  }
+        67538e81-58ec-4d22-893a-e89cbbdeecad:
+          uuid: 67538e81-58ec-4d22-893a-e89cbbdeecad
+          region: second
+          configuration:
+            id: 'views_block:celebrities_short-block_1'
+            label: Celebrities
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: Celebrities
+            items_per_page: none
+          weight: 6
+          additional: {  }
+        218356a6-bf91-4059-8db0-a18596260009:
+          uuid: 218356a6-bf91-4059-8db0-a18596260009
+          region: second
+          configuration:
+            id: 'block_content:bfbffcd1-40e4-4759-9dcf-ea8db9ff3817'
+            label: 'Stay connected'
+            label_display: visible
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
+            context_mapping: {  }
+          weight: 7
+          additional: {  }
+      third_party_settings: {  }
+    -
+      layout_id: layout_onecol
+      layout_settings:
+        label: content
+        context_mapping: {  }
+      components:
+        d774891c-2489-439e-a3c8-fffc8b3da2aa:
+          uuid: d774891c-2489-439e-a3c8-fffc8b3da2aa
+          region: content
+          configuration:
+            id: 'views_block:music_festival-block_1'
+            label: ''
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 0
+          additional: {  }
+      third_party_settings: {  }
+page: news_page
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

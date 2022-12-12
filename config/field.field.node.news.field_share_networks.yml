@@ -1,0 +1,34 @@
+uuid: 937f2adb-e186-4792-8104-e37bb033f993
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_share_networks
+    - node.type.news
+    - paragraphs.paragraphs_type.social_networks_share
+  module:
+    - entity_reference_revisions
+id: node.news.field_share_networks
+field_name: field_share_networks
+entity_type: node
+bundle: news
+label: 'share networks'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      social_networks_share: social_networks_share
+    negate: 0
+    target_bundles_drag_drop:
+      social_networks_share:
+        weight: 3
+        enabled: true
+      statistics_of_social_networks:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

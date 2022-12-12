@@ -1,0 +1,20 @@
+uuid: 08490330-dbdb-4af2-99bd-af0d8499a11f
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_counter_followers
+field_name: field_counter_followers
+entity_type: paragraph
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

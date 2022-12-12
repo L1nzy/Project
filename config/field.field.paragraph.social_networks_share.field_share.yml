@@ -1,0 +1,19 @@
+uuid: e74252cd-069b-4e76-a320-9b851ee8edbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_share
+    - paragraphs.paragraphs_type.social_networks_share
+id: paragraph.social_networks_share.field_share
+field_name: field_share
+entity_type: paragraph
+bundle: social_networks_share
+label: share
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

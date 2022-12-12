@@ -1,0 +1,39 @@
+uuid: 00893f37-7175-48f5-adfd-73f18def4c65
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.titele_description_formated_text
+    - field.field.block_content.titele_description_formated_text.field_description
+    - field.field.block_content.titele_description_formated_text.field_link
+    - field.field.block_content.titele_description_formated_text.field_title
+  module:
+    - text
+id: block_content.titele_description_formated_text.default
+targetEntityType: block_content
+bundle: titele_description_formated_text
+mode: default
+content:
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_link:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

@@ -1,0 +1,120 @@
+uuid: e7e2025c-d949-4205-b981-5deef4a69f61
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.travel
+    - views.view.latest_news
+    - views.view.must_read
+    - views.view.travel
+  content:
+    - 'block_content:block_with_advertising:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
+    - 'block_content:category_page_banner:5939b93d-4a50-4533-be7f-a586143a9101'
+  module:
+    - block_content
+    - layout_builder
+    - layout_discovery
+    - views
+id: travel-layout_builder-0
+label: 'Layout Builder'
+weight: 0
+variant: layout_builder
+variant_settings:
+  id: layout_builder
+  label: null
+  weight: 0
+  uuid: 1f2ff595-e288-4e37-b0a1-82c1cb49b63e
+  sections:
+    -
+      layout_id: layout_onecol
+      layout_settings:
+        label: 'baner section'
+        context_mapping: {  }
+      components:
+        79cfd87b-1ccc-45aa-b8cb-5236fdde6608:
+          uuid: 79cfd87b-1ccc-45aa-b8cb-5236fdde6608
+          region: content
+          configuration:
+            id: 'block_content:5939b93d-4a50-4533-be7f-a586143a9101'
+            label: 'Travel baner'
+            label_display: '0'
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
+            context_mapping: {  }
+          weight: 0
+          additional: {  }
+      third_party_settings: {  }
+    -
+      layout_id: layout_twocol_section
+      layout_settings:
+        label: ' content and sidebar'
+        context_mapping: {  }
+        column_widths: 50-50
+      components:
+        4c269846-ce8b-486e-b47a-e77d0d221b12:
+          uuid: 4c269846-ce8b-486e-b47a-e77d0d221b12
+          region: first
+          configuration:
+            id: 'views_block:travel-block_1'
+            label: ''
+            label_display: '0'
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 0
+          additional: {  }
+        a1e73960-71b7-4a32-ab0b-e8ed36e0ed24:
+          uuid: a1e73960-71b7-4a32-ab0b-e8ed36e0ed24
+          region: second
+          configuration:
+            id: 'views_block:latest_news-block_1'
+            label: ''
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: '3'
+          weight: 0
+          additional: {  }
+        279ad13c-73c5-4bc0-9f3b-1359710b9828:
+          uuid: 279ad13c-73c5-4bc0-9f3b-1359710b9828
+          region: second
+          configuration:
+            id: 'views_block:must_read-block_1'
+            label: 'Must read'
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: 'Must read'
+            items_per_page: '2'
+          weight: 1
+          additional: {  }
+      third_party_settings: {  }
+    -
+      layout_id: layout_onecol
+      layout_settings:
+        label: content
+        context_mapping: {  }
+      components:
+        d713fd1e-a6b6-4436-9700-d8f4464ccba5:
+          uuid: d713fd1e-a6b6-4436-9700-d8f4464ccba5
+          region: content
+          configuration:
+            id: 'block_content:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
+            label: Advertising970x250
+            label_display: '0'
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
+            context_mapping: {  }
+          weight: 0
+          additional: {  }
+      third_party_settings: {  }
+page: travel
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

@@ -1,0 +1,12 @@
+uuid: e0979df0-801d-4d8d-a2c6-ac1096e9fdd2
+langcode: en
+status: true
+dependencies: {  }
+id: music
+label: Music
+description: ''
+use_admin_theme: false
+path: /music-page
+access_logic: and
+access_conditions: {  }
+parameters: {  }

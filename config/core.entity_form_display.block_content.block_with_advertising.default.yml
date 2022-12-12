@@ -1,0 +1,32 @@
+uuid: 20fb4a16-5ad1-40be-a1fc-5ec4233e3abd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.block_with_advertising
+    - field.field.block_content.block_with_advertising.field_img
+    - image.style.thumbnail
+  module:
+    - image
+id: block_content.block_with_advertising.default
+targetEntityType: block_content
+bundle: block_with_advertising
+mode: default
+content:
+  field_img:
+    type: image_image
+    weight: 28
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
