@@ -15,7 +15,11 @@ dependencies:
     - views.view.technology
     - views.view.top_news
     - views.view.tv
+  content:
+    - 'block_content:block_with_advertising:0f939486-355a-4894-abab-f96aa1a6df8f'
+    - 'block_content:block_with_advertising:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
   module:
+    - block_content
     - layout_builder
     - layout_discovery
     - views
@@ -140,6 +144,20 @@ variant_settings:
             items_per_page: none
           weight: 6
           additional: {  }
+        ee1876d4-be8a-40e8-bb25-3a5a5f96070f:
+          uuid: ee1876d4-be8a-40e8-bb25-3a5a5f96070f
+          region: second
+          configuration:
+            id: 'block_content:0f939486-355a-4894-abab-f96aa1a6df8f'
+            label: Advertising300x250
+            label_display: '0'
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
+            context_mapping: {  }
+          weight: 7
+          additional: {  }
       third_party_settings: {  }
     -
       layout_id: layout_onecol
@@ -147,52 +165,20 @@ variant_settings:
         label: content
         context_mapping: {  }
       components:
-        036973e5-cd3f-430a-b591-cd6264414387:
-          uuid: 036973e5-cd3f-430a-b591-cd6264414387
+        5d3c4eaf-aa4b-4b2e-9e41-9abc3e3155e1:
+          uuid: 5d3c4eaf-aa4b-4b2e-9e41-9abc3e3155e1
           region: content
           configuration:
-            id: 'views_block:editor_picks-block_1'
-            label: ''
-            label_display: visible
-            provider: views
+            id: 'block_content:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
+            label: Advertising970x250
+            label_display: '0'
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
             context_mapping: {  }
-            views_label: ''
-            items_per_page: none
           weight: 0
           additional: {  }
-        8f4eaae7-1027-408a-b7c2-4d3c12bd2283:
-          uuid: 8f4eaae7-1027-408a-b7c2-4d3c12bd2283
-          region: content
-          configuration:
-            id: 'views_block:must_read_short-block_1'
-            label: ''
-            label_display: visible
-            provider: views
-            context_mapping: {  }
-            views_label: ''
-            items_per_page: none
-          weight: 1
-          additional: {  }
-        4fb6c35c-0683-4d52-b2d9-8786970080a5:
-          uuid: 4fb6c35c-0683-4d52-b2d9-8786970080a5
-          region: content
-          configuration:
-            id: 'views_block:hot_topics-block_1'
-            label: ''
-            label_display: visible
-            provider: views
-            context_mapping: {  }
-            views_label: ''
-            items_per_page: none
-          weight: 2
-          additional: {  }
-      third_party_settings: {  }
-    -
-      layout_id: layout_onecol
-      layout_settings:
-        label: 'About us'
-        context_mapping: {  }
-      components: {  }
       third_party_settings: {  }
 page: news
 selection_criteria: {  }

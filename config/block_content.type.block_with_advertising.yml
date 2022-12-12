@@ -1,0 +1,8 @@
+uuid: 0eb3a741-006e-484e-a150-76bc96bac6a2
+langcode: en
+status: true
+dependencies: {  }
+id: block_with_advertising
+label: 'Block with advertising'
+revision: 0
+description: ''
