@@ -5,10 +5,13 @@ dependencies:
   config:
     - page_manager.page.news
     - views.view.celebrities
+    - views.view.editor_picks
     - views.view.fashion
     - views.view.featured
     - views.view.food_drink
+    - views.view.hot_topics
     - views.view.latest_news
+    - views.view.must_read_short
     - views.view.technology
     - views.view.top_news
     - views.view.tv
@@ -143,7 +146,46 @@ variant_settings:
       layout_settings:
         label: content
         context_mapping: {  }
-      components: {  }
+      components:
+        036973e5-cd3f-430a-b591-cd6264414387:
+          uuid: 036973e5-cd3f-430a-b591-cd6264414387
+          region: content
+          configuration:
+            id: 'views_block:editor_picks-block_1'
+            label: ''
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 0
+          additional: {  }
+        8f4eaae7-1027-408a-b7c2-4d3c12bd2283:
+          uuid: 8f4eaae7-1027-408a-b7c2-4d3c12bd2283
+          region: content
+          configuration:
+            id: 'views_block:must_read_short-block_1'
+            label: ''
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 1
+          additional: {  }
+        4fb6c35c-0683-4d52-b2d9-8786970080a5:
+          uuid: 4fb6c35c-0683-4d52-b2d9-8786970080a5
+          region: content
+          configuration:
+            id: 'views_block:hot_topics-block_1'
+            label: ''
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 2
+          additional: {  }
       third_party_settings: {  }
 page: news
 selection_criteria: {  }
