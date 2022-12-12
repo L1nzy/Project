@@ -57,6 +57,7 @@ module:
   views_slideshow_cycle: 0
   views_ui: 0
   views: 10
+  paragraphs: 11
 theme:
   bartik: 0
   seven: 0

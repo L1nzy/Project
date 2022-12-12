@@ -3,17 +3,36 @@ langcode: en
 status: true
 dependencies:
   config:
+<<<<<<<< HEAD:config/page_manager.page_variant.news_page-layout_builder-0.yml
     - page_manager.page.news_page
     - views.view.celebrities_short
     - views.view.fashion_short
+========
+    - page_manager.page.news
+    - views.view.celebrities
+    - views.view.editor_picks
+    - views.view.fashion
+>>>>>>>> main:config/page_manager.page_variant.news-layout_builder-0.yml
     - views.view.featured
     - views.view.food_drink
+    - views.view.hot_topics
     - views.view.latest_news
+<<<<<<<< HEAD:config/page_manager.page_variant.news_page-layout_builder-0.yml
     - views.view.music_festival
     - views.view.technology_page
     - views.view.top_news
     - views.view.tv_short
+========
+    - views.view.must_read_short
+    - views.view.technology
+    - views.view.top_news
+    - views.view.tv
+  content:
+    - 'block_content:block_with_advertising:0f939486-355a-4894-abab-f96aa1a6df8f'
+    - 'block_content:block_with_advertising:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
+>>>>>>>> main:config/page_manager.page_variant.news-layout_builder-0.yml
   module:
+    - block_content
     - layout_builder
     - layout_discovery
     - views
@@ -138,6 +157,20 @@ variant_settings:
             items_per_page: none
           weight: 6
           additional: {  }
+        ee1876d4-be8a-40e8-bb25-3a5a5f96070f:
+          uuid: ee1876d4-be8a-40e8-bb25-3a5a5f96070f
+          region: second
+          configuration:
+            id: 'block_content:0f939486-355a-4894-abab-f96aa1a6df8f'
+            label: Advertising300x250
+            label_display: '0'
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
+            context_mapping: {  }
+          weight: 7
+          additional: {  }
       third_party_settings: {  }
     -
       layout_id: layout_onecol
@@ -145,6 +178,7 @@ variant_settings:
         label: content
         context_mapping: {  }
       components:
+<<<<<<<< HEAD:config/page_manager.page_variant.news_page-layout_builder-0.yml
         d774891c-2489-439e-a3c8-fffc8b3da2aa:
           uuid: d774891c-2489-439e-a3c8-fffc8b3da2aa
           region: content
@@ -156,6 +190,20 @@ variant_settings:
             context_mapping: {  }
             views_label: ''
             items_per_page: none
+========
+        5d3c4eaf-aa4b-4b2e-9e41-9abc3e3155e1:
+          uuid: 5d3c4eaf-aa4b-4b2e-9e41-9abc3e3155e1
+          region: content
+          configuration:
+            id: 'block_content:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
+            label: Advertising970x250
+            label_display: '0'
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
+            context_mapping: {  }
+>>>>>>>> main:config/page_manager.page_variant.news-layout_builder-0.yml
           weight: 0
           additional: {  }
       third_party_settings: {  }

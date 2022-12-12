@@ -5,17 +5,20 @@ dependencies:
   config:
     - core.entity_view_display.comment.comment.default
     - field.field.node.news.comment
+    - field.field.node.news.field_categories_for_title
     - field.field.node.news.field_category
     - field.field.node.news.field_description
     - field.field.node.news.field_editor_picks
     - field.field.node.news.field_image
+    - field.field.node.news.field_link_on_comments
     - field.field.node.news.field_must_read
-    - field.field.node.news.field_reviewed
-    - field.field.node.news.field_top_news
+    - field.field.node.news.field_short_title
+    - field.field.node.news.field_title
     - node.type.news
   module:
     - comment
     - image
+    - link
     - text
     - user
 id: node.news.default
@@ -25,19 +28,28 @@ mode: default
 content:
   comment:
     type: comment_default
-    label: above
+    label: hidden
     settings:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-    weight: 0
+    weight: 7
     region: content
-  field_description:
-    type: text_default
+  field_categories_for_title:
+    type: entity_reference_label
     label: hidden
-    settings: {  }
+    settings:
+      link: true
     third_party_settings: {  }
-    weight: 2
+    weight: 1
+    region: content
+  field_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
     region: content
   field_image:
     type: image
@@ -46,24 +58,41 @@ content:
       image_link: ''
       image_style: ''
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
-  field_reviewed:
-    type: number_integer
-    label: above
+  field_link_on_comments:
+    type: link
+    label: hidden
     settings:
-      thousand_separator: ''
-      prefix_suffix: true
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_short_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: text_default
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
     weight: 4
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 5
     region: content
 hidden:
-  field_category: true
+  field_description: true
   field_editor_picks: true
   field_must_read: true
-  field_top_news: true

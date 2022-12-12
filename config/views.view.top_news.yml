@@ -7,6 +7,7 @@ dependencies:
     - node.type.news
   module:
     - node
+    - statistics
     - user
 id: top_news
 label: 'Top news'
@@ -95,6 +96,19 @@ display:
         options: {  }
       empty: {  }
       sorts:
+        totalcount:
+          id: totalcount
+          table: node_counter
+          field: totalcount
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
         created:
           id: created
           table: node_field_data
@@ -135,19 +149,23 @@ display:
           plugin_id: bundle
           value:
             news: news
+          group: 1
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        field_top_news_value:
-          id: field_top_news_value
-          table: node__field_top_news
-          field: field_top_news_value
+        totalcount:
+          id: totalcount
+          table: node_counter
+          field: totalcount
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: boolean
-          operator: '='
-          value: '1'
+          plugin_id: numeric
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: '1'
           group: 1
           exposed: false
           expose:
@@ -164,6 +182,9 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -176,6 +197,10 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: default
       row:

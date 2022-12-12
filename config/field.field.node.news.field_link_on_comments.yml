@@ -1,0 +1,23 @@
+uuid: be9847fd-1a3f-4533-b911-d55206d30ef7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_on_comments
+    - node.type.news
+  module:
+    - link
+id: node.news.field_link_on_comments
+field_name: field_link_on_comments
+entity_type: node
+bundle: news
+label: 'link on comments'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

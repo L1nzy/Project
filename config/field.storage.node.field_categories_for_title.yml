@@ -1,14 +1,16 @@
-uuid: 3e3d3a75-37c1-440d-a1f5-a7d1287142a3
+uuid: 69b3f375-3295-4b08-a651-ba7c61ce0b5d
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_top_news
-field_name: field_top_news
+    - taxonomy
+id: node.field_categories_for_title
+field_name: field_categories_for_title
 entity_type: node
-type: boolean
-settings: {  }
+type: entity_reference
+settings:
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1
