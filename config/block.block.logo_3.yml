@@ -11,7 +11,7 @@ dependencies:
 id: logo_3
 theme: bartik
 region: featured_bottom_second
-weight: -2
+weight: -3
 provider: null
 plugin: 'block_content:cc8fac9b-9eaf-4b11-b030-840237125bd1'
 settings:

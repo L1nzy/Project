@@ -5,6 +5,10 @@ dependencies:
   config:
     - comment.type.comment
     - field.field.comment.comment.comment_body
+    - field.field.comment.comment.field_save_me
+    - field.field.comment.comment.field_user_email
+    - field.field.comment.comment.field_user_name
+    - field.field.comment.comment.field_website
   module:
     - text
 _core:
@@ -21,7 +25,42 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_save_me:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_user_email:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_user_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_website:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
   links:
-    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
     region: content
 hidden: {  }

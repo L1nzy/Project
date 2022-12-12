@@ -3,10 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_description
+    - field.field.user.user.field_link_at_site
+    - field.field.user.user.field_social_networks
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - image
+    - link
+    - text
     - user
 _core:
   default_config_hash: E1qmUI2SlozLlJ308jfMMFKT67l1p6PywE2LTRbeYS4
@@ -15,7 +20,37 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_link_at_site:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_social_networks:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
   member_for:
+    settings: {  }
+    third_party_settings: {  }
     weight: 5
     region: content
   user_picture:

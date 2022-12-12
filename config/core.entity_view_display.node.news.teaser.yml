@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.news.field_editor_picks
     - field.field.node.news.field_image
     - field.field.node.news.field_must_read
+    - field.field.node.news.field_reviewed
     - field.field.node.news.field_top_news
     - node.type.news
   module:
@@ -54,4 +55,5 @@ hidden:
   comment: true
   field_editor_picks: true
   field_must_read: true
+  field_reviewed: true
   field_top_news: true

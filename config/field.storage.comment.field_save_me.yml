@@ -1,0 +1,18 @@
+uuid: ec0fa8bf-0704-471a-bf85-fd247785a0c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+id: comment.field_save_me
+field_name: field_save_me
+entity_type: comment
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

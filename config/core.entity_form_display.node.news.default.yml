@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.news.field_editor_picks
     - field.field.node.news.field_image
     - field.field.node.news.field_must_read
+    - field.field.node.news.field_reviewed
     - field.field.node.news.field_top_news
     - image.style.thumbnail
     - node.type.news
@@ -73,6 +74,13 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  field_reviewed:
+    type: number
+    weight: 28
+    region: content
+    settings:
+      placeholder: ''
     third_party_settings: {  }
   field_top_news:
     type: boolean_checkbox

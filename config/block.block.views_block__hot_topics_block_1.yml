@@ -11,7 +11,7 @@ dependencies:
 id: views_block__hot_topics_block_1
 theme: bartik
 region: featured_bottom_second
-weight: -3
+weight: -4
 provider: null
 plugin: 'views_block:hot_topics-block_1'
 settings:

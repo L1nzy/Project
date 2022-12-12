@@ -11,7 +11,7 @@ dependencies:
 id: aboutus
 theme: bartik
 region: featured_bottom_second
-weight: -1
+weight: -2
 provider: null
 plugin: 'block_content:f9d598f6-4ef7-4112-8a6b-d94a4e9f2bd7'
 settings:
