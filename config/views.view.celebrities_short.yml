@@ -1,19 +1,19 @@
-uuid: 737f5836-63b9-4124-ad95-750a6c573586
+uuid: 1800b719-cfb4-4c80-9818-8168e93747d4
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.vertical_long_format
+    - core.entity_view_mode.node.horizontal_long_format
     - node.type.news
     - taxonomy.vocabulary.categories
   content:
-    - 'taxonomy_term:categories:ef4ee46a-4f15-4b99-bbdf-17b448829d89'
+    - 'taxonomy_term:categories:cc9d68de-66de-4449-857e-49f25671b513'
   module:
     - node
     - taxonomy
     - user
-id: technology
-label: Technology
+id: celebrities_short
+label: 'Celebrities short'
 module: views
 description: ''
 tag: ''
@@ -26,7 +26,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Technology
+      title: 'Celebrities short'
       fields:
         title:
           id: title
@@ -79,7 +79,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 4
+          items_per_page: 5
       exposed_form:
         type: basic
         options:
@@ -152,7 +152,7 @@ display:
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            5: 5
+            6: 6
           group: 1
           exposed: false
           expose:
@@ -194,7 +194,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: vertical_long_format
+          view_mode: horizontal_long_format
       query:
         type: views_query
         options:

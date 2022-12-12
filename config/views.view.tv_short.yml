@@ -1,15 +1,19 @@
-uuid: 37814d38-392c-4702-8bf5-9b0909065e59
+uuid: 989a0871-604b-41d7-a08b-007ffe861c31
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.horizontal_short_format
+    - core.entity_view_mode.node.vertical_short_format
     - node.type.news
+    - taxonomy.vocabulary.categories
+  content:
+    - 'taxonomy_term:categories:8fd8aa6b-c478-4158-9093-2ebf4c577c5e'
   module:
     - node
+    - taxonomy
     - user
-id: fashion
-label: Fashion
+id: tv_short
+label: 'tv short'
 module: views
 description: ''
 tag: ''
@@ -22,7 +26,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Fashion
+      title: 'tv short'
       fields:
         title:
           id: title
@@ -75,7 +79,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 6
+          items_per_page: 4
       exposed_form:
         type: basic
         options:
@@ -138,13 +142,59 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
+        field_category_target_id:
+          id: field_category_target_id
+          table: node__field_category
+          field: field_category_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            8: 8
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: categories
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
       style:
         type: default
       row:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: horizontal_short_format
+          view_mode: vertical_short_format
       query:
         type: views_query
         options:
@@ -162,6 +212,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -177,6 +228,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }

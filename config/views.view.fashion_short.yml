@@ -1,19 +1,19 @@
-uuid: b9e679f0-38fe-44ec-9f01-bc87ed805168
+uuid: 9dd243cb-b362-4047-ad39-841888d088f4
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.horizontal_short_format
     - node.type.news
     - taxonomy.vocabulary.categories
   content:
-    - 'taxonomy_term:categories:cc9d68de-66de-4449-857e-49f25671b513'
+    - 'taxonomy_term:categories:0d4244ce-d929-4164-ba4d-89d747204c97'
   module:
     - node
     - taxonomy
     - user
-id: celebrities
-label: Celebrities
+id: fashion_short
+label: 'Fashion short'
 module: views
 description: ''
 tag: ''
@@ -26,7 +26,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Celebrities
+      title: 'Fashion short'
       fields:
         title:
           id: title
@@ -79,7 +79,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 5
+          items_per_page: 6
       exposed_form:
         type: basic
         options:
@@ -152,7 +152,7 @@ display:
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            6: 6
+            4: 4
           group: 1
           exposed: false
           expose:
@@ -193,7 +193,8 @@ display:
       row:
         type: 'entity:node'
         options:
-          view_mode: teaser
+          relationship: none
+          view_mode: horizontal_short_format
       query:
         type: views_query
         options:
