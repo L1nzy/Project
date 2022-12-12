@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: titele_description_formated_text
-label: 'titele + description + formated text'
+label: 'title + description + formatted text'
 revision: 0
 description: ''
