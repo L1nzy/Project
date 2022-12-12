@@ -1,0 +1,49 @@
+uuid: 165e8bda-6361-4479-8147-0663d3d86387
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.titele_description_formated_text
+    - field.field.block_content.titele_description_formated_text.field_description
+    - field.field.block_content.titele_description_formated_text.field_link
+    - field.field.block_content.titele_description_formated_text.field_title
+  module:
+    - text
+id: block_content.titele_description_formated_text.default
+targetEntityType: block_content
+bundle: titele_description_formated_text
+mode: default
+content:
+  field_description:
+    type: text_textarea
+    weight: 28
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_link:
+    type: text_textarea
+    weight: 29
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

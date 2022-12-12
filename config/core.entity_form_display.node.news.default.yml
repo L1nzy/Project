@@ -3,16 +3,22 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.news.comment
+    - field.field.node.news.field_categories_for_title
     - field.field.node.news.field_category
     - field.field.node.news.field_description
     - field.field.node.news.field_editor_picks
     - field.field.node.news.field_image
+    - field.field.node.news.field_link_on_comments
     - field.field.node.news.field_must_read
-    - field.field.node.news.field_top_news
+    - field.field.node.news.field_short_title
+    - field.field.node.news.field_title
     - image.style.thumbnail
     - node.type.news
   module:
+    - comment
     - image
+    - link
     - path
     - text
 id: node.news.default
@@ -20,11 +26,27 @@ targetEntityType: node
 bundle: news
 mode: default
 content:
+  comment:
+    type: comment_default
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 4
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_categories_for_title:
+    type: entity_reference_autocomplete
+    weight: 30
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_category:
     type: entity_reference_autocomplete
@@ -59,6 +81,14 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
+  field_link_on_comments:
+    type: link_default
+    weight: 31
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
   field_must_read:
     type: boolean_checkbox
     weight: 10
@@ -66,12 +96,21 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
-  field_top_news:
-    type: boolean_checkbox
-    weight: 11
+  field_short_title:
+    type: string_textfield
+    weight: 29
     region: content
     settings:
-      display_label: true
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: text_textarea
+    weight: 32
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
   path:
     type: path

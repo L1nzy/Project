@@ -8,6 +8,7 @@ dependencies:
     - views.view.latest_news
     - views.view.must_read
   content:
+    - 'block_content:block_with_advertising:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
     - 'block_content:category_page_banner:1ad16644-cc07-475a-8ef3-5e145af25e66'
   module:
     - block_content
@@ -97,7 +98,21 @@ variant_settings:
       layout_settings:
         label: content
         context_mapping: {  }
-      components: {  }
+      components:
+        57ce3642-a3cd-4dd9-92ff-3d4a62516b09:
+          uuid: 57ce3642-a3cd-4dd9-92ff-3d4a62516b09
+          region: content
+          configuration:
+            id: 'block_content:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
+            label: Advertising970x250
+            label_display: '0'
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
+            context_mapping: {  }
+          weight: 0
+          additional: {  }
       third_party_settings: {  }
 page: fashion
 selection_criteria: {  }

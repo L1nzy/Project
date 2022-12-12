@@ -1,0 +1,24 @@
+uuid: d2fd2105-b22a-4a10-a370-13e666c23267
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.block_with_advertising
+    - field.field.block_content.block_with_advertising.field_img
+  module:
+    - image
+id: block_content.block_with_advertising.default
+targetEntityType: block_content
+bundle: block_with_advertising
+mode: default
+content:
+  field_img:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

@@ -1,0 +1,25 @@
+uuid: afce5ea6-6f00-4658-9368-054f939f47ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_networks
+    - field.field.block_content.social_networks.field_icon
+    - image.style.img38x38
+  module:
+    - image
+id: block_content.social_networks.default
+targetEntityType: block_content
+bundle: social_networks
+mode: default
+content:
+  field_icon:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: img38x38
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

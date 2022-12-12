@@ -1,0 +1,19 @@
+uuid: 080e1705-7ee1-41ae-9941-d61e813442c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_link_on_comments
+field_name: field_link_on_comments
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 1c1ebdfe-3e04-4ceb-be3d-c1fad1a7b5dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_link_at_site
+  module:
+    - link
+    - user
+id: user.user.field_link_at_site
+field_name: field_link_at_site
+entity_type: user
+bundle: user
+label: 'Link at site'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

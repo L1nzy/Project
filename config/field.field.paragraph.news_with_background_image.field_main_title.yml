@@ -1,0 +1,21 @@
+uuid: dd8fe00b-fc1e-4a32-abfb-e8400666a4e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_main_title
+    - paragraphs.paragraphs_type.news_with_background_image
+  module:
+    - text
+id: paragraph.news_with_background_image.field_main_title
+field_name: field_main_title
+entity_type: paragraph
+bundle: news_with_background_image
+label: 'Main title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
