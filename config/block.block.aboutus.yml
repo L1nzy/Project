@@ -1,0 +1,25 @@
+uuid: 6e6aff35-8f42-4e69-a424-43299c5c6db2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:titele_description_formated_text:f9d598f6-4ef7-4112-8a6b-d94a4e9f2bd7'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: aboutus
+theme: bartik
+region: featured_bottom_second
+weight: -1
+provider: null
+plugin: 'block_content:f9d598f6-4ef7-4112-8a6b-d94a4e9f2bd7'
+settings:
+  id: 'block_content:f9d598f6-4ef7-4112-8a6b-d94a4e9f2bd7'
+  label: 'About Us'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

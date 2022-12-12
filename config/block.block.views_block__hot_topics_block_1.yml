@@ -1,0 +1,24 @@
+uuid: eab794d0-bda9-47d9-b161-882daa5e953d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.hot_topics
+  module:
+    - views
+  theme:
+    - bartik
+id: views_block__hot_topics_block_1
+theme: bartik
+region: featured_bottom_second
+weight: -3
+provider: null
+plugin: 'views_block:hot_topics-block_1'
+settings:
+  id: 'views_block:hot_topics-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

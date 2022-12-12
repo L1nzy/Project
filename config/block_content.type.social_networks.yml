@@ -1,0 +1,8 @@
+uuid: ee0b71e1-cf9e-4363-8eea-3bb302147e36
+langcode: en
+status: true
+dependencies: {  }
+id: social_networks
+label: 'social networks'
+revision: 0
+description: ''
