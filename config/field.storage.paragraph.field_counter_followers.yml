@@ -1,17 +1,16 @@
-uuid: 39d11afe-8307-4bbf-ba2e-fad2e1139921
+uuid: 08490330-dbdb-4af2-99bd-af0d8499a11f
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_title
-field_name: field_title
+id: paragraph.field_counter_followers
+field_name: field_counter_followers
 entity_type: paragraph
-type: string
+type: integer
 settings:
-  max_length: 255
-  case_sensitive: false
-  is_ascii: false
+  unsigned: false
+  size: normal
 module: core
 locked: false
 cardinality: 1

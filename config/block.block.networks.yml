@@ -1,0 +1,25 @@
+uuid: 01991f05-c979-4e10-9e4d-d4083c19823b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:social_networks:c0304607-ad2e-49ef-ba69-621e84203368'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: networks
+theme: bartik
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'block_content:c0304607-ad2e-49ef-ba69-621e84203368'
+settings:
+  id: 'block_content:c0304607-ad2e-49ef-ba69-621e84203368'
+  label: Networks
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.social_networks
     - field.field.block_content.social_networks.field_icon
+    - field.field.block_content.social_networks.field_share_link
     - image.style.thumbnail
   module:
     - image
@@ -20,6 +21,14 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_share_link:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   info:
     type: string_textfield

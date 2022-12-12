@@ -1,0 +1,53 @@
+uuid: 14252bda-fe77-47f9-a427-a87ec03eca51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.statistics_of_social_networks.field_counter_followers
+    - field.field.paragraph.statistics_of_social_networks.field_icon
+    - field.field.paragraph.statistics_of_social_networks.field_social_button
+    - field.field.paragraph.statistics_of_social_networks.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.statistics_of_social_networks
+  module:
+    - image
+    - link
+id: paragraph.statistics_of_social_networks.default
+targetEntityType: paragraph
+bundle: statistics_of_social_networks
+mode: default
+content:
+  field_counter_followers:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_icon:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_social_button:
+    type: link_default
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

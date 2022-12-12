@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.news.field_image
     - field.field.node.news.field_link_on_comments
     - field.field.node.news.field_must_read
+    - field.field.node.news.field_share_networks
     - field.field.node.news.field_short_title
     - field.field.node.news.field_title
     - node.type.news
@@ -59,5 +60,6 @@ hidden:
   field_editor_picks: true
   field_link_on_comments: true
   field_must_read: true
+  field_share_networks: true
   field_short_title: true
   field_title: true

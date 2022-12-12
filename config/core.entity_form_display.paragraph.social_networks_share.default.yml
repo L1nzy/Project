@@ -1,0 +1,35 @@
+uuid: 25ab4a5e-da64-4477-a290-dfe9765803c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.social_networks_share.field_icon
+    - field.field.paragraph.social_networks_share.field_share
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.social_networks_share
+  module:
+    - image
+id: paragraph.social_networks_share.default
+targetEntityType: paragraph
+bundle: social_networks_share
+mode: default
+content:
+  field_icon:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_share:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

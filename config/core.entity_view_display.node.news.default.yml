@@ -12,11 +12,13 @@ dependencies:
     - field.field.node.news.field_image
     - field.field.node.news.field_link_on_comments
     - field.field.node.news.field_must_read
+    - field.field.node.news.field_share_networks
     - field.field.node.news.field_short_title
     - field.field.node.news.field_title
     - node.type.news
   module:
     - comment
+    - entity_reference_revisions
     - image
     - link
     - text
@@ -71,6 +73,15 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_share_networks:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 8
     region: content
   field_short_title:
     type: string
