@@ -96,6 +96,13 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  field_reviewed:
+    type: number
+    weight: 28
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   field_short_title:
     type: string_textfield
     weight: 29
