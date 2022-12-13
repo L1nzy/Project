@@ -1,6 +1,6 @@
 uuid: 3bf56a70-4423-4acc-a0e7-2e9f73f8779a
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.you_might_also_like
@@ -11,7 +11,7 @@ dependencies:
 id: views_block__you_might_also_like_block_1
 theme: bartik
 region: content
-weight: -6
+weight: -4
 provider: null
 plugin: 'views_block:you_might_also_like-block_1'
 settings:

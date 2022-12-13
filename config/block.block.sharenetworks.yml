@@ -1,0 +1,30 @@
+uuid: 83df8fde-beef-44e6-adb8-abb96d1d2e22
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:social_networks:972383ed-e8cb-44ad-8c12-c0b6d6f320ab'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: sharenetworks
+theme: bartik
+region: content
+weight: -9
+provider: null
+plugin: 'block_content:972383ed-e8cb-44ad-8c12-c0b6d6f320ab'
+settings:
+  id: 'block_content:972383ed-e8cb-44ad-8c12-c0b6d6f320ab'
+  label: 'share networks'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/node/*'

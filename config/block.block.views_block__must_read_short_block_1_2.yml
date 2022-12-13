@@ -1,24 +1,24 @@
-uuid: a346c711-7c0b-4cbb-b4c9-67574dbe75fb
+uuid: 3e8ed281-876a-431f-b906-70546463e3cb
 langcode: en
 status: false
 dependencies:
   config:
-    - views.view.author_info
+    - views.view.must_read_short
   module:
     - system
     - views
   theme:
     - bartik
-id: views_block__author_info_block_1
+id: views_block__must_read_short_block_1_2
 theme: bartik
 region: content
-weight: -7
+weight: -5
 provider: null
-plugin: 'views_block:author_info-block_1'
+plugin: 'views_block:must_read_short-block_1'
 settings:
-  id: 'views_block:author_info-block_1'
+  id: 'views_block:must_read_short-block_1'
   label: ''
-  label_display: '0'
+  label_display: visible
   provider: views
   views_label: ''
   items_per_page: none
