@@ -1,0 +1,15 @@
+uuid: 29445875-e5c9-4e3c-8709-7d3418ac6a56
+langcode: en
+status: true
+dependencies: {  }
+name: img317x317
+label: img317x317
+effects:
+  7f18f553-3080-4502-8958-a31dae32fd8c:
+    uuid: 7f18f553-3080-4502-8958-a31dae32fd8c
+    id: image_scale
+    weight: 1
+    data:
+      width: 317
+      height: 317
+      upscale: false

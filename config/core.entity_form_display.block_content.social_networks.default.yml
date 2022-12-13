@@ -6,7 +6,7 @@ dependencies:
     - block_content.type.social_networks
     - field.field.block_content.social_networks.field_icon
     - field.field.block_content.social_networks.field_share_link
-    - image.style.thumbnail
+    - image.style.img18x15
   module:
     - image
 id: block_content.social_networks.default
@@ -20,7 +20,7 @@ content:
     region: content
     settings:
       progress_indicator: throbber
-      preview_image_style: thumbnail
+      preview_image_style: img18x15
     third_party_settings: {  }
   field_share_link:
     type: string_textfield

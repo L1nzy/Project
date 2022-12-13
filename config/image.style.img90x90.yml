@@ -1,0 +1,15 @@
+uuid: 0df5ea1b-8923-470a-a34f-cfb7ed9082d2
+langcode: en
+status: true
+dependencies: {  }
+name: img90x90
+label: img90x90
+effects:
+  d126ea65-cfcf-4222-a499-992931b95319:
+    uuid: d126ea65-cfcf-4222-a499-992931b95319
+    id: image_scale
+    weight: 1
+    data:
+      width: 90
+      height: 90
+      upscale: false

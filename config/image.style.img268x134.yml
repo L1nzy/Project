@@ -1,0 +1,15 @@
+uuid: 46d6efd2-d9cc-45a4-9fc3-1fb71381255d
+langcode: en
+status: true
+dependencies: {  }
+name: img268x134
+label: img268x134
+effects:
+  b5b2fceb-9aa7-4b91-b936-96e7bade12d8:
+    uuid: b5b2fceb-9aa7-4b91-b936-96e7bade12d8
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 268
+      height: 134
+      anchor: center-center
