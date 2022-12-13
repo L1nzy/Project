@@ -1,0 +1,15 @@
+uuid: a6f8065a-4806-4687-b7b2-99a2dc915fc4
+langcode: en
+status: true
+dependencies: {  }
+name: img252x126
+label: img252x126
+effects:
+  a3957369-296d-41c4-9b67-8c15fe277d71:
+    uuid: a3957369-296d-41c4-9b67-8c15fe277d71
+    id: image_scale
+    weight: 1
+    data:
+      width: 252
+      height: 126
+      upscale: false

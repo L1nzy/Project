@@ -1,0 +1,15 @@
+uuid: 4880c90c-bb3e-4cdd-9798-8b73de78867f
+langcode: en
+status: true
+dependencies: {  }
+name: img209x146
+label: img209x146
+effects:
+  a80b0d40-357d-4b17-bd9b-2a002c06773b:
+    uuid: a80b0d40-357d-4b17-bd9b-2a002c06773b
+    id: image_scale
+    weight: 1
+    data:
+      width: 209
+      height: 146
+      upscale: false

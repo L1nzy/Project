@@ -1,0 +1,15 @@
+uuid: 5f1a7165-3b13-4c9e-95c0-973b78528cff
+langcode: en
+status: true
+dependencies: {  }
+name: img970x250
+label: img970x250
+effects:
+  772a44a1-7788-4278-b7d8-8eff0e061d85:
+    uuid: 772a44a1-7788-4278-b7d8-8eff0e061d85
+    id: image_scale
+    weight: 1
+    data:
+      width: 970
+      height: 250
+      upscale: false

@@ -6,7 +6,6 @@ dependencies:
     - field.field.paragraph.title_description_image.field_description
     - field.field.paragraph.title_description_image.field_image
     - field.field.paragraph.title_description_image.field_paragraph_title
-    - image.style.img1200x550
     - paragraphs.paragraphs_type.title_description_image
   module:
     - image
@@ -28,7 +27,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: img1200x550
+      image_style: ''
     third_party_settings: {  }
     weight: 2
     region: content

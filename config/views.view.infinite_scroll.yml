@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - node.type.news
+    - taxonomy.vocabulary.categories
   module:
     - node
     - user
@@ -149,8 +150,9 @@ display:
           default_argument_options:
             term_page: '1'
             node: true
-            limit: false
-            vids: {  }
+            limit: true
+            vids:
+              categories: categories
             anyall: ','
           default_argument_skip_url: false
           summary_options:

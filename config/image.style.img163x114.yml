@@ -1,0 +1,15 @@
+uuid: 05b148be-2e96-4f0c-af71-0d0c950e42b4
+langcode: en
+status: true
+dependencies: {  }
+name: img163x114
+label: img163x114
+effects:
+  2a1b6b84-49fd-4822-871b-dd5ea66d3dc3:
+    uuid: 2a1b6b84-49fd-4822-871b-dd5ea66d3dc3
+    id: image_scale
+    weight: 1
+    data:
+      width: 163
+      height: 114
+      upscale: false

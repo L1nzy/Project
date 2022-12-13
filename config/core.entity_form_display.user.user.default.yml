@@ -52,7 +52,7 @@ content:
     region: content
     settings:
       progress_indicator: throbber
-      preview_image_style: ''
+      preview_image_style: img18x15
     third_party_settings: {  }
   language:
     weight: 0

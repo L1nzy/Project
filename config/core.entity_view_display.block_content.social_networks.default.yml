@@ -6,7 +6,7 @@ dependencies:
     - block_content.type.social_networks
     - field.field.block_content.social_networks.field_icon
     - field.field.block_content.social_networks.field_share_link
-    - image.style.img38x38
+    - image.style.img18x15
   module:
     - image
 id: block_content.social_networks.default
@@ -19,7 +19,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: img38x38
+      image_style: img18x15
     third_party_settings: {  }
     weight: 1
     region: content

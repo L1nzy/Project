@@ -1,0 +1,15 @@
+uuid: 95d0c81c-f5d9-4ebd-8940-b64c7129f2c1
+langcode: en
+status: true
+dependencies: {  }
+name: img322x255
+label: img322x255
+effects:
+  bbdfc581-d266-4afb-b77c-f2616b93a208:
+    uuid: bbdfc581-d266-4afb-b77c-f2616b93a208
+    id: image_scale
+    weight: 1
+    data:
+      width: 322
+      height: 255
+      upscale: false

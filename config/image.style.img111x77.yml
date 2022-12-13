@@ -1,0 +1,15 @@
+uuid: 6b2e1bf8-5d24-4825-b8b6-210e636dbc53
+langcode: en
+status: true
+dependencies: {  }
+name: img111x77
+label: img111x77
+effects:
+  60ab0de4-c9aa-4dbd-b990-3f7d938e4fd4:
+    uuid: 60ab0de4-c9aa-4dbd-b990-3f7d938e4fd4
+    id: image_scale
+    weight: 1
+    data:
+      width: 111
+      height: 77
+      upscale: false
