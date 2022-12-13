@@ -7,12 +7,12 @@ dependencies:
     - field.field.node.news.comment
     - field.field.node.news.field_categories_for_title
     - field.field.node.news.field_category
+    - field.field.node.news.field_content
     - field.field.node.news.field_description
     - field.field.node.news.field_editor_picks
     - field.field.node.news.field_image
     - field.field.node.news.field_link_on_comments
     - field.field.node.news.field_must_read
-    - field.field.node.news.field_share_networks
     - field.field.node.news.field_short_title
     - field.field.node.news.field_title
     - node.type.news
@@ -20,7 +20,6 @@ dependencies:
     - comment
     - entity_reference_revisions
     - image
-    - link
     - text
     - user
 id: node.news.default
@@ -53,6 +52,15 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
+  field_content:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
   field_image:
     type: image
     label: hidden
@@ -63,25 +71,13 @@ content:
     weight: 0
     region: content
   field_link_on_comments:
-    type: link
+    type: image
     label: hidden
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      image_link: ''
+      image_style: ''
     third_party_settings: {  }
-    weight: 6
-    region: content
-  field_share_networks:
-    type: entity_reference_revisions_entity_view
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 8
+    weight: 5
     region: content
   field_short_title:
     type: string
@@ -101,7 +97,7 @@ content:
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
 hidden:
   field_description: true

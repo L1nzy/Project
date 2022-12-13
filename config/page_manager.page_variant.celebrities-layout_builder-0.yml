@@ -1,0 +1,120 @@
+uuid: 385ed366-85ea-4db1-9e88-7183241e288c
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.celebrities
+    - views.view.celebrities_page
+    - views.view.latest_news_short
+    - views.view.must_read_short
+  content:
+    - 'block_content:block_with_advertising:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
+    - 'block_content:category_page_banner:11545f42-0dfa-4112-80bc-73dabf9f89cc'
+  module:
+    - block_content
+    - layout_builder
+    - layout_discovery
+    - views
+id: celebrities-layout_builder-0
+label: 'Layout Builder'
+weight: 0
+variant: layout_builder
+variant_settings:
+  id: layout_builder
+  label: null
+  weight: 0
+  uuid: 0c9d43d7-e54a-43e3-b361-6f75e9c57f0e
+  sections:
+    -
+      layout_id: layout_onecol
+      layout_settings:
+        label: 'baner section'
+        context_mapping: {  }
+      components:
+        76bb239f-34c4-45f8-898f-3fc95c45e229:
+          uuid: 76bb239f-34c4-45f8-898f-3fc95c45e229
+          region: content
+          configuration:
+            id: 'block_content:11545f42-0dfa-4112-80bc-73dabf9f89cc'
+            label: 'Celebrities baner'
+            label_display: '0'
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
+            context_mapping: {  }
+          weight: 0
+          additional: {  }
+      third_party_settings: {  }
+    -
+      layout_id: layout_twocol_section
+      layout_settings:
+        label: ' content and sidebar'
+        context_mapping: {  }
+        column_widths: 50-50
+      components:
+        6b2730c6-d150-42f0-ac70-8dc9ef45a3fc:
+          uuid: 6b2730c6-d150-42f0-ac70-8dc9ef45a3fc
+          region: first
+          configuration:
+            id: 'views_block:celebrities_page-block_1'
+            label: ''
+            label_display: '0'
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 0
+          additional: {  }
+        2dbd4471-adcb-470b-8958-0b13f09bcd84:
+          uuid: 2dbd4471-adcb-470b-8958-0b13f09bcd84
+          region: second
+          configuration:
+            id: 'views_block:latest_news_short-block_1'
+            label: 'Latest news'
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: 'Latest news'
+            items_per_page: none
+          weight: 0
+          additional: {  }
+        457eea7e-afd5-4e9d-a2e2-ad158517182b:
+          uuid: 457eea7e-afd5-4e9d-a2e2-ad158517182b
+          region: second
+          configuration:
+            id: 'views_block:must_read_short-block_1'
+            label: 'Must read'
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: 'Must read'
+            items_per_page: none
+          weight: 1
+          additional: {  }
+      third_party_settings: {  }
+    -
+      layout_id: layout_onecol
+      layout_settings:
+        label: content
+        context_mapping: {  }
+      components:
+        a6ad5828-a654-4427-b848-5a6141a29ca2:
+          uuid: a6ad5828-a654-4427-b848-5a6141a29ca2
+          region: content
+          configuration:
+            id: 'block_content:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
+            label: Advertising970x250
+            label_display: '0'
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
+            context_mapping: {  }
+          weight: 0
+          additional: {  }
+      third_party_settings: {  }
+page: celebrities
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

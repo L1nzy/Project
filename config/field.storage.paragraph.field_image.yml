@@ -1,14 +1,14 @@
-uuid: 8efe29c6-12f5-43e9-ac66-b1f7e48b4c4a
+uuid: f6125e0c-84f1-450c-80b3-565cd1aa5ea3
 langcode: en
 status: true
 dependencies:
   module:
     - file
     - image
-    - node
-id: node.field_link_on_comments
-field_name: field_link_on_comments
-entity_type: node
+    - paragraphs
+id: paragraph.field_image
+field_name: field_image
+entity_type: paragraph
 type: image
 settings:
   target_type: file
@@ -16,11 +16,11 @@ settings:
   display_default: false
   uri_scheme: public
   default_image:
-    uuid: fedfd667-0abd-4adb-b653-5f007bb1a824
+    uuid: ''
     alt: ''
     title: ''
-    width: 50
-    height: 50
+    width: null
+    height: null
 module: image
 locked: false
 cardinality: 1

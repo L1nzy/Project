@@ -1,17 +1,17 @@
-uuid: 74ed1873-cc33-4227-8769-6e6df1f84cf7
+uuid: d86ff81f-48a6-409b-8c99-6e25c9715324
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_link_on_comments
-    - node.type.news
+    - field.storage.paragraph.field_image
+    - paragraphs.paragraphs_type.title_description_image
   module:
     - image
-id: node.news.field_link_on_comments
-field_name: field_link_on_comments
-entity_type: node
-bundle: news
-label: 'link on comments'
+id: paragraph.title_description_image.field_image
+field_name: field_image
+entity_type: paragraph
+bundle: title_description_image
+label: Image
 description: ''
 required: false
 translatable: false
@@ -35,4 +35,7 @@ settings:
     title: ''
     width: null
     height: null
+    caption: ''
+  caption_field: 0
+  caption_field_required: 0
 field_type: image
