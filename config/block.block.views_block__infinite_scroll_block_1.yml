@@ -1,0 +1,30 @@
+uuid: 2c3cff0c-b366-4ab3-833b-2e49c0c9004b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.infinite_scroll
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: views_block__infinite_scroll_block_1
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:infinite_scroll-block_1'
+settings:
+  id: 'views_block:infinite_scroll-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/node/*'

@@ -8,7 +8,6 @@ dependencies:
     - taxonomy.vocabulary.categories
   content:
     - 'taxonomy_term:categories:1c0d1a75-96a5-4dda-a7e5-be6ad4b015c7'
-    - 'taxonomy_term:categories:65326cfc-9da6-4b7b-84c8-7fd439df0896'
     - 'taxonomy_term:categories:7dd3d4d5-1023-45e9-a959-4d247b11e090'
     - 'taxonomy_term:categories:8fd8aa6b-c478-4158-9093-2ebf4c577c5e'
     - 'taxonomy_term:categories:cc9d68de-66de-4449-857e-49f25671b513'
@@ -144,6 +143,7 @@ display:
           plugin_id: bundle
           value:
             news: news
+          group: 1
           expose:
             operator_limit_selection: false
             operator_list: {  }
@@ -158,7 +158,6 @@ display:
           operator: or
           value:
             6: 6
-            1: 1
             10: 10
             7: 7
             9: 9
@@ -198,6 +197,10 @@ display:
           hierarchy: false
           limit: true
           error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: default
       row:

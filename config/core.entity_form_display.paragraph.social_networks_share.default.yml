@@ -3,24 +3,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.social_networks_share.field_icon
+    - field.field.paragraph.social_networks_share.field_icons
     - field.field.paragraph.social_networks_share.field_share
-    - image.style.thumbnail
     - paragraphs.paragraphs_type.social_networks_share
-  module:
-    - image
 id: paragraph.social_networks_share.default
 targetEntityType: paragraph
 bundle: social_networks_share
 mode: default
 content:
-  field_icon:
-    type: image_image
+  field_icons:
+    type: string_textfield
     weight: 1
     region: content
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_share:
     type: string_textfield

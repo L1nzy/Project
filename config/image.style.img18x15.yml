@@ -1,0 +1,15 @@
+uuid: 270e6651-ae92-45f8-b87b-e61c854fc49d
+langcode: en
+status: true
+dependencies: {  }
+name: img18x15
+label: img18x15
+effects:
+  f1e36d5b-adc9-4bc3-a42d-1624e2804541:
+    uuid: f1e36d5b-adc9-4bc3-a42d-1624e2804541
+    id: image_scale
+    weight: 1
+    data:
+      width: 18
+      height: 15
+      upscale: false

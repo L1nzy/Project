@@ -1,0 +1,15 @@
+uuid: f2bbf5a3-c188-4d31-a7d9-1c23f3d81437
+langcode: en
+status: true
+dependencies: {  }
+name: img1200x550
+label: img1200x550
+effects:
+  4a70ab41-1d9f-4cb1-b008-c750ae9c52a7:
+    uuid: 4a70ab41-1d9f-4cb1-b008-c750ae9c52a7
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1250
+      height: 550
+      anchor: center-center

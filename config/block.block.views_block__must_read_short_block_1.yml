@@ -16,9 +16,9 @@ provider: null
 plugin: 'views_block:must_read_short-block_1'
 settings:
   id: 'views_block:must_read_short-block_1'
-  label: ''
+  label: 'Must read'
   label_display: visible
   provider: views
-  views_label: ''
+  views_label: 'Must read'
   items_per_page: none
 visibility: {  }

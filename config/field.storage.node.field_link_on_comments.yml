@@ -1,16 +1,27 @@
-uuid: 080e1705-7ee1-41ae-9941-d61e813442c6
+uuid: 8efe29c6-12f5-43e9-ac66-b1f7e48b4c4a
 langcode: en
 status: true
 dependencies:
   module:
-    - link
+    - file
+    - image
     - node
 id: node.field_link_on_comments
 field_name: field_link_on_comments
 entity_type: node
-type: link
-settings: {  }
-module: link
+type: image
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  default_image:
+    uuid: fedfd667-0abd-4adb-b653-5f007bb1a824
+    alt: ''
+    title: ''
+    width: 50
+    height: 50
+module: image
 locked: false
 cardinality: 1
 translatable: true

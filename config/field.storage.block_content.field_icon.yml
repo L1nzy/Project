@@ -1,27 +1,18 @@
-uuid: 3c094c92-42ba-40c2-bc3b-54c7d457bea0
+uuid: 9080d47a-9a80-4e78-a62f-ab826f30cc20
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
-    - file
-    - image
 id: block_content.field_icon
 field_name: field_icon
 entity_type: block_content
-type: image
+type: string
 settings:
-  target_type: file
-  display_field: false
-  display_default: false
-  uri_scheme: public
-  default_image:
-    uuid: ''
-    alt: ''
-    title: ''
-    width: null
-    height: null
-module: image
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
 locked: false
 cardinality: -1
 translatable: true

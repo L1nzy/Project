@@ -1,0 +1,44 @@
+uuid: ab840364-5c59-4585-9da4-61dd6c4b907a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.news
+    - paragraphs.paragraphs_type.social_networks_share
+    - paragraphs.paragraphs_type.title_description_
+    - paragraphs.paragraphs_type.title_description_image
+  module:
+    - entity_reference_revisions
+id: node.news.field_content
+field_name: field_content
+entity_type: node
+bundle: news
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      social_networks_share: social_networks_share
+      title_description_: title_description_
+      title_description_image: title_description_image
+    negate: 0
+    target_bundles_drag_drop:
+      social_networks_share:
+        weight: 5
+        enabled: true
+      statistics_of_social_networks:
+        weight: 6
+        enabled: false
+      title_description_:
+        weight: 7
+        enabled: true
+      title_description_image:
+        weight: 8
+        enabled: true
+field_type: entity_reference_revisions
