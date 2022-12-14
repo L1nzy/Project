@@ -1,0 +1,32 @@
+uuid: a94fb7c0-209e-4e96-b739-bf02088ed5ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.key_value.field_key
+    - field.field.paragraph.key_value.field_value
+    - paragraphs.paragraphs_type.key_value
+id: paragraph.key_value.default
+targetEntityType: paragraph
+bundle: key_value
+mode: default
+content:
+  field_key:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_value:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_content
     - node.type.news
+    - paragraphs.paragraphs_type.key_value
     - paragraphs.paragraphs_type.social_networks_share
     - paragraphs.paragraphs_type.title_description_
     - paragraphs.paragraphs_type.title_description_image
@@ -25,10 +26,14 @@ settings:
   handler_settings:
     target_bundles:
       social_networks_share: social_networks_share
+      key_value: key_value
       title_description_: title_description_
       title_description_image: title_description_image
     negate: 0
     target_bundles_drag_drop:
+      key_value:
+        weight: 6
+        enabled: true
       social_networks_share:
         weight: 5
         enabled: true
