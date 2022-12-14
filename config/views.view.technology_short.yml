@@ -1,21 +1,19 @@
-uuid: 568413f6-e283-460b-a3f9-9fd7b82c37ec
+uuid: e19bb19d-9dcb-4aa2-af5a-834e02691057
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.standart_news_format
+    - core.entity_view_mode.node.teaser
     - node.type.news
     - taxonomy.vocabulary.categories
   content:
-    - 'taxonomy_term:categories:1c0d1a75-96a5-4dda-a7e5-be6ad4b015c7'
-    - 'taxonomy_term:categories:f32f4406-108e-4677-aa16-3c18ee4ab014'
+    - 'taxonomy_term:categories:ef4ee46a-4f15-4b99-bbdf-17b448829d89'
   module:
     - node
-    - statistics
     - taxonomy
     - user
-id: music_festival
-label: 'Music Festivals'
+id: technology_short
+label: 'Technology short'
 module: views
 description: ''
 tag: ''
@@ -28,7 +26,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Music Festivals'
+      title: 'Technology short'
       fields:
         title:
           id: title
@@ -81,7 +79,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 3
+          items_per_page: 4
       exposed_form:
         type: basic
         options:
@@ -101,19 +99,6 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        totalcount:
-          id: totalcount
-          table: node_counter
-          field: totalcount
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: standard
-          order: DESC
-          expose:
-            label: ''
-            field_identifier: ''
-          exposed: false
         created:
           id: created
           table: node_field_data
@@ -154,12 +139,11 @@ display:
           plugin_id: bundle
           value:
             news: news
-          group: 1
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        field_category_target_id_1:
-          id: field_category_target_id_1
+        field_category_target_id:
+          id: field_category_target_id
           table: node__field_category
           field: field_category_target_id
           relationship: none
@@ -168,8 +152,7 @@ display:
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            7: 7
-            9: 9
+            5: 5
           group: 1
           exposed: false
           expose:
@@ -205,17 +188,12 @@ display:
           hierarchy: false
           limit: true
           error_message: true
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
       style:
         type: default
       row:
         type: 'entity:node'
         options:
-          relationship: none
-          view_mode: standart_news_format
+          view_mode: teaser
       query:
         type: views_query
         options:
@@ -225,21 +203,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      group_by: true
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text
-          empty: false
-          content:
-            value: '<h4 class="td-block-title"><span>Music Festivals<span class="td-block-speech-bubble">POPULAR</span></span><div class="td-block-subtitle">Find Your Perfect Music Festival</div></h4>'
-            format: full_html
-          tokenize: false
+      header: {  }
       footer: {  }
       display_extenders: {  }
     cache_metadata:
