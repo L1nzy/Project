@@ -20,7 +20,6 @@ dependencies:
     - comment
     - entity_reference_revisions
     - image
-    - link
     - text
     - user
 id: node.news.default
@@ -60,7 +59,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 9
+    weight: 8
     region: content
   field_image:
     type: image
@@ -72,16 +71,13 @@ content:
     weight: 0
     region: content
   field_link_on_comments:
-    type: link
+    type: image
     label: hidden
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      image_link: ''
+      image_style: ''
     third_party_settings: {  }
-    weight: 6
+    weight: 5
     region: content
   field_short_title:
     type: string
@@ -101,7 +97,7 @@ content:
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
 hidden:
   field_description: true

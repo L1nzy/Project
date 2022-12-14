@@ -25,7 +25,16 @@ settings:
       statistics_of_social_networks: statistics_of_social_networks
     negate: 0
     target_bundles_drag_drop:
+      social_networks_share:
+        weight: 5
+        enabled: false
       statistics_of_social_networks:
         weight: 2
         enabled: true
+      title_description_:
+        weight: 7
+        enabled: false
+      title_description_image:
+        weight: 8
+        enabled: false
 field_type: entity_reference_revisions

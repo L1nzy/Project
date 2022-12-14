@@ -5,9 +5,14 @@ dependencies:
   config:
     - core.entity_view_mode.node.standart_news_format
     - node.type.news
+    - taxonomy.vocabulary.categories
+  content:
+    - 'taxonomy_term:categories:1c0d1a75-96a5-4dda-a7e5-be6ad4b015c7'
+    - 'taxonomy_term:categories:f32f4406-108e-4677-aa16-3c18ee4ab014'
   module:
     - node
     - statistics
+    - taxonomy
     - user
 id: music_festival
 label: 'Music Festivals'
@@ -125,6 +130,19 @@ display:
             field_identifier: ''
           exposed: false
           granularity: second
+        totalcount_1:
+          id: totalcount_1
+          table: node_counter
+          field: totalcount
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
       arguments: {  }
       filters:
         status:
@@ -153,19 +171,18 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        totalcount:
-          id: totalcount
-          table: node_counter
-          field: totalcount
+        field_category_target_id_1:
+          id: field_category_target_id_1
+          table: node__field_category
+          field: field_category_target_id
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: numeric
-          operator: '>='
+          plugin_id: taxonomy_index_tid
+          operator: or
           value:
-            min: ''
-            max: ''
-            value: '1'
+            7: 7
+            9: 9
           group: 1
           exposed: false
           expose:
@@ -182,9 +199,7 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
+            reduce: false
           is_grouped: false
           group_info:
             label: ''
@@ -197,6 +212,12 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+          reduce_duplicates: false
+          vid: categories
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
       filter_groups:
         operator: AND
         groups:
@@ -226,6 +247,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -241,6 +263,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }

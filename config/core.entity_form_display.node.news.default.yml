@@ -19,7 +19,6 @@ dependencies:
   module:
     - comment
     - image
-    - link
     - paragraphs
     - path
     - text
@@ -102,12 +101,12 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
   field_link_on_comments:
-    type: link_default
-    weight: 31
+    type: image_image
+    weight: 35
     region: content
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
   field_must_read:
     type: boolean_checkbox

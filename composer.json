@@ -20,6 +20,7 @@
         "drupal/core-composer-scaffold": "^9.3",
         "drupal/core-project-message": "^9.3",
         "drupal/core-recommended": "^9.3",
+        "drupal/nextpre": "^9.0",
         "drupal/image_field_caption": "^1.2",
         "drupal/page_manager": "^4.0@RC",
         "drupal/paragraphs": "^1.15",
