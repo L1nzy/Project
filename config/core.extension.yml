@@ -35,6 +35,7 @@ module:
   media_library: 0
   menu_link_content: 0
   menu_ui: 0
+  nextpre: 0
   node: 0
   options: 0
   page_cache: 0
@@ -52,6 +53,7 @@ module:
   text: 0
   toolbar: 0
   tour: 0
+  update: 0
   user: 0
   views_infinite_scroll: 0
   views_slideshow: 0
@@ -59,7 +61,6 @@ module:
   views_ui: 0
   views: 10
   paragraphs: 11
-  update: 0
 theme:
   bartik: 0
   seven: 0
