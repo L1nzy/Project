@@ -1,0 +1,19 @@
+uuid: b1b1361e-e7b2-4e29-947f-45d54a26c645
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icons
+    - paragraphs.paragraphs_type.social_networks_share
+id: paragraph.social_networks_share.field_icons
+field_name: field_icons
+entity_type: paragraph
+bundle: social_networks_share
+label: icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - page_manager.page.entertainment
+    - views.view.category_related_block
     - views.view.entertainment
-    - views.view.latest_news
+    - views.view.latest_news_short
     - views.view.must_read
   content:
+    - 'block_content:block_with_advertising:0f939486-355a-4894-abab-f96aa1a6df8f'
     - 'block_content:block_with_advertising:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
     - 'block_content:category_page_banner:c21e1261-9a9d-45e6-ae68-3f7805535ff9'
   module:
@@ -66,19 +68,6 @@ variant_settings:
             items_per_page: none
           weight: 0
           additional: {  }
-        aaf28fd2-47aa-4799-b435-0ce5ce4ef777:
-          uuid: aaf28fd2-47aa-4799-b435-0ce5ce4ef777
-          region: second
-          configuration:
-            id: 'views_block:latest_news-block_1'
-            label: ''
-            label_display: visible
-            provider: views
-            context_mapping: {  }
-            views_label: ''
-            items_per_page: '3'
-          weight: 0
-          additional: {  }
         3356d80c-f5be-4952-b4a2-2985a0e9258d:
           uuid: 3356d80c-f5be-4952-b4a2-2985a0e9258d
           region: second
@@ -90,7 +79,34 @@ variant_settings:
             context_mapping: {  }
             views_label: 'Must read'
             items_per_page: '2'
+          weight: 3
+          additional: {  }
+        71d041df-a1a9-4de4-9c69-bb64ab20e671:
+          uuid: 71d041df-a1a9-4de4-9c69-bb64ab20e671
+          region: second
+          configuration:
+            id: 'views_block:latest_news_short-block_1'
+            label: 'Latest news '
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: 'Latest news '
+            items_per_page: none
           weight: 1
+          additional: {  }
+        09c1ec0c-c37c-44cf-8e60-80539c988e4e:
+          uuid: 09c1ec0c-c37c-44cf-8e60-80539c988e4e
+          region: second
+          configuration:
+            id: 'block_content:0f939486-355a-4894-abab-f96aa1a6df8f'
+            label: Advertisement
+            label_display: visible
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
+            context_mapping: {  }
+          weight: 2
           additional: {  }
       third_party_settings: {  }
     -
@@ -112,6 +128,19 @@ variant_settings:
             view_mode: full
             context_mapping: {  }
           weight: 0
+          additional: {  }
+        fb100a22-ba60-4421-ac3c-09bef1c5b51c:
+          uuid: fb100a22-ba60-4421-ac3c-09bef1c5b51c
+          region: content
+          configuration:
+            id: 'views_block:category_related_block-block_1'
+            label: ''
+            label_display: '0'
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 1
           additional: {  }
       third_party_settings: {  }
 page: entertainment

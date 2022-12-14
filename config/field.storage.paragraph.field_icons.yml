@@ -1,12 +1,12 @@
-uuid: 9080d47a-9a80-4e78-a62f-ab826f30cc20
+uuid: e1c590eb-646c-4b0e-bc70-601283b89b98
 langcode: en
 status: true
 dependencies:
   module:
-    - block_content
-id: block_content.field_icon
-field_name: field_icon
-entity_type: block_content
+    - paragraphs
+id: paragraph.field_icons
+field_name: field_icons
+entity_type: paragraph
 type: string
 settings:
   max_length: 255
@@ -14,7 +14,7 @@ settings:
   is_ascii: false
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

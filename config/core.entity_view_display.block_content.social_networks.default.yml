@@ -6,20 +6,16 @@ dependencies:
     - block_content.type.social_networks
     - field.field.block_content.social_networks.field_icon
     - field.field.block_content.social_networks.field_share_link
-    - image.style.img18x15
-  module:
-    - image
 id: block_content.social_networks.default
 targetEntityType: block_content
 bundle: social_networks
 mode: default
 content:
   field_icon:
-    type: image
+    type: string
     label: hidden
     settings:
-      image_link: ''
-      image_style: img18x15
+      link_to_entity: false
     third_party_settings: {  }
     weight: 1
     region: content
