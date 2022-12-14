@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.title_description_image.field_caption
     - field.field.paragraph.title_description_image.field_description
     - field.field.paragraph.title_description_image.field_image
     - field.field.paragraph.title_description_image.field_paragraph_title
@@ -15,6 +16,14 @@ targetEntityType: paragraph
 bundle: title_description_image
 mode: default
 content:
+  field_caption:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_description:
     type: text_default
     label: hidden

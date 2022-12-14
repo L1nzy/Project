@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.title_description_image.field_caption
     - field.field.paragraph.title_description_image.field_description
     - field.field.paragraph.title_description_image.field_image
     - field.field.paragraph.title_description_image.field_paragraph_title
@@ -16,6 +17,14 @@ targetEntityType: paragraph
 bundle: title_description_image
 mode: default
 content:
+  field_caption:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_description:
     type: text_textarea
     weight: 1
