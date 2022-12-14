@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.title_description_image.field_description
     - field.field.paragraph.title_description_image.field_image
     - field.field.paragraph.title_description_image.field_paragraph_title
+    - image.style.img1200x550
     - paragraphs.paragraphs_type.title_description_image
   module:
     - image

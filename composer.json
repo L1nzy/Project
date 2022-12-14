@@ -21,8 +21,10 @@
         "drupal/core-project-message": "^9.3",
         "drupal/views_slideshow": "^4.8",
         "drupal/core-recommended": "^9.3",
+        "drupal/image_field_caption": "^1.2",
         "drupal/page_manager": "^4.0@RC",
-        "drupal/paragraphs": "^1.15"
+        "drupal/paragraphs": "^1.15",
+        "drupal/views_slideshow": "^4.8"
     },
     "conflict": {
         "drupal/drupal": "*"
