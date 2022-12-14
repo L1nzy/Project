@@ -1,0 +1,15 @@
+uuid: aa5b0529-1f7b-4686-b931-401aecd47a55
+langcode: en
+status: true
+dependencies: {  }
+name: img312x312
+label: img312x312
+effects:
+  10e36898-a4a0-4af4-9b8c-8194ca549985:
+    uuid: 10e36898-a4a0-4af4-9b8c-8194ca549985
+    id: image_scale
+    weight: 1
+    data:
+      width: 312
+      height: 312
+      upscale: false

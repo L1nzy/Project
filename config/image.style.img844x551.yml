@@ -1,0 +1,15 @@
+uuid: a0f1f692-7dd2-4d42-95fd-6f69e5c655d1
+langcode: en
+status: true
+dependencies: {  }
+name: img844x551
+label: img844x551
+effects:
+  096b4a08-6fea-4c89-9383-6274fbe77d6e:
+    uuid: 096b4a08-6fea-4c89-9383-6274fbe77d6e
+    id: image_scale
+    weight: 1
+    data:
+      width: 844
+      height: 551
+      upscale: false

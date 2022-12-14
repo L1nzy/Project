@@ -7,6 +7,7 @@ dependencies:
     - field.storage.user.field_link_at_site
     - field.storage.user.field_social_networks
     - field.storage.user.user_picture
+    - image.style.img120x120
     - image.style.img38x38
   module:
     - image
@@ -82,7 +83,7 @@ display:
           type: image
           settings:
             image_link: ''
-            image_style: ''
+            image_style: img120x120
           group_column: ''
           group_columns: {  }
           group_rows: true

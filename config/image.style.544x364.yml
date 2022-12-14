@@ -1,0 +1,15 @@
+uuid: dac40d38-ebbc-4668-971b-62e1450bf1a9
+langcode: en
+status: true
+dependencies: {  }
+name: 544x364
+label: 544x364
+effects:
+  151f2dda-f019-41a7-b363-75a982f50ba3:
+    uuid: 151f2dda-f019-41a7-b363-75a982f50ba3
+    id: image_scale
+    weight: 1
+    data:
+      width: 533
+      height: 364
+      upscale: false

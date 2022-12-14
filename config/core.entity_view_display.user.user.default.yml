@@ -7,7 +7,7 @@ dependencies:
     - field.field.user.user.field_link_at_site
     - field.field.user.user.field_social_networks
     - field.field.user.user.user_picture
-    - image.style.thumbnail
+    - image.style.img120x120
   module:
     - image
     - link
@@ -44,7 +44,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: img18x15
     third_party_settings: {  }
     weight: 4
     region: content
@@ -58,7 +58,7 @@ content:
     label: hidden
     settings:
       image_link: content
-      image_style: thumbnail
+      image_style: img120x120
     third_party_settings: {  }
     weight: 0
     region: content

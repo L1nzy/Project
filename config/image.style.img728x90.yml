@@ -1,0 +1,15 @@
+uuid: 9aa4c4f7-6a2f-4fc8-874c-cef84609b99b
+langcode: en
+status: true
+dependencies: {  }
+name: img728x90
+label: img728x90
+effects:
+  254b1b79-cdf4-4f71-9319-010ab8805530:
+    uuid: 254b1b79-cdf4-4f71-9319-010ab8805530
+    id: image_scale
+    weight: 1
+    data:
+      width: 728
+      height: 90
+      upscale: false

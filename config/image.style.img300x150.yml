@@ -1,0 +1,15 @@
+uuid: 15972d8d-e98b-475b-b350-ceee4d2dc363
+langcode: en
+status: true
+dependencies: {  }
+name: img300x150
+label: img300x150
+effects:
+  e7296da7-d316-4347-a8f9-0e34718a9c21:
+    uuid: e7296da7-d316-4347-a8f9-0e34718a9c21
+    id: image_scale
+    weight: 1
+    data:
+      width: 300
+      height: 150
+      upscale: false
