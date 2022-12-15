@@ -1,0 +1,25 @@
+uuid: 53828bf8-320a-469a-b0d0-a45d3a0bd889
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:logo:cc8fac9b-9eaf-4b11-b030-840237125bd1'
+  module:
+    - block_content
+  theme:
+    - b5subtheme
+id: logo_5
+theme: b5subtheme
+region: nav_branding
+weight: 0
+provider: null
+plugin: 'block_content:cc8fac9b-9eaf-4b11-b030-840237125bd1'
+settings:
+  id: 'block_content:cc8fac9b-9eaf-4b11-b030-840237125bd1'
+  label: Logo
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

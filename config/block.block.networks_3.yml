@@ -1,0 +1,25 @@
+uuid: 8ba60674-f6d5-4e1e-94b7-5b3ca4709867
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:social_networks:c0304607-ad2e-49ef-ba69-621e84203368'
+  module:
+    - block_content
+  theme:
+    - b5subtheme
+id: networks_3
+theme: b5subtheme
+region: nav_additional
+weight: 0
+provider: null
+plugin: 'block_content:c0304607-ad2e-49ef-ba69-621e84203368'
+settings:
+  id: 'block_content:c0304607-ad2e-49ef-ba69-621e84203368'
+  label: Networks
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

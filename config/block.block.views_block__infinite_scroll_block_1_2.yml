@@ -1,0 +1,30 @@
+uuid: c9eabae4-805b-4885-ac2c-4320090233b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.infinite_scroll
+  module:
+    - system
+    - views
+  theme:
+    - b5subtheme
+id: views_block__infinite_scroll_block_1_2
+theme: b5subtheme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:infinite_scroll-block_1'
+settings:
+  id: 'views_block:infinite_scroll-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/node/*'
