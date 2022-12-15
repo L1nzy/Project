@@ -1,6 +1,6 @@
 uuid: 2c3cff0c-b366-4ab3-833b-2e49c0c9004b
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.infinite_scroll

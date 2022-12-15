@@ -4,12 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.statistics_of_social_networks.field_counter_followers
-    - field.field.paragraph.statistics_of_social_networks.field_icon
+    - field.field.paragraph.statistics_of_social_networks.field_icons
     - field.field.paragraph.statistics_of_social_networks.field_social_button
     - field.field.paragraph.statistics_of_social_networks.field_title
     - paragraphs.paragraphs_type.statistics_of_social_networks
   module:
-    - image
     - link
 id: paragraph.statistics_of_social_networks.default
 targetEntityType: paragraph
@@ -25,12 +24,11 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_icon:
-    type: image
+  field_icons:
+    type: string
     label: hidden
     settings:
-      image_link: ''
-      image_style: ''
+      link_to_entity: false
     third_party_settings: {  }
     weight: 0
     region: content

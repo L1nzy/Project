@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - page_manager.page.technology
-    - views.view.latest_news
+    - views.view.category_related_block
+    - views.view.latest_news_short
     - views.view.must_read
     - views.view.technology_page
   content:
+    - 'block_content:block_with_advertising:0f939486-355a-4894-abab-f96aa1a6df8f'
     - 'block_content:block_with_advertising:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
     - 'block_content:category_page_banner:8413d3e5-4e57-440d-9a91-b2416d123f4b'
   module:
@@ -66,19 +68,6 @@ variant_settings:
             items_per_page: none
           weight: 0
           additional: {  }
-        507d8db2-0a33-48eb-9cae-46184d592efe:
-          uuid: 507d8db2-0a33-48eb-9cae-46184d592efe
-          region: second
-          configuration:
-            id: 'views_block:latest_news-block_2'
-            label: ''
-            label_display: visible
-            provider: views
-            context_mapping: {  }
-            views_label: ''
-            items_per_page: '3'
-          weight: 0
-          additional: {  }
         0cf78e32-e87f-4dab-80c1-6c2f3019dd79:
           uuid: 0cf78e32-e87f-4dab-80c1-6c2f3019dd79
           region: second
@@ -90,7 +79,34 @@ variant_settings:
             context_mapping: {  }
             views_label: 'Must read'
             items_per_page: '2'
+          weight: 3
+          additional: {  }
+        592c1a77-539a-46e5-9689-cc6e34e70920:
+          uuid: 592c1a77-539a-46e5-9689-cc6e34e70920
+          region: second
+          configuration:
+            id: 'views_block:latest_news_short-block_1'
+            label: 'Latest news'
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: 'Latest news'
+            items_per_page: none
           weight: 1
+          additional: {  }
+        c2b1fac7-a70f-4b53-8681-e19f7965db50:
+          uuid: c2b1fac7-a70f-4b53-8681-e19f7965db50
+          region: second
+          configuration:
+            id: 'block_content:0f939486-355a-4894-abab-f96aa1a6df8f'
+            label: Advertising300x250
+            label_display: '0'
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
+            context_mapping: {  }
+          weight: 2
           additional: {  }
       third_party_settings: {  }
     -
@@ -112,6 +128,19 @@ variant_settings:
             view_mode: full
             context_mapping: {  }
           weight: 0
+          additional: {  }
+        7fc1d793-f145-40b2-8de4-1235f0518be5:
+          uuid: 7fc1d793-f145-40b2-8de4-1235f0518be5
+          region: content
+          configuration:
+            id: 'views_block:category_related_block-block_1'
+            label: ''
+            label_display: '0'
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 1
           additional: {  }
       third_party_settings: {  }
 page: technology

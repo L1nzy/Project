@@ -79,7 +79,6 @@ display:
         type: none
         options:
           offset: 0
-          items_per_page: null
       exposed_form:
         type: basic
         options:
@@ -139,6 +138,7 @@ display:
           plugin_id: bundle
           value:
             news: news
+          group: 1
           expose:
             operator_limit_selection: false
             operator_list: {  }
@@ -188,6 +188,10 @@ display:
           hierarchy: false
           limit: true
           error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: default
       row:
