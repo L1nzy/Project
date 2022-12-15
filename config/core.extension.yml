@@ -59,6 +59,7 @@ module:
   views_ui: 0
   views: 10
   paragraphs: 11
+  update: 0
 theme:
   bartik: 0
   seven: 0

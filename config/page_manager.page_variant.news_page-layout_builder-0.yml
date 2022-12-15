@@ -10,7 +10,7 @@ dependencies:
     - views.view.food_drink
     - views.view.latest_news
     - views.view.music_festival
-    - views.view.technology_page
+    - views.view.technology_short
     - views.view.top_news
     - views.view.tv_short
   content:
@@ -90,19 +90,6 @@ variant_settings:
             items_per_page: none
           weight: 2
           additional: {  }
-        727ad22f-c38f-4063-8a19-e1b7f75fd1aa:
-          uuid: 727ad22f-c38f-4063-8a19-e1b7f75fd1aa
-          region: second
-          configuration:
-            id: 'views_block:technology_page-block_1'
-            label: ''
-            label_display: visible
-            provider: views
-            context_mapping: {  }
-            views_label: ''
-            items_per_page: '4'
-          weight: 3
-          additional: {  }
         56ed14b3-cf98-4377-9098-c47723fb46cc:
           uuid: 56ed14b3-cf98-4377-9098-c47723fb46cc
           region: second
@@ -114,7 +101,7 @@ variant_settings:
             context_mapping: {  }
             views_label: TV
             items_per_page: none
-          weight: 6
+          weight: 7
           additional: {  }
         b5065b53-bfdf-41ef-945e-0091956cf90f:
           uuid: b5065b53-bfdf-41ef-945e-0091956cf90f
@@ -127,7 +114,7 @@ variant_settings:
             context_mapping: {  }
             views_label: ''
             items_per_page: none
-          weight: 7
+          weight: 8
           additional: {  }
         67538e81-58ec-4d22-893a-e89cbbdeecad:
           uuid: 67538e81-58ec-4d22-893a-e89cbbdeecad
@@ -140,7 +127,7 @@ variant_settings:
             context_mapping: {  }
             views_label: Celebrities
             items_per_page: none
-          weight: 8
+          weight: 9
           additional: {  }
         96adbea2-6e64-48ce-96d1-392c418890fa:
           uuid: 96adbea2-6e64-48ce-96d1-392c418890fa
@@ -154,7 +141,7 @@ variant_settings:
             info: ''
             view_mode: full
             context_mapping: {  }
-          weight: 5
+          weight: 6
           additional: {  }
         218356a6-bf91-4059-8db0-a18596260009:
           uuid: 218356a6-bf91-4059-8db0-a18596260009
@@ -168,6 +155,19 @@ variant_settings:
             info: ''
             view_mode: full
             context_mapping: {  }
+          weight: 5
+          additional: {  }
+        f111aa55-87ff-4852-999b-7d6a6d5afe32:
+          uuid: f111aa55-87ff-4852-999b-7d6a6d5afe32
+          region: second
+          configuration:
+            id: 'views_block:technology_short-block_1'
+            label: 'Technology '
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: 'Technology '
+            items_per_page: none
           weight: 4
           additional: {  }
       third_party_settings: {  }

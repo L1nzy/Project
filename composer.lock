@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5f31e5c2bc19aa97cca03ce4583ee3e1",
+    "content-hash": "4a3b1e460da2ee93fab39f209d602e4c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1165,27 +1165,27 @@
             }
         },
         {
-            "name": "drupal/image_field_caption",
-            "version": "1.2.0",
+            "name": "drupal/nextpre",
+            "version": "9.0.2",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/image_field_caption.git",
-                "reference": "8.x-1.2"
+                "url": "https://git.drupalcode.org/project/nextpre.git",
+                "reference": "9.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/image_field_caption-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "ea4705e97d8b13257507f2013e16a7ba244a4298"
+                "url": "https://ftp.drupal.org/files/projects/nextpre-9.0.2.zip",
+                "reference": "9.0.2",
+                "shasum": "cf3ba8029232688423c0906d1925ebf101f19b08"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^8 || ^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1651684811",
+                    "version": "9.0.2",
+                    "datestamp": "1658677976",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1194,35 +1194,19 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
-                    "name": "awm",
-                    "homepage": "https://www.drupal.org/user/1059398"
-                },
-                {
-                    "name": "hanoii",
-                    "homepage": "https://www.drupal.org/user/23157"
-                },
-                {
-                    "name": "iStryker",
-                    "homepage": "https://www.drupal.org/user/303676"
-                },
-                {
-                    "name": "ironsizide",
-                    "homepage": "https://www.drupal.org/user/787980"
-                },
-                {
-                    "name": "tyler.frankenstein",
-                    "homepage": "https://www.drupal.org/user/150680"
+                    "name": "Rohit Rajput (rohit-drupal)",
+                    "homepage": "https://www.drupal.org/u/rohit-drupal",
+                    "role": "Maintainer"
                 }
             ],
-            "description": "Add caption to image field.",
-            "homepage": "https://www.drupal.org/project/image_field_caption",
+            "description": "Next and previous link on detail page",
+            "homepage": "https://www.drupal.org/project/nextpre",
             "support": {
-                "source": "https://git.drupalcode.org/project/image_field_caption",
-                "issues": "https://www.drupal.org/project/issues/image_field_caption"
+                "source": "https://git.drupalcode.org/project/nextpre"
             }
         },
         {
@@ -1370,6 +1354,62 @@
             "homepage": "https://www.drupal.org/project/paragraphs",
             "support": {
                 "source": "https://git.drupalcode.org/project/paragraphs"
+            }
+        },
+        {
+            "name": "drupal/views_infinite_scroll",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_infinite_scroll.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_infinite_scroll-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "c57a2c63f00c53a9ee7e741c7f37df21eb9e76de"
+            },
+            "require": {
+                "drupal/core": "^9.2 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1664716655",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Honza Pobořil",
+                    "homepage": "https://www.drupal.org/user/123612"
+                },
+                {
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/user/3580850"
+                },
+                {
+                    "name": "Remon",
+                    "homepage": "https://www.drupal.org/user/143827"
+                },
+                {
+                    "name": "Sam152",
+                    "homepage": "https://www.drupal.org/user/1485048"
+                }
+            ],
+            "description": "A pager which allows an infinite scroll effect for views.",
+            "homepage": "https://www.drupal.org/project/views_infinite_scroll",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_infinite_scroll"
             }
         },
         {

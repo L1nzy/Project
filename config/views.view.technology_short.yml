@@ -1,9 +1,9 @@
-uuid: b0ac016a-3066-4b09-b965-5d29d2eeebed
+uuid: e19bb19d-9dcb-4aa2-af5a-834e02691057
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.standart_news_format
+    - core.entity_view_mode.node.teaser
     - node.type.news
     - taxonomy.vocabulary.categories
   content:
@@ -12,8 +12,8 @@ dependencies:
     - node
     - taxonomy
     - user
-id: technology_page
-label: Technology
+id: technology_short
+label: 'Technology short'
 module: views
 description: ''
 tag: ''
@@ -26,7 +26,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Technology
+      title: 'Technology short'
       fields:
         title:
           id: title
@@ -76,9 +76,10 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: none
+        type: some
         options:
           offset: 0
+          items_per_page: 4
       exposed_form:
         type: basic
         options:
@@ -138,7 +139,6 @@ display:
           plugin_id: bundle
           value:
             news: news
-          group: 1
           expose:
             operator_limit_selection: false
             operator_list: {  }
@@ -188,17 +188,12 @@ display:
           hierarchy: false
           limit: true
           error_message: true
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
       style:
         type: default
       row:
         type: 'entity:node'
         options:
-          relationship: none
-          view_mode: standart_news_format
+          view_mode: teaser
       query:
         type: views_query
         options:
@@ -224,26 +219,9 @@ display:
     id: block_1
     display_title: Block
     display_plugin: block
-    position: 2
-    display_options:
-      display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - user
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  page_1:
-    id: page_1
-    display_title: Page
-    display_plugin: page
     position: 1
     display_options:
       display_extenders: {  }
-      path: technology
     cache_metadata:
       max-age: -1
       contexts:

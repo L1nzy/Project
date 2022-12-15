@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - page_manager.page.travel
-    - views.view.latest_news
+    - views.view.category_related_block
+    - views.view.latest_news_short
     - views.view.must_read
     - views.view.travel
   content:
+    - 'block_content:block_with_advertising:0f939486-355a-4894-abab-f96aa1a6df8f'
     - 'block_content:block_with_advertising:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
     - 'block_content:category_page_banner:5939b93d-4a50-4533-be7f-a586143a9101'
   module:
@@ -66,19 +68,6 @@ variant_settings:
             items_per_page: none
           weight: 0
           additional: {  }
-        a1e73960-71b7-4a32-ab0b-e8ed36e0ed24:
-          uuid: a1e73960-71b7-4a32-ab0b-e8ed36e0ed24
-          region: second
-          configuration:
-            id: 'views_block:latest_news-block_1'
-            label: ''
-            label_display: visible
-            provider: views
-            context_mapping: {  }
-            views_label: ''
-            items_per_page: '3'
-          weight: 0
-          additional: {  }
         279ad13c-73c5-4bc0-9f3b-1359710b9828:
           uuid: 279ad13c-73c5-4bc0-9f3b-1359710b9828
           region: second
@@ -90,7 +79,34 @@ variant_settings:
             context_mapping: {  }
             views_label: 'Must read'
             items_per_page: '2'
+          weight: 3
+          additional: {  }
+        6c69a668-de3f-4853-93fc-23720d2ba867:
+          uuid: 6c69a668-de3f-4853-93fc-23720d2ba867
+          region: second
+          configuration:
+            id: 'views_block:latest_news_short-block_1'
+            label: 'Latest news'
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: 'Latest news'
+            items_per_page: none
           weight: 1
+          additional: {  }
+        c50010ed-761b-466f-84a2-bd9c59f61270:
+          uuid: c50010ed-761b-466f-84a2-bd9c59f61270
+          region: second
+          configuration:
+            id: 'block_content:0f939486-355a-4894-abab-f96aa1a6df8f'
+            label: Advertisement
+            label_display: visible
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
+            context_mapping: {  }
+          weight: 2
           additional: {  }
       third_party_settings: {  }
     -
@@ -112,6 +128,19 @@ variant_settings:
             view_mode: full
             context_mapping: {  }
           weight: 0
+          additional: {  }
+        19708bf7-f605-41ac-87b9-fd91c4927105:
+          uuid: 19708bf7-f605-41ac-87b9-fd91c4927105
+          region: content
+          configuration:
+            id: 'views_block:category_related_block-block_1'
+            label: ''
+            label_display: '0'
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 1
           additional: {  }
       third_party_settings: {  }
 page: travel
