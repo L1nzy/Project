@@ -3,7 +3,7 @@ const srcFolder = `../b5subtheme`
 
 export const path = {
   build:{
-    css:`${buildFolder}/customStyle`
+    css:`${buildFolder}/css`
   },
   src:{
     scss:`${srcFolder}/assets/scss/style.scss`
