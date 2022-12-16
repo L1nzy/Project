@@ -1,0 +1,33 @@
+@import "../variables/fonts_variables";
+@import "../variables/color_variables";
+
+body {
+  font-size: $base_size;
+  color: $color-gray;
+  font-family: "Fira Sans", sans-serif;
+}
+
+h2 {
+  font-size: $medium-title;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+h2 a {
+  text-decoration: unset;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: $color-yellow100;
+    text-underline-offset: 5px;
+  }
+}
+
+h2 span {
+  font-size: $small-title;
+  font-family: "Merriweather", sans-serif;
+  color: $color-black;
+  transition: all 0.2s ease;
+  font-weight: 800;
+}
