@@ -12082,6 +12082,76 @@ header .navbar {
   width: 340px;
 }
 
+.bg-secondary {
+  background-color: #000 !important;
+  padding: 0;
+}
+.bg-secondary .region-footer {
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.bg-secondary [id=block-copyright] {
+  color: #ffffff;
+  font-family: Fira Sans, sans-serif;
+  font-size: 13px;
+  line-height: 41px;
+  font-weight: 300;
+}
+.bg-secondary [id=block-copyright] a,
+.bg-secondary [id=block-copyright] a:hover {
+  color: #f5b000;
+}
+.bg-secondary [id=block-copyright] p {
+  margin-bottom: 0;
+}
+.bg-secondary .nav, .bg-secondary .media-library-view--widget .view-header, .media-library-view--widget .bg-secondary .view-header {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+}
+.bg-secondary .nav .nav-item, .bg-secondary .media-library-view--widget .view-header .nav-item, .media-library-view--widget .bg-secondary .view-header .nav-item {
+  position: relative;
+}
+.bg-secondary .nav .nav-link, .bg-secondary .media-library-view--widget .view-header .nav-link, .media-library-view--widget .bg-secondary .view-header .nav-link, .media-library-view--widget .view-header .bg-secondary .nav a, .bg-secondary .media-library-view--widget .view-header a, .media-library-view--widget .bg-secondary .view-header a {
+  font-family: Fira Sans, sans-serif;
+  font-size: 13px;
+  line-height: 40px;
+  font-weight: 300;
+}
+.bg-secondary .nav .nav-link:after, .bg-secondary .media-library-view--widget .view-header .nav-link:after, .media-library-view--widget .bg-secondary .view-header .nav-link:after, .media-library-view--widget .view-header .bg-secondary .nav a:after, .bg-secondary .media-library-view--widget .view-header a:after, .media-library-view--widget .bg-secondary .view-header a:after {
+  display: none;
+}
+.bg-secondary .nav .nav-link.is-active, .bg-secondary .media-library-view--widget .view-header .nav-link.is-active, .media-library-view--widget .bg-secondary .view-header .nav-link.is-active, .media-library-view--widget .view-header .bg-secondary .nav a.is-active, .bg-secondary .media-library-view--widget .view-header a.is-active, .media-library-view--widget .bg-secondary .view-header a.is-active,
+.bg-secondary .nav .nav-link:hover,
+.bg-secondary .media-library-view--widget .view-header .nav-link:hover,
+.media-library-view--widget .bg-secondary .view-header .nav-link:hover,
+.media-library-view--widget .view-header .bg-secondary .nav a:hover,
+.bg-secondary .media-library-view--widget .view-header a:hover,
+.media-library-view--widget .bg-secondary .view-header a:hover {
+  color: #f5b000;
+}
+.bg-secondary .nav .nav-item:last-of-type ul, .bg-secondary .media-library-view--widget .view-header .nav-item:last-of-type ul, .media-library-view--widget .bg-secondary .view-header .nav-item:last-of-type ul {
+  position: absolute;
+  display: none;
+  left: calc(0% - 25px);
+  bottom: 56px;
+  padding: 8px 0;
+  background-color: #ffffff;
+}
+.bg-secondary .nav .nav-item:last-of-type ul a, .bg-secondary .media-library-view--widget .view-header .nav-item:last-of-type ul a, .media-library-view--widget .bg-secondary .view-header .nav-item:last-of-type ul a {
+  padding: 5px 25px;
+  color: #383838;
+  line-height: 18px;
+}
+.bg-secondary .nav .nav-item:last-of-type ul .nav-item::marker, .bg-secondary .media-library-view--widget .view-header .nav-item:last-of-type ul .nav-item::marker, .media-library-view--widget .bg-secondary .view-header .nav-item:last-of-type ul .nav-item::marker {
+  font-size: 0;
+}
+.bg-secondary .nav .nav-item:last-of-type:hover ul, .bg-secondary .media-library-view--widget .view-header .nav-item:last-of-type:hover ul, .media-library-view--widget .bg-secondary .view-header .nav-item:last-of-type:hover ul {
+  display: block;
+}
+
 body {
   font-size: 14px;
   color: #383838;
