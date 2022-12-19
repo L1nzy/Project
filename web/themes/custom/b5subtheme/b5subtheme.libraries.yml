@@ -1,8 +1,10 @@
 global-styling:
   css:
     theme:
+      assets/fonts/fontawesome/css/all.css: {}
       css/style.css: {}
   js:
     assets/js/script.js: {}
+    assets/js/search.js: {}
     dependencies:
       - core/jquery

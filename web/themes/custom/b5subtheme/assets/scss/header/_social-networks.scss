@@ -1,0 +1,42 @@
+.field--name-field-icon {
+  display: flex;
+  gap: 5px;
+
+  .facebook,
+  .instagram,
+  .twitter {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+  }
+
+  .facebook::before,
+  .instagram::before,
+  .twitter::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(2deg) brightness(113%) contrast(100%);
+    background-repeat: no-repeat;
+  }
+
+  .facebook::before {
+    background-image: url("../assets/images/social_network/facebook.svg");
+    width: 7px;
+    height: 14px;
+  }
+
+  .instagram::before {
+    background-image: url("../assets/images/social_network/instagram.svg");
+    width: 12px;
+    height: 14px;
+  }
+
+  .twitter::before {
+    background-image: url("../assets/images/social_network/twitter.svg");
+    width: 14px;
+    height: 12px;
+  }
+}

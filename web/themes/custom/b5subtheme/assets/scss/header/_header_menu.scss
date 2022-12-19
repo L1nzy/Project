@@ -8,7 +8,7 @@ header nav {
     .dropdown-toggle::after,
     .nav-link:after {
       content: '.';
-      color: $color-wite;
+      color: $color-white;
       border: unset;
       vertical-align: unset;
       margin-left: 5px;
@@ -21,6 +21,17 @@ header nav {
     .dropdown-toggle:hover,
     .nav-link:hover {
       &::after {
+        color: $color-yellow;
+      }
+    }
+
+    .dropdown-menu {
+      border: unset;
+      border-radius: unset;
+      top: 35px;
+
+      .nav-item:hover a {
+        background-color: rgba(254, 248, 76, 0.2);
         color: $color-yellow;
       }
     }
@@ -41,7 +52,7 @@ header nav {
  .nav-link {
    font-family: Fira Sans, sans-serif;
    text-transform: uppercase;
-   color: white;
+   color: $color-white;
    font-size: 15px;
    font-weight: 400;
    padding: 0;
@@ -63,7 +74,7 @@ header nav {
 
  .dropdown::after {
    content: ' ';
-   background-image: url("../assets/images/arrow-right.png");
+   background-image: url("../assets/images/icons/arrow-right.png");
    height: 27px;
    width: 36px;
    position: absolute;
