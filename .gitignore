@@ -25,3 +25,4 @@
 /.env
 *.sql
 /web/core/*
+/web/themes/custom/b5subtheme/node_modules
