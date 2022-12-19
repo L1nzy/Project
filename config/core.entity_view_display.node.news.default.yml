@@ -33,6 +33,7 @@ dependencies:
     - image
     - layout_builder
     - layout_discovery
+    - nextpre
     - text
     - user
     - views
@@ -369,6 +370,22 @@ third_party_settings:
                 settings: {  }
                 third_party_settings: {  }
             weight: 0
+            additional: {  }
+          4f29cde7-8435-42fa-b64a-f340e546c05d:
+            uuid: 4f29cde7-8435-42fa-b64a-f340e546c05d
+            region: first
+            configuration:
+              id: next_previous_block
+              label: 'Next Previous link'
+              label_display: '0'
+              provider: nextpre
+              context_mapping: {  }
+              content_type: news
+              previous_text: 'Previous article'
+              next_text: 'Next article'
+              previouslink_class: ''
+              nextlink_class: ''
+            weight: 5
             additional: {  }
         third_party_settings: {  }
       -
