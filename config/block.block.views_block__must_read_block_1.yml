@@ -1,0 +1,24 @@
+uuid: f80b1c77-5d5c-45c8-a86a-ad93c2e1429d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.must_read
+  module:
+    - views
+  theme:
+    - b5subtheme
+id: views_block__must_read_block_1
+theme: b5subtheme
+region: footer_first
+weight: -3
+provider: null
+plugin: 'views_block:must_read-block_1'
+settings:
+  id: 'views_block:must_read-block_1'
+  label: 'Must read'
+  label_display: visible
+  provider: views
+  views_label: 'Must read'
+  items_per_page: none
+visibility: {  }

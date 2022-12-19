@@ -1,0 +1,91 @@
+@import "../variables/color_variables";
+@import "../variables/breakpoints_variable";
+
+header nav {
+  .navbar-nav {
+    align-items: baseline;
+
+    .dropdown-toggle::after,
+    .nav-link:after {
+      content: '.';
+      color: $color-wite;
+      border: unset;
+      vertical-align: unset;
+      margin-left: 5px;
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+
+    .dropdown-toggle:hover,
+    .nav-link:hover {
+      &::after {
+        color: $color-yellow;
+      }
+    }
+
+    .nav-link.active {
+      color: $color-yellow;
+
+      @media (max-width: $mobile) {
+        color: $color-black;
+      }
+    }
+  }
+
+  .nav-item {
+    gap: 20px;
+  }
+
+ .nav-link {
+   font-family: Fira Sans, sans-serif;
+   text-transform: uppercase;
+   color: white;
+   font-size: 15px;
+   font-weight: 400;
+   padding: 0;
+   transition: all 0.5s ease;
+
+   &:hover {
+     color: $color-yellow;
+   }
+
+   @media (max-width: $desktop) {
+     font-size: 11px;
+   }
+
+   @media (max-width: $mobile) {
+     font-size: 21px;
+     font-weight: 600;
+   }
+ }
+
+ .dropdown::after {
+   content: ' ';
+   background-image: url("../assets/images/arrow-right.png");
+   height: 27px;
+   width: 36px;
+   position: absolute;
+   background-repeat: no-repeat;
+   top: 0;
+   right: -100%;
+   display: none;
+
+   @media (max-width: $mobile) {
+    display: block;
+   }
+ }
+
+ .navbar-toggler {
+   border: unset;
+
+   &:focus{
+     box-shadow: unset;
+   }
+ }
+
+  @media (max-width: $mobile) {
+    padding: 20px 0;
+  }
+}

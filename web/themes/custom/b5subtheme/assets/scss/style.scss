@@ -1,0 +1,25 @@
+// Sub theme styling.
+@import 'variables_drupal';
+//
+////// Bootstrap overriden variables.
+////// @see https://getbootstrap.com/docs/5.2/customize/sass/#variable-defaults.
+@import 'variables_bootstrap';
+////
+//////// Include bootstrap.
+@import '../../../../contrib/bootstrap5/scss/style';
+
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+
+//Header
+@import "header/header_menu";
+@import "header/header";
+
+//Variables
+@import "variables/color_variables";
+@import "variables/breakpoints_variable";
+@import "variables/fonts_variables";
+
+//Base
+@import "base/base_styles";
