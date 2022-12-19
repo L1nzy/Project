@@ -194,7 +194,20 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<h4 class="td-block-title"><span>You might also like<span class="td-block-speech-bubble">RELATED</span></span><div class="td-block-subtitle">Recommended to you</div></h4>'
+            format: full_html
+          tokenize: false
       footer: {  }
       display_extenders: {  }
     cache_metadata:
