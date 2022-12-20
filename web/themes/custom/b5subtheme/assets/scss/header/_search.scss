@@ -1,0 +1,87 @@
+@import "assets/scss/variables/color_variables";
+
+.search-block-form {
+  position: relative;
+
+  &::before {
+    content: ' ';
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: -7px;
+    left: 15px;
+    background-image: url("../assets/images/icons/search.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  [id="search-block-form"] {
+    position: absolute;
+    display: none !important;
+    top: 30px;
+    right: -60px;
+    background-color: $color-white;
+    padding: 30px;
+    border-width: 0;
+    z-index: 5;
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      top: -10px;
+      right: 28px;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 10px solid $color-white;
+    }
+
+    &.active {
+      display: flex !important;
+    }
+  }
+
+  #edit-actions {
+    position: relative;
+    margin-left: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      top: 12px;
+      right: 10px;
+      background-image: url("../assets/images/icons/right-arrow.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .button {
+    display: inline-block;
+    position: relative;
+    min-width: 100px;
+    padding: 8px 16px;
+    background: linear-gradient(-90deg, #ffe53f, #ffcd3f);
+    font-family: Fira Sans, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    border: unset;
+    border-radius: unset;
+  }
+
+  .form-search {
+    height: auto;
+    min-height: 32px;
+    color: $color-gray;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: unset;
+    border: 0;
+    border-bottom: 2px solid $color-gray100;
+    width: 340px;
+  }
+}
