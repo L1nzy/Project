@@ -31,12 +31,20 @@ targetEntityType: node
 bundle: news
 mode: horizontal_long_format
 content:
+  field_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
   field_description:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_image:
     type: image
@@ -45,17 +53,16 @@ content:
       image_link: ''
       image_style: img300x250
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
 hidden:
   comment: true
   field_categories_for_title: true
-  field_category: true
   field_content: true
   field_editor_picks: true
   field_link_on_comments: true

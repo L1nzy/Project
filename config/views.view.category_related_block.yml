@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.horizontal_long_format
     - node.type.news
     - taxonomy.vocabulary.categories
   content:
@@ -253,7 +253,8 @@ display:
       row:
         type: 'entity:node'
         options:
-          view_mode: teaser
+          relationship: none
+          view_mode: horizontal_long_format
       query:
         type: views_query
         options:
