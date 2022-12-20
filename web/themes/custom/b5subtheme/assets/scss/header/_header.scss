@@ -1,3 +1,33 @@
+.region-nav-additional {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  position: relative;
+  background-image: url("../assets/images/menu-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &:before {
+    content: ' ';
+    width: 100%;
+    background-image: url("../assets/images/subheader.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: -19px;
+    height: 50px;
+    opacity: 0.3;
+    transform: rotate(180deg);
+  }
+
+  .navbar {
+    background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,1)) !important;
+    padding: 15px 0;
+  }
+}
+
 @media (min-width: 768px) {
   .justify-content-md-end {
     justify-content: space-between !important;
