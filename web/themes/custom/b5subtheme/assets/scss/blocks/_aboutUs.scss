@@ -1,0 +1,66 @@
+.region-footer-second {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+
+  h2 {
+    font-size: 26px;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 26px;
+    line-height: 26px;
+    padding: 0;
+    letter-spacing: -0.6px;
+  }
+
+  p {
+    color: $color-gray200;;
+    font-family: Merriweather, sans-serif;
+    line-height: 1.5;
+    font-weight: 300;
+  }
+
+  [id="block-logo-6"] {
+    width: 25%;
+
+    .field--name-field-logo {
+      color: $color-black;
+    }
+
+    .field--name-field-sublogo {
+      color: $color-gray300;
+    }
+  }
+
+  [id="block-aboutus-2"] {
+    width: 50%;
+
+    a {
+      color: $color-yellow;
+      text-decoration: unset;
+    }
+  }
+
+  [id="block-followus-2"] {
+    width: 25%;
+  }
+}
+
+[id="block-followus-2"] {
+  .facebook::before {
+    width: 9px;
+    height: 18px;
+  }
+
+  .instagram::before {
+    width: 15px;
+    height: 18px;
+  }
+
+  .twitter::before {
+    width: 17px;
+    height: 15px;
+  }
+}
