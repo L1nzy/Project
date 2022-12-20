@@ -1,0 +1,25 @@
+uuid: 21fc0e69-e6b2-4500-9c94-90289362179a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image_gallary:63c4e3db-0555-4963-b22b-0f4e7553bcba'
+  module:
+    - block_content
+  theme:
+    - b5subtheme
+id: footergallary_2
+theme: b5subtheme
+region: footer_second
+weight: 0
+provider: null
+plugin: 'block_content:63c4e3db-0555-4963-b22b-0f4e7553bcba'
+settings:
+  id: 'block_content:63c4e3db-0555-4963-b22b-0f4e7553bcba'
+  label: 'footer gallary'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
