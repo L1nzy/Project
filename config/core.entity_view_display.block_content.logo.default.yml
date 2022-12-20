@@ -10,6 +10,85 @@ dependencies:
     - image.style.img38x38
   module:
     - image
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: icon
+          context_mapping: {  }
+        components:
+          ab211b43-e0a9-47e4-8278-b656d1cf4010:
+            uuid: ab211b43-e0a9-47e4-8278-b656d1cf4010
+            region: content
+            configuration:
+              id: 'field_block:block_content:logo:field_logo_icon'
+              label: logo_icon
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: title
+          context_mapping: {  }
+        components:
+          f811d0d0-9f59-44ce-bddf-14c355dd2171:
+            uuid: f811d0d0-9f59-44ce-bddf-14c355dd2171
+            region: content
+            configuration:
+              id: 'field_block:block_content:logo:field_sublogo'
+              label: Sublogo
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          954c03b1-fb7b-4c5c-a2f6-b13f328c910c:
+            uuid: 954c03b1-fb7b-4c5c-a2f6-b13f328c910c
+            region: content
+            configuration:
+              id: 'field_block:block_content:logo:field_logo'
+              label: Logo
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
 id: block_content.logo.default
 targetEntityType: block_content
 bundle: logo

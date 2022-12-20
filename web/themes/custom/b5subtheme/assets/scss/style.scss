@@ -19,6 +19,9 @@
 @import "header/social-networks";
 @import "header/search";
 
+//Footer
+@import "footer/footer_menu";
+
 //Variables
 @import "variables/color_variables";
 @import "variables/breakpoints_variable";
@@ -26,3 +29,7 @@
 
 //Base
 @import "base/base_styles";
+
+//Blocks
+@import "blocks/image_gallery";
+@import "blocks/aboutUs";

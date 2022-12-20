@@ -18,7 +18,6 @@
     position: absolute;
     top: 10px;
     left: 0;
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(2deg) brightness(113%) contrast(100%);
     background-repeat: no-repeat;
   }
 
@@ -38,5 +37,13 @@
     background-image: url("../assets/images/social_network/twitter.svg");
     width: 14px;
     height: 12px;
+  }
+}
+
+header {
+  .facebook::before,
+  .instagram::before,
+  .twitter::before {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(2deg) brightness(113%) contrast(100%);
   }
 }
