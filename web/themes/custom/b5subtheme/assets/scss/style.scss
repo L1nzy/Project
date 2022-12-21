@@ -33,6 +33,10 @@
 //Blocks
 @import "blocks/image_gallery";
 @import "blocks/aboutUs";
+@import "blocks/popular_articles";
+
+//Mixins
+@import "mixins/mixins_buttons";
 @import "blocks/more_information";
 @import "blocks/short_format";
 @import "blocks/hot_topic";

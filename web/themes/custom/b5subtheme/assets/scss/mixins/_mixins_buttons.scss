@@ -1,0 +1,23 @@
+@mixin small-category {
+  color: $color-black;
+  text-decoration: unset;
+  background-color: $color-white;
+  padding: 5px 6px 3px;
+  border: 1px solid $color-black;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@mixin authoredBy {
+  text-decoration: unset;
+  color: $color-black;
+  font-family: Fira Sans,sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
