@@ -12438,6 +12438,171 @@ h2 span, .h2 span {
   text-decoration: unset;
   color: #000;
   font-family: Fira Sans, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.view-music-festival .view-content .views-row:nth-child(2n) {
+  width: 50%;
+}
+.view-music-festival .view-content .views-row:nth-child(2n) img {
+  width: 100%;
+  max-width: 672px;
+  height: 450px;
+  margin-bottom: 23px;
+}
+.view-music-festival .view-content .views-row:nth-child(2n) .field--name-field-category {
+  top: 440px;
+}
+.view-music-festival .view-content .views-row:nth-child(2n) .field--name-field-category a {
+  font-size: 15px;
+}
+.view-music-festival .view-content .views-row:nth-child(2n) h2 span, .view-music-festival .view-content .views-row:nth-child(2n) .h2 span {
+  font-size: 32px;
+}
+
+[class*=block-views-blockcelebrities-] h2, [class*=block-views-blockcelebrities-] .h2 {
+  margin-bottom: 26px;
+}
+[class*=block-views-blockcelebrities-] .view-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+[class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type {
+  width: 100%;
+  max-width: unset;
+  margin-bottom: 28px;
+}
+[class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type img {
+  max-height: 364px;
+}
+[class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type .field--name-field-category .field__item {
+  display: flex;
+  justify-content: center;
+}
+[class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type .field--name-field-category a {
+  top: -38px;
+  padding: 8px 12px 7px;
+  font-weight: 600;
+}
+[class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type h2, [class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type .h2 {
+  text-align: center;
+  margin-bottom: 4px;
+  line-height: 38.4px;
+  letter-spacing: 1px;
+}
+[class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type h2 span, [class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type .h2 span {
+  font-size: 32px;
+}
+[class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type .node__submitted {
+  display: block;
+  text-align: center;
+}
+[class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type .node__submitted a {
+  text-decoration: unset;
+  color: #000;
+  font-family: Fira Sans, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+[class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type .field--name-field-description p {
+  text-align: center;
+}
+[class*=block-views-blockcelebrities-] .view-content .views-row {
+  position: relative;
+  width: 50%;
+  max-width: 252px;
+}
+[class*=block-views-blockcelebrities-] .view-content .views-row img {
+  height: auto;
+  max-height: 126px;
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: 23px;
+}
+[class*=block-views-blockcelebrities-] .view-content .views-row .field--name-field-category {
+  position: absolute;
+  width: 100%;
+}
+[class*=block-views-blockcelebrities-] .view-content .views-row .field--name-field-category a {
+  position: absolute;
+  top: -35px;
+  color: #000;
+  text-decoration: unset;
+  background-color: #ffffff;
+  padding: 5px 6px 3px;
+  border: 1px solid #000;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+[class*=block-views-blockcelebrities-] .view-content .views-row h2, [class*=block-views-blockcelebrities-] .view-content .views-row .h2 {
+  margin-bottom: 4px;
+  line-height: 22px;
+}
+[class*=block-views-blockcelebrities-] .view-content .views-row h2 span, [class*=block-views-blockcelebrities-] .view-content .views-row .h2 span {
+  font-size: 20px;
+  font-weight: 600;
+}
+[class*=block-views-blockcelebrities-] .view-content .views-row .field--name-field-description p {
+  font-family: Merriweather, sans-serif;
+  margin-bottom: 0;
+  color: #767676;
+  font-weight: 300;
+}
+[class*=block-views-blockcelebrities-] .view-content .views-row .node__submitted {
+  display: none;
+}
+
+[class*=block-views-blockfashion-short-block-] {
+  margin-bottom: 48px;
+}
+[class*=block-views-blockfashion-short-block-] h2, [class*=block-views-blockfashion-short-block-] .h2 {
+  margin-bottom: 16px;
+}
+[class*=block-views-blockfashion-short-block-] .view-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+[class*=block-views-blockfashion-short-block-] .view-content .views-row {
+  width: calc(50% - 20px);
+}
+[class*=block-views-blockfashion-short-block-] .view-content .views-row h2, [class*=block-views-blockfashion-short-block-] .view-content .views-row .h2 {
+  line-height: 24px;
+  font-size: 16px;
+  font-family: Merriweather, sans-serif;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+[class*=block-views-blockfashion-short-block-] .view-content .views-row .username {
+  text-decoration: unset;
+  color: #000;
+  font-family: Fira Sans, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+[class*=block-views-blockfashion-short-block-] .view-content .views-row .username::after {
+  content: "-";
+  padding-left: 5px;
+  color: #767676;
+}
+[class*=block-views-blockfashion-short-block-] .view-content .views-row .node__submitted {
+  color: #767676;
+}
 
 .region-footer-first {
   position: relative;
@@ -12472,63 +12637,75 @@ h2 span, .h2 span {
   width: 33.3%;
 }
 
-.block-views-blockeditor-picks-block-1 h2, .block-views-blockeditor-picks-block-1 .h2,
-.block-views-blockmust-read-short-block-1 h2,
-.block-views-blockmust-read-short-block-1 .h2 {
+[class*=block-views-blockeditor-picks-] h2, [class*=block-views-blockeditor-picks-] .h2,
+[class*=block-views-blockmust-read-short-] h2,
+[class*=block-views-blockmust-read-short-] .h2,
+[class*=block-views-blocktv-short-] h2,
+[class*=block-views-blocktv-short-] .h2,
+[class*=block-views-blockfood-drink-] h2,
+[class*=block-views-blockfood-drink-] .h2 {
   margin-bottom: 16px;
 }
-.block-views-blockeditor-picks-block-1 .node__content,
-.block-views-blockmust-read-short-block-1 .node__content {
+[class*=block-views-blockeditor-picks-] .node__content,
+[class*=block-views-blockmust-read-short-] .node__content,
+[class*=block-views-blocktv-short-] .node__content,
+[class*=block-views-blockfood-drink-] .node__content {
   display: flex;
   gap: 14px;
   margin-bottom: 25px;
 }
-.block-views-blockeditor-picks-block-1 .node__content img,
-.block-views-blockmust-read-short-block-1 .node__content img {
+[class*=block-views-blockeditor-picks-] .node__content img,
+[class*=block-views-blockmust-read-short-] .node__content img,
+[class*=block-views-blocktv-short-] .node__content img,
+[class*=block-views-blockfood-drink-] .node__content img {
   width: 111px;
   max-width: unset;
   height: 78px;
   object-fit: cover;
 }
-.block-views-blockeditor-picks-block-1 .node__content h2, .block-views-blockeditor-picks-block-1 .node__content .h2,
-.block-views-blockmust-read-short-block-1 .node__content h2,
-.block-views-blockmust-read-short-block-1 .node__content .h2 {
+[class*=block-views-blockeditor-picks-] .node__content h2, [class*=block-views-blockeditor-picks-] .node__content .h2,
+[class*=block-views-blockmust-read-short-] .node__content h2,
+[class*=block-views-blockmust-read-short-] .node__content .h2,
+[class*=block-views-blocktv-short-] .node__content h2,
+[class*=block-views-blocktv-short-] .node__content .h2,
+[class*=block-views-blockfood-drink-] .node__content h2,
+[class*=block-views-blockfood-drink-] .node__content .h2 {
   margin-bottom: 6px;
   line-height: 17.6px;
 }
-.block-views-blockeditor-picks-block-1 .node__content h2 span, .block-views-blockeditor-picks-block-1 .node__content .h2 span,
-.block-views-blockmust-read-short-block-1 .node__content h2 span,
-.block-views-blockmust-read-short-block-1 .node__content .h2 span {
+[class*=block-views-blockeditor-picks-] .node__content h2 span, [class*=block-views-blockeditor-picks-] .node__content .h2 span,
+[class*=block-views-blockmust-read-short-] .node__content h2 span,
+[class*=block-views-blockmust-read-short-] .node__content .h2 span,
+[class*=block-views-blocktv-short-] .node__content h2 span,
+[class*=block-views-blocktv-short-] .node__content .h2 span,
+[class*=block-views-blockfood-drink-] .node__content h2 span,
+[class*=block-views-blockfood-drink-] .node__content .h2 span {
   font-size: 16px;
   font-family: "Fira Sans", sans-serif;
   font-weight: 600;
 }
-.block-views-blockeditor-picks-block-1 .node__content .node__submitted,
-.block-views-blockmust-read-short-block-1 .node__content .node__submitted {
+[class*=block-views-blockeditor-picks-] .node__content .node__submitted,
+[class*=block-views-blockmust-read-short-] .node__content .node__submitted,
+[class*=block-views-blocktv-short-] .node__content .node__submitted,
+[class*=block-views-blockfood-drink-] .node__content .node__submitted {
   font-size: 12px;
   line-height: 1;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
-}
-.view-music-festival .view-content .views-row:nth-child(2n) {
-  width: 50%;
-}
-.view-music-festival .view-content .views-row:nth-child(2n) img {
-  width: 100%;
-  max-width: 672px;
-  height: 450px;
-  margin-bottom: 23px;
-}
-.view-music-festival .view-content .views-row:nth-child(2n) .field--name-field-category {
-  top: 440px;
-}
-.view-music-festival .view-content .views-row:nth-child(2n) .field--name-field-category a {
-  font-size: 15px;
-}
-.view-music-festival .view-content .views-row:nth-child(2n) h2 span, .view-music-festival .view-content .views-row:nth-child(2n) .h2 span {
-  font-size: 32px;
   color: #595959;
+}
+
+[class*=block-views-blocktv-short-],
+[class*=block-views-blockfood-drink-] {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 48px;
+}
+[class*=block-views-blocktv-short-] .node__content img,
+[class*=block-views-blockfood-drink-] .node__content img {
+  height: 90px;
+  width: 90px;
 }
 
 .block-views-blockhot-topics-block-1 h2, .block-views-blockhot-topics-block-1 .h2 {
@@ -12551,4 +12728,55 @@ h2 span, .h2 span {
   font-weight: 500;
   line-height: 30px;
   text-decoration: none;
+}
+
+[class*=block-views-blocktechnology-short-block-] h2, [class*=block-views-blocktechnology-short-block-] .h2 {
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+[class*=block-views-blocktechnology-short-block-] .views-row {
+  margin-bottom: 30px;
+}
+[class*=block-views-blocktechnology-short-block-] .node--type-news {
+  display: flex;
+  gap: 20px;
+}
+[class*=block-views-blocktechnology-short-block-] .node--type-news img {
+  max-width: 163px;
+  height: auto;
+  object-fit: cover;
+}
+[class*=block-views-blocktechnology-short-block-] .node--type-news .content-side h2, [class*=block-views-blocktechnology-short-block-] .node--type-news .content-side .h2 {
+  margin-bottom: 4px;
+  line-height: 22px;
+}
+[class*=block-views-blocktechnology-short-block-] .node--type-news .content-side h2 span, [class*=block-views-blocktechnology-short-block-] .node--type-news .content-side .h2 span {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Fira Sans", sans-serif;
+}
+[class*=block-views-blocktechnology-short-block-] .node--type-news .content-side .field--name-field-description p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #767676;
+}
+[class*=block-views-blocktechnology-short-block-] .node--type-news .content-side .node__meta {
+  padding: 0;
+  color: #767676;
+}
+[class*=block-views-blocktechnology-short-block-] .node--type-news .content-side .username {
+  text-decoration: unset;
+  color: #000;
+  font-family: Fira Sans, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+[class*=block-views-blocktechnology-short-block-] .node--type-news .content-side .username::after {
+  content: "-";
+  padding-left: 5px;
+  color: #767676;
 }

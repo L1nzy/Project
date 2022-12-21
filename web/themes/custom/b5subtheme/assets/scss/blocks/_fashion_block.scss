@@ -1,0 +1,46 @@
+[class *= "block-views-blockfashion-short-block-"] {
+  margin-bottom: 48px;
+
+  h2 {
+    margin-bottom: 16px;
+  }
+
+  .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .views-row {
+      width: calc(50% - 20px);
+
+      h2 {
+        line-height: 24px;
+        font-size: 16px;
+        font-family: Merriweather, sans-serif;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+
+      .username {
+        text-decoration: unset;
+        color: $color-black;
+        font-family: Fira Sans,sans-serif;
+        font-size: 12px;
+        line-height: 1;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        &::after {
+          content: '-';
+          padding-left: 5px;
+          color: $color-text;
+        }
+      }
+
+      .node__submitted {
+        color: $color-text;
+      }
+    }
+  }
+}
