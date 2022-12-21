@@ -1,0 +1,26 @@
+.block-views-blockhot-topics-block-1 {
+  h2 {
+    margin-bottom: 16px;
+  }
+
+  .views-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .views-field-name a:hover {
+    color: $color-yellow;
+  }
+
+  .views-field-name-1 span,
+  .views-field-name a {
+    font-family: 'Fira Sans', sans-serif;
+    margin-right: 10px;
+    color: $color-black;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,35 @@
+.region-footer-first {
+  position: relative;
+  display: flex;
+  gap: 40px;
+  margin-bottom: 58px;
+  padding: 50px 20px 40px 20px;
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    border-bottom: 1px solid $color-gray100;
+    left: 20%;
+    bottom: 0;
+    height: 1px;
+    width: 60%;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url("../assets/images/subheader.svg");
+    width: 100vw;
+    top: -62px;
+    height: 100px;
+    transform-origin: 50% 50% 0;
+    left: calc(50% - 15px);
+    transform: translateX(-50%);
+    filter: invert(99%) sepia(56%) saturate(99%) hue-rotate(246deg) brightness(114%) contrast(95%);
+    z-index: -1;
+  }
+
+  & > .block-views {
+    width: 33.3%;
+  }
+}

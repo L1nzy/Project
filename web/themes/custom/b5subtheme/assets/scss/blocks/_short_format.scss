@@ -1,0 +1,40 @@
+.block-views-blockeditor-picks-block-1,
+.block-views-blockmust-read-short-block-1 {
+
+  h2 {
+    margin-bottom: 16px;
+  }
+
+  .node__content {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 25px;
+
+    img {
+      width: 111px;
+      max-width: unset;
+      height: 78px;
+      object-fit: cover;
+    }
+
+    h2 {
+      margin-bottom: 6px;
+      line-height: 17.6px;
+
+      span {
+        font-size: $small-title;
+        font-family: "Fira Sans", sans-serif;
+        font-weight: 600;
+      }
+    }
+
+    .node__submitted {
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: $color-gray300;
+    }
+  }
+}

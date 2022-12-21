@@ -12438,6 +12438,73 @@ h2 span, .h2 span {
   text-decoration: unset;
   color: #000;
   font-family: Fira Sans, sans-serif;
+
+.region-footer-first {
+  position: relative;
+  display: flex;
+  gap: 40px;
+  margin-bottom: 58px;
+  padding: 50px 20px 40px 20px;
+}
+.region-footer-first::after {
+  content: " ";
+  position: absolute;
+  border-bottom: 1px solid #e1e1e1;
+  left: 20%;
+  bottom: 0;
+  height: 1px;
+  width: 60%;
+}
+.region-footer-first::before {
+  content: "";
+  position: absolute;
+  background-image: url("../assets/images/subheader.svg");
+  width: 100vw;
+  top: -62px;
+  height: 100px;
+  transform-origin: 50% 50% 0;
+  left: calc(50% - 15px);
+  transform: translateX(-50%);
+  filter: invert(99%) sepia(56%) saturate(99%) hue-rotate(246deg) brightness(114%) contrast(95%);
+  z-index: -1;
+}
+.region-footer-first > .block-views {
+  width: 33.3%;
+}
+
+.block-views-blockeditor-picks-block-1 h2, .block-views-blockeditor-picks-block-1 .h2,
+.block-views-blockmust-read-short-block-1 h2,
+.block-views-blockmust-read-short-block-1 .h2 {
+  margin-bottom: 16px;
+}
+.block-views-blockeditor-picks-block-1 .node__content,
+.block-views-blockmust-read-short-block-1 .node__content {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 25px;
+}
+.block-views-blockeditor-picks-block-1 .node__content img,
+.block-views-blockmust-read-short-block-1 .node__content img {
+  width: 111px;
+  max-width: unset;
+  height: 78px;
+  object-fit: cover;
+}
+.block-views-blockeditor-picks-block-1 .node__content h2, .block-views-blockeditor-picks-block-1 .node__content .h2,
+.block-views-blockmust-read-short-block-1 .node__content h2,
+.block-views-blockmust-read-short-block-1 .node__content .h2 {
+  margin-bottom: 6px;
+  line-height: 17.6px;
+}
+.block-views-blockeditor-picks-block-1 .node__content h2 span, .block-views-blockeditor-picks-block-1 .node__content .h2 span,
+.block-views-blockmust-read-short-block-1 .node__content h2 span,
+.block-views-blockmust-read-short-block-1 .node__content .h2 span {
+  font-size: 16px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+}
+.block-views-blockeditor-picks-block-1 .node__content .node__submitted,
+.block-views-blockmust-read-short-block-1 .node__content .node__submitted {
   font-size: 12px;
   line-height: 1;
   font-weight: 400;
@@ -12461,4 +12528,27 @@ h2 span, .h2 span {
 }
 .view-music-festival .view-content .views-row:nth-child(2n) h2 span, .view-music-festival .view-content .views-row:nth-child(2n) .h2 span {
   font-size: 32px;
+  color: #595959;
+}
+
+.block-views-blockhot-topics-block-1 h2, .block-views-blockhot-topics-block-1 .h2 {
+  margin-bottom: 16px;
+}
+.block-views-blockhot-topics-block-1 .views-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.block-views-blockhot-topics-block-1 .views-field-name a:hover {
+  color: #f5b000;
+}
+.block-views-blockhot-topics-block-1 .views-field-name-1 span,
+.block-views-blockhot-topics-block-1 .views-field-name a {
+  font-family: "Fira Sans", sans-serif;
+  margin-right: 10px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  text-decoration: none;
 }
