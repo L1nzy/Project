@@ -12194,6 +12194,13 @@ h2 span, .h2 span {
   font-weight: 800;
 }
 
+.path-frontpage .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first {
+  flex: 0 1 25%;
+}
+.path-frontpage .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--second {
+  flex: 0 1 75%;
+}
+
 .field--name-field-gallary-item {
   width: calc(100vw - 15px);
   left: 50%;
@@ -12438,6 +12445,86 @@ h2 span, .h2 span {
   text-decoration: unset;
   color: #000;
   font-family: Fira Sans, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.view-music-festival .view-content .views-row:nth-child(2n) {
+  width: 50%;
+}
+.view-music-festival .view-content .views-row:nth-child(2n) img {
+  width: 100%;
+  max-width: 672px;
+  height: 450px;
+  margin-bottom: 23px;
+}
+.view-music-festival .view-content .views-row:nth-child(2n) .field--name-field-category {
+  top: 440px;
+}
+.view-music-festival .view-content .views-row:nth-child(2n) .field--name-field-category a {
+  font-size: 15px;
+}
+.view-music-festival .view-content .views-row:nth-child(2n) h2 span, .view-music-festival .view-content .views-row:nth-child(2n) .h2 span {
+  font-size: 32px;
+}
+
+[class*=block-views-blocklatest-news-] {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+[class*=block-views-blocklatest-news-] .views-row {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+[class*=block-views-blocklatest-news-] .views-row::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -15px;
+  width: 100%;
+  height: 1px;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #eaeaea;
+}
+[class*=block-views-blocklatest-news-] .views-row:first-of-type::after {
+  content: none;
+}
+[class*=block-views-blocklatest-news-] .views-row h2, [class*=block-views-blocklatest-news-] .views-row .h2 {
+  margin-bottom: 0;
+  line-height: 20px;
+}
+[class*=block-views-blocklatest-news-] img {
+  height: 134px;
+  object-fit: cover;
+  margin-bottom: 13px;
+  background-color: #0a6fb4;
+}
+[class*=block-views-blocklatest-news-] .field--name-field-description p {
+  margin-bottom: 0;
+  font-family: Merriweather, sans-serif;
+  color: #767676;
+}
+[class*=block-views-blocklatest-news-] .category-and-date {
+  display: flex;
+  gap: 14px;
+}
+[class*=block-views-blocklatest-news-] .category-and-date .field--name-field-category a {
+  text-decoration: unset;
+  color: #000;
+  font-family: Fira Sans, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+[class*=block-views-blocklatest-news-] .category-and-date .node__submitted {
+  color: #ffcd3f;
+}
 
 .region-footer-first {
   position: relative;
@@ -12510,24 +12597,6 @@ h2 span, .h2 span {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
-}
-.view-music-festival .view-content .views-row:nth-child(2n) {
-  width: 50%;
-}
-.view-music-festival .view-content .views-row:nth-child(2n) img {
-  width: 100%;
-  max-width: 672px;
-  height: 450px;
-  margin-bottom: 23px;
-}
-.view-music-festival .view-content .views-row:nth-child(2n) .field--name-field-category {
-  top: 440px;
-}
-.view-music-festival .view-content .views-row:nth-child(2n) .field--name-field-category a {
-  font-size: 15px;
-}
-.view-music-festival .view-content .views-row:nth-child(2n) h2 span, .view-music-festival .view-content .views-row:nth-child(2n) .h2 span {
-  font-size: 32px;
   color: #595959;
 }
 

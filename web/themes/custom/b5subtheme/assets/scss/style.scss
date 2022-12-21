@@ -29,11 +29,13 @@
 
 //Base
 @import "base/base_styles";
+@import "base/layout_section";
 
 //Blocks
 @import "blocks/image_gallery";
 @import "blocks/aboutUs";
 @import "blocks/popular_articles";
+@import "blocks/lates_news";
 
 //Mixins
 @import "mixins/mixins_buttons";
