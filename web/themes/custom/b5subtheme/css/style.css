@@ -12175,6 +12175,7 @@ h2, .h2 {
   font-family: "Fira Sans", sans-serif;
   font-weight: 800;
   letter-spacing: 1px;
+  margin-bottom: 16px;
 }
 
 h2 a, .h2 a {
@@ -12438,6 +12439,112 @@ h2 span, .h2 span {
   text-decoration: unset;
   color: #000;
   font-family: Fira Sans, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.view-music-festival .view-content .views-row:nth-child(2n) {
+  width: 50%;
+}
+.view-music-festival .view-content .views-row:nth-child(2n) img {
+  width: 100%;
+  max-width: 672px;
+  height: 450px;
+  margin-bottom: 23px;
+}
+.view-music-festival .view-content .views-row:nth-child(2n) .field--name-field-category {
+  top: 440px;
+}
+.view-music-festival .view-content .views-row:nth-child(2n) .field--name-field-category a {
+  font-size: 15px;
+}
+.view-music-festival .view-content .views-row:nth-child(2n) h2 span, .view-music-festival .view-content .views-row:nth-child(2n) .h2 span {
+  font-size: 32px;
+}
+
+.paragraph--type--statistics-of-social-networks {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.paragraph--type--statistics-of-social-networks .facebook,
+.paragraph--type--statistics-of-social-networks .instagram,
+.paragraph--type--statistics-of-social-networks .twitter,
+.paragraph--type--statistics-of-social-networks .youtube {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  font-size: 0;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.paragraph--type--statistics-of-social-networks .facebook::before,
+.paragraph--type--statistics-of-social-networks .instagram::before,
+.paragraph--type--statistics-of-social-networks .twitter::before,
+.paragraph--type--statistics-of-social-networks .youtube::before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-image: url("../assets/images/sprites.png");
+}
+.paragraph--type--statistics-of-social-networks .facebook {
+  background-color: #516eab;
+}
+.paragraph--type--statistics-of-social-networks .facebook::before {
+  background-position: -17px -17px;
+}
+.paragraph--type--statistics-of-social-networks .instagram {
+  background-color: #417096;
+}
+.paragraph--type--statistics-of-social-networks .instagram::before {
+  background-position: -16px -224px;
+}
+.paragraph--type--statistics-of-social-networks .twitter {
+  background-color: #29c5f6;
+}
+.paragraph--type--statistics-of-social-networks .twitter::before {
+  background-position: -16px -431px;
+}
+.paragraph--type--statistics-of-social-networks .youtube {
+  background-color: #e14e42;
+}
+.paragraph--type--statistics-of-social-networks .youtube::before {
+  background-position: -15px -380px;
+}
+.paragraph--type--statistics-of-social-networks .field--name-field-counter-followers,
+.paragraph--type--statistics-of-social-networks .field--name-field-title {
+  font-family: "Open Sans", arial, sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  margin-right: 10px;
+}
+.paragraph--type--statistics-of-social-networks .field--name-field-counter-followers:hover,
+.paragraph--type--statistics-of-social-networks .field--name-field-title:hover {
+  color: #767676;
+}
+.paragraph--type--statistics-of-social-networks .field--name-field-social-button {
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+}
+.paragraph--type--statistics-of-social-networks .field--name-field-social-button a {
+  font-family: "Open Sans", arial, sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  text-decoration: unset;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.field--name-field-networks {
+  margin-bottom: 47px;
+  max-width: 300px;
+}
 
 .region-footer-first {
   position: relative;
@@ -12510,24 +12617,6 @@ h2 span, .h2 span {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
-}
-.view-music-festival .view-content .views-row:nth-child(2n) {
-  width: 50%;
-}
-.view-music-festival .view-content .views-row:nth-child(2n) img {
-  width: 100%;
-  max-width: 672px;
-  height: 450px;
-  margin-bottom: 23px;
-}
-.view-music-festival .view-content .views-row:nth-child(2n) .field--name-field-category {
-  top: 440px;
-}
-.view-music-festival .view-content .views-row:nth-child(2n) .field--name-field-category a {
-  font-size: 15px;
-}
-.view-music-festival .view-content .views-row:nth-child(2n) h2 span, .view-music-festival .view-content .views-row:nth-child(2n) .h2 span {
-  font-size: 32px;
   color: #595959;
 }
 
