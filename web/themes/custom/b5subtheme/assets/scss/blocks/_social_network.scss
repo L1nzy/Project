@@ -1,0 +1,94 @@
+.paragraph--type--statistics-of-social-networks {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .facebook,
+  .instagram,
+  .twitter,
+  .youtube {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    font-size: 0;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+
+  .facebook::before,
+  .instagram::before,
+  .twitter::before,
+  .youtube::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-image: url("../assets/images/sprites.png");
+  }
+
+  .facebook {
+    background-color: $color-blue200;
+
+    &::before {
+      background-position: -17px -17px;
+    }
+  }
+
+  .instagram {
+    background-color: $color-blue300;
+
+    &::before {
+      background-position: -16px -224px;
+    }
+  }
+
+  .twitter {
+    background-color: $color-blue100;
+
+    &::before {
+      background-position: -16px -431px;
+    }
+  }
+
+  .youtube {
+    background-color: $color-red;
+
+    &::before {
+      background-position: -15px -380px;
+    }
+  }
+
+  .field--name-field-counter-followers,
+  .field--name-field-title {
+    font-family: 'Open Sans', arial, sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    margin-right: 10px;
+
+    &:hover {
+      color: $color-text;
+    }
+  }
+
+  .field--name-field-social-button {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+
+    a {
+      font-family: 'Open Sans', arial, sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      text-decoration: unset;
+      text-transform: uppercase;
+      color: $color-black;
+    }
+  }
+}
+
+.field--name-field-networks {
+  margin-bottom: 47px;
+  max-width: 300px;
+}
