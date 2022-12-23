@@ -12438,6 +12438,129 @@ h2 span, .h2 span {
   text-decoration: unset;
   color: #000;
   font-family: Fira Sans, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.view-music-festival .view-content .views-row:nth-child(2n) {
+  width: 50%;
+}
+.view-music-festival .view-content .views-row:nth-child(2n) img {
+  width: 100%;
+  max-width: 672px;
+  height: 450px;
+  margin-bottom: 23px;
+}
+.view-music-festival .view-content .views-row:nth-child(2n) .field--name-field-category {
+  top: 440px;
+}
+.view-music-festival .view-content .views-row:nth-child(2n) .field--name-field-category a {
+  font-size: 15px;
+}
+.view-music-festival .view-content .views-row:nth-child(2n) h2 span, .view-music-festival .view-content .views-row:nth-child(2n) .h2 span {
+  font-size: 32px;
+}
+
+[class*=block-views-blocktop-news-] {
+  margin-bottom: 48px;
+  padding: 0 20px;
+}
+[class*=block-views-blocktop-news-] .view-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-end;
+  gap: 30px;
+}
+[class*=block-views-blocktop-news-] .view-content .views-row:first-of-type {
+  position: absolute;
+  left: 35px;
+  width: 66.67%;
+  max-width: 575px;
+  text-align: center;
+}
+[class*=block-views-blocktop-news-] .view-content .views-row:first-of-type .node__submitted {
+  display: block;
+}
+[class*=block-views-blocktop-news-] .view-content .views-row:first-of-type .node__submitted a {
+  text-decoration: unset;
+  color: #000;
+  font-family: Fira Sans, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+[class*=block-views-blocktop-news-] .view-content .views-row:first-of-type h2, [class*=block-views-blocktop-news-] .view-content .views-row:first-of-type .h2 {
+  line-height: 1.2;
+}
+[class*=block-views-blocktop-news-] .view-content .views-row:first-of-type h2 span, [class*=block-views-blocktop-news-] .view-content .views-row:first-of-type .h2 span {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+[class*=block-views-blocktop-news-] .view-content .views-row:first-of-type img {
+  max-width: 575px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+[class*=block-views-blocktop-news-] .view-content .views-row:first-of-type .field--name-field-category {
+  text-align: center;
+}
+[class*=block-views-blocktop-news-] .view-content .views-row:first-of-type .field--name-field-category a {
+  position: relative;
+  bottom: 35px;
+}
+[class*=block-views-blocktop-news-] .view-content .views-row {
+  position: relative;
+  width: 33.33%;
+  max-width: 268px;
+}
+[class*=block-views-blocktop-news-] .view-content .views-row img {
+  width: 267px;
+  height: 133px;
+  margin-bottom: 23px;
+}
+[class*=block-views-blocktop-news-] .view-content .views-row .field--name-field-category {
+  position: absolute;
+  width: 100%;
+}
+[class*=block-views-blocktop-news-] .view-content .views-row .field--name-field-category a {
+  color: #000;
+  text-decoration: unset;
+  background-color: #ffffff;
+  padding: 5px 6px 3px;
+  border: 1px solid #000;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 13px;
+}
+[class*=block-views-blocktop-news-] .view-content .views-row h2, [class*=block-views-blocktop-news-] .view-content .views-row .h2 {
+  line-height: 22px;
+}
+[class*=block-views-blocktop-news-] .view-content .views-row h2 span, [class*=block-views-blocktop-news-] .view-content .views-row .h2 span {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Fira Sans", sans-serif;
+}
+[class*=block-views-blocktop-news-] .view-content .views-row .field--name-field-description p {
+  line-height: 1.5;
+  font-weight: 300;
+  color: #767676;
+  margin-bottom: 0;
+}
+[class*=block-views-blocktop-news-] .view-content .views-row .node__submitted {
+  display: none;
+}
 
 .region-footer-first {
   position: relative;
@@ -12510,24 +12633,6 @@ h2 span, .h2 span {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
-}
-.view-music-festival .view-content .views-row:nth-child(2n) {
-  width: 50%;
-}
-.view-music-festival .view-content .views-row:nth-child(2n) img {
-  width: 100%;
-  max-width: 672px;
-  height: 450px;
-  margin-bottom: 23px;
-}
-.view-music-festival .view-content .views-row:nth-child(2n) .field--name-field-category {
-  top: 440px;
-}
-.view-music-festival .view-content .views-row:nth-child(2n) .field--name-field-category a {
-  font-size: 15px;
-}
-.view-music-festival .view-content .views-row:nth-child(2n) h2 span, .view-music-festival .view-content .views-row:nth-child(2n) .h2 span {
-  font-size: 32px;
   color: #595959;
 }
 
