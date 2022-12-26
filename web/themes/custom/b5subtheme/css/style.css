@@ -12866,6 +12866,152 @@ img {
   max-width: 300px;
 }
 
+.view-id-featured {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+.view-id-featured .view-header {
+  width: 100%;
+  padding: 0 10px;
+  max-width: 206px;
+}
+.view-id-featured .view-header p {
+  font-family: Merriweather, sans-serif;
+  line-height: 1.5;
+  color: #666666;
+  font-weight: 300;
+}
+.view-id-featured .view-header a {
+  text-decoration: unset;
+  color: #000;
+  font-family: Fira Sans, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  font-size: 13px;
+  font-weight: 500;
+}
+.view-id-featured .view-header a:after {
+  content: " ";
+  background-image: url("../assets/images/icons/arrow-right-black.png");
+  background-size: cover;
+  width: 12px;
+  height: 16px;
+  position: absolute;
+  right: -16px;
+  top: -1px;
+}
+.view-id-featured .view-header a:hover, .view-id-featured .view-header a:hover::after {
+  color: #f5b000;
+  filter: invert(54%) sepia(91%) saturate(769%) hue-rotate(11deg) brightness(107%) contrast(106%);
+}
+.view-id-featured .views-col {
+  width: 33.33% !important;
+}
+.view-id-featured .pager__item--previous a,
+.view-id-featured .pager__item--next a {
+  background-color: unset;
+  position: relative;
+  border: unset;
+}
+.view-id-featured .pager__item--previous a:before,
+.view-id-featured .pager__item--next a:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  left: 0;
+}
+.view-id-featured .pager__item--previous a:hover::before,
+.view-id-featured .pager__item--next a:hover::before {
+  filter: invert(76%) sepia(53%) saturate(3828%) hue-rotate(5deg) brightness(102%) contrast(100%);
+}
+.view-id-featured .pager__item--previous a span,
+.view-id-featured .pager__item--next a span {
+  display: none;
+}
+.view-id-featured .pager__item--previous a:hover, .view-id-featured .pager__item--previous a:active,
+.view-id-featured .pager__item--next a:hover,
+.view-id-featured .pager__item--next a:active {
+  background-color: unset;
+  box-shadow: none;
+  border: unset;
+}
+.view-id-featured .pager__item--next a::before {
+  background-image: url("../assets/images/icons/thin-arrow-right.png");
+}
+.view-id-featured .pager__item--previous a::before {
+  background-image: url("../assets/images/icons/thin-arrow-left.png");
+}
+.view-id-featured .node--view-mode-vertical-short-format-category {
+  position: relative;
+  margin-right: 14px;
+}
+.view-id-featured .node--view-mode-vertical-short-format-category img {
+  width: 100%;
+  height: 146px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+.view-id-featured .node--view-mode-vertical-short-format-category .field--name-field-category {
+  position: absolute;
+  width: 100%;
+}
+.view-id-featured .node--view-mode-vertical-short-format-category .field--name-field-category a {
+  color: #000;
+  text-decoration: unset;
+  background-color: #ffffff;
+  padding: 5px 6px 3px;
+  border: 1px solid #000;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 10px;
+}
+.view-id-featured .node--view-mode-vertical-short-format-category h2, .view-id-featured .node--view-mode-vertical-short-format-category .h2 {
+  margin-bottom: 6px;
+  line-height: 16px;
+}
+.view-id-featured .node--view-mode-vertical-short-format-category h2 span, .view-id-featured .node--view-mode-vertical-short-format-category .h2 span {
+  font-family: Fira Sans, sans-serif;
+  font-weight: 600;
+}
+.view-id-featured .node--view-mode-vertical-short-format-category .node__submitted {
+  font-family: Fira Sans, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #767676;
+}
+.view-id-featured .node--view-mode-vertical-short-format-category .field--name-uid {
+  display: none;
+}
+.view-id-featured .pager__item--last,
+.view-id-featured .pager__item--first,
+.view-id-featured .disabled {
+  display: none;
+}
+.view-id-featured .view-content {
+  margin-bottom: 45px;
+}
+.view-id-featured nav {
+  position: absolute;
+  bottom: -20px;
+  left: 25%;
+}
+
 .region-footer-first {
   position: relative;
   display: flex;

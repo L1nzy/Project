@@ -11,6 +11,16 @@
   text-transform: uppercase;
 }
 
+@mixin date {
+  font-family: Fira Sans, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $color-text;
+}
+
 @mixin authoredBy {
   text-decoration: unset;
   color: $color-black;
