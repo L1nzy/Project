@@ -1,0 +1,46 @@
+.node--view-mode-article-teaser .node__content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 46px;
+
+  img {
+    width: auto;
+    height: auto;
+    max-height: 232px;
+    max-width: 331px;
+    object-fit: cover;
+  }
+
+  .field--name-field-category {
+    margin-bottom: 8px;
+
+    a {
+      @include small-category;
+    }
+  }
+
+  .field--name-field-description p {
+    @include textDescription;
+    margin-bottom: 6px;
+  }
+
+  h2 {
+    margin-bottom: 6px;
+    line-height: 30px;
+
+    span {
+      font-family: "Fira Sans", sans-serif;
+      font-size: 28px;
+      font-weight: 600;
+    }
+  }
+
+  .username {
+    @include authoredBy;
+  }
+
+  .node__submitted {
+    color: $color-text;
+  }
+}
