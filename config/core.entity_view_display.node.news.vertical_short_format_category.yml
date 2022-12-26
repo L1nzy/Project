@@ -15,7 +15,6 @@ dependencies:
     - field.field.node.news.field_must_read
     - field.field.node.news.field_short_title
     - field.field.node.news.field_title
-    - image.style.img300x250
     - node.type.news
   module:
     - image
@@ -51,7 +50,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: img300x250
+      image_style: ''
     third_party_settings: {  }
     weight: 0
     region: content
