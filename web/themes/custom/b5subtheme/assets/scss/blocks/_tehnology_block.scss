@@ -6,6 +6,10 @@
 
   .views-row {
     margin-bottom: 30px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   .node--type-news {
