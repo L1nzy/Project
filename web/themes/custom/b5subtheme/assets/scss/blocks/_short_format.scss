@@ -1,5 +1,7 @@
-.block-views-blockeditor-picks-block-1,
-.block-views-blockmust-read-short-block-1 {
+[class *= "block-views-blockeditor-picks-"],
+[class *= "block-views-blockmust-read-short-"],
+[class *= "block-views-blocktv-short-"],
+[class *= "block-views-blockfood-drink-"] {
 
   h2 {
     margin-bottom: 16px;
@@ -36,5 +38,17 @@
       letter-spacing: 1px;
       color: $color-gray300;
     }
+  }
+}
+
+[class *= "block-views-blocktv-short-"],
+[class *= "block-views-blockfood-drink-"] {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 48px;
+
+  .node__content img {
+    height: 90px;
+    width: 90px;
   }
 }
