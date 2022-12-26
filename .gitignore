@@ -26,3 +26,4 @@
 *.sql
 /web/core/*
 /web/themes/custom/b5subtheme/node_modules
+web/themes/custom/b5subtheme/css
