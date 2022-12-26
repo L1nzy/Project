@@ -7,9 +7,8 @@ dependencies:
     - views.view.category_related_block
     - views.view.celebrities_page
     - views.view.latest_news_short
-    - views.view.must_read_short
+    - views.view.must_read
   content:
-    - 'block_content:block_with_advertising:0f939486-355a-4894-abab-f96aa1a6df8f'
     - 'block_content:block_with_advertising:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
     - 'block_content:category_page_banner:11545f42-0dfa-4112-80bc-73dabf9f89cc'
   module:
@@ -55,19 +54,6 @@ variant_settings:
         context_mapping: {  }
         column_widths: 50-50
       components:
-        6b2730c6-d150-42f0-ac70-8dc9ef45a3fc:
-          uuid: 6b2730c6-d150-42f0-ac70-8dc9ef45a3fc
-          region: first
-          configuration:
-            id: 'views_block:celebrities_page-block_1'
-            label: ''
-            label_display: '0'
-            provider: views
-            context_mapping: {  }
-            views_label: ''
-            items_per_page: none
-          weight: 0
-          additional: {  }
         2dbd4471-adcb-470b-8958-0b13f09bcd84:
           uuid: 2dbd4471-adcb-470b-8958-0b13f09bcd84
           region: second
@@ -81,32 +67,31 @@ variant_settings:
             items_per_page: none
           weight: 0
           additional: {  }
-        457eea7e-afd5-4e9d-a2e2-ad158517182b:
-          uuid: 457eea7e-afd5-4e9d-a2e2-ad158517182b
+        6b88f923-1ea9-4b7a-aa22-1101f24f307f:
+          uuid: 6b88f923-1ea9-4b7a-aa22-1101f24f307f
           region: second
           configuration:
-            id: 'views_block:must_read_short-block_1'
+            id: 'views_block:must_read-block_1'
             label: 'Must read'
             label_display: visible
             provider: views
             context_mapping: {  }
             views_label: 'Must read'
             items_per_page: none
-          weight: 2
-          additional: {  }
-        ba467b31-47b5-4038-8bdd-98804f9ed552:
-          uuid: ba467b31-47b5-4038-8bdd-98804f9ed552
-          region: second
-          configuration:
-            id: 'block_content:0f939486-355a-4894-abab-f96aa1a6df8f'
-            label: Advertisement
-            label_display: visible
-            provider: block_content
-            status: true
-            info: ''
-            view_mode: full
-            context_mapping: {  }
           weight: 1
+          additional: {  }
+        989171ad-bec1-4dd5-b789-d4999d1980bf:
+          uuid: 989171ad-bec1-4dd5-b789-d4999d1980bf
+          region: first
+          configuration:
+            id: 'views_block:celebrities_page-block_1'
+            label: ''
+            label_display: '0'
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 0
           additional: {  }
       third_party_settings: {  }
     -
