@@ -24,6 +24,7 @@
         "drupal/nextpre": "^9.0",
         "drupal/page_manager": "^4.0@RC",
         "drupal/paragraphs": "^1.15",
+        "drupal/svg_image": "^1.16",
         "drupal/views_infinite_scroll": "^2.0",
         "drupal/views_slideshow": "^4.8"
     },

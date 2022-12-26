@@ -32,3 +32,11 @@ h2 span {
   transition: all 0.2s ease;
   font-weight: 800;
 }
+
+.field--name-field-img {
+  text-align: center;
+}
+
+img {
+  object-fit: cover;
+}
