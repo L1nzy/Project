@@ -1,0 +1,8 @@
+uuid: 2311e44e-57d2-4fe6-b1f4-bf39066b6ea5
+langcode: en
+status: true
+dependencies: {  }
+id: about_us_block
+label: 'About us block'
+revision: 0
+description: ''

@@ -1,0 +1,79 @@
+uuid: 9b9c5405-fb15-4401-b8e5-0ef368561a9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.three_columns
+    - field.field.block_content.three_columns.body
+    - views.view.editor_picks
+    - views.view.hot_topics
+    - views.view.must_read_short
+  module:
+    - layout_builder
+    - text
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_threecol_section
+        layout_settings:
+          label: 'three column'
+          context_mapping: {  }
+          column_widths: 33-34-33
+        components:
+          2fb5be28-91d5-4af3-bffd-80be50da8ebf:
+            uuid: 2fb5be28-91d5-4af3-bffd-80be50da8ebf
+            region: first
+            configuration:
+              id: 'views_block:editor_picks-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+          b461ea15-45de-4f55-941a-7a660c01d38d:
+            uuid: b461ea15-45de-4f55-941a-7a660c01d38d
+            region: second
+            configuration:
+              id: 'views_block:must_read_short-block_1'
+              label: 'Must read'
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: 'Must read'
+              items_per_page: none
+            weight: 0
+            additional: {  }
+          0845ab8d-5e08-4e61-b2c0-bedba6f83a5b:
+            uuid: 0845ab8d-5e08-4e61-b2c0-bedba6f83a5b
+            region: third
+            configuration:
+              id: 'views_block:hot_topics-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: block_content.three_columns.default
+targetEntityType: block_content
+bundle: three_columns
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
