@@ -1,6 +1,25 @@
 <?php
 
+use Drupal\taxonomy\TermInterface;
+
 /**
- * @file
- * B5 subtheme theme file.
+ * Implements hook_preprocess_HOOK().
  */
+function b5subtheme_preprocess_taxonomy_term(&$variables) {
+
+  $term = $variables['term'];
+
+  if ($term instanceof TermInterface) {
+
+    if (!$term->hasField('field_link_to_page')) {
+      return;
+    }
+
+    if (!$term->get('field_link_to_page')->isEmpty()) {
+      $values = $term->get('field_link_to_page')->getValue();
+      $links = $values[0]['uri'];
+      $variables['new_links'] = $links;
+    }
+  }
+
+}

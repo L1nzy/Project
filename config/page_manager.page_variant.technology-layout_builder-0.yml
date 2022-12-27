@@ -9,7 +9,6 @@ dependencies:
     - views.view.must_read
     - views.view.technology_page
   content:
-    - 'block_content:block_with_advertising:0f939486-355a-4894-abab-f96aa1a6df8f'
     - 'block_content:block_with_advertising:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
     - 'block_content:category_page_banner:8413d3e5-4e57-440d-9a91-b2416d123f4b'
   module:
@@ -93,20 +92,6 @@ variant_settings:
             views_label: 'Latest news'
             items_per_page: none
           weight: 1
-          additional: {  }
-        c2b1fac7-a70f-4b53-8681-e19f7965db50:
-          uuid: c2b1fac7-a70f-4b53-8681-e19f7965db50
-          region: second
-          configuration:
-            id: 'block_content:0f939486-355a-4894-abab-f96aa1a6df8f'
-            label: Advertising300x250
-            label_display: '0'
-            provider: block_content
-            status: true
-            info: ''
-            view_mode: full
-            context_mapping: {  }
-          weight: 2
           additional: {  }
       third_party_settings: {  }
     -

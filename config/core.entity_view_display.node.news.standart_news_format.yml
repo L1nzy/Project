@@ -36,7 +36,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_description:
     type: text_trimmed
@@ -44,7 +44,7 @@ content:
     settings:
       trim_length: 70
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_image:
     type: image

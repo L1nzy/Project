@@ -9,7 +9,6 @@ dependencies:
     - views.view.latest_news_short
     - views.view.must_read
   content:
-    - 'block_content:block_with_advertising:0f939486-355a-4894-abab-f96aa1a6df8f'
     - 'block_content:block_with_advertising:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
     - 'block_content:category_page_banner:9ccea91a-13e4-42da-82a3-0b7243d6fa3c'
   module:
@@ -93,20 +92,6 @@ variant_settings:
             views_label: 'Latest news'
             items_per_page: none
           weight: 1
-          additional: {  }
-        ab852f6e-1766-485f-a276-d0cb21a75395:
-          uuid: ab852f6e-1766-485f-a276-d0cb21a75395
-          region: second
-          configuration:
-            id: 'block_content:0f939486-355a-4894-abab-f96aa1a6df8f'
-            label: Advertisement
-            label_display: visible
-            provider: block_content
-            status: true
-            info: ''
-            view_mode: full
-            context_mapping: {  }
-          weight: 3
           additional: {  }
       third_party_settings: {  }
     -

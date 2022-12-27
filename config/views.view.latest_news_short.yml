@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.standart_news_format
     - field.storage.node.field_category
     - field.storage.node.field_description
     - node.type.news
@@ -335,7 +336,10 @@ display:
       style:
         type: default
       row:
-        type: fields
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: standart_news_format
       query:
         type: views_query
         options:

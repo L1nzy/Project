@@ -1,0 +1,10 @@
+uuid: 9b7769ab-a75f-47b9-8dc2-90dec654a8f9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.article_teaser
+label: 'Article teaser'
+targetEntityType: node
+cache: true
