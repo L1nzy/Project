@@ -13,6 +13,10 @@ h2 {
   font-weight: 800;
   letter-spacing: 1px;
   margin-bottom: 16px;
+
+  @media(max-width: $first-breakpoint) {
+    font-size: 23px;
+  }
 }
 
 h2 a {

@@ -1,0 +1,10 @@
+.custom-container {
+  max-width: 1232px;
+  margin: 0 auto;
+}
+
+@media (max-width: $first-breakpoint) {
+  .custom-container {
+    max-width: unset;
+  }
+}
