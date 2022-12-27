@@ -15,9 +15,10 @@ dependencies:
     - field.field.node.news.field_must_read
     - field.field.node.news.field_short_title
     - field.field.node.news.field_title
+    - image.style.img322x255
     - node.type.news
   module:
-    - svg_image
+    - image
     - text
     - user
 id: node.news.teaser
@@ -45,11 +46,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: ''
-      svg_attributes:
-        width: null
-        height: null
-      svg_render_as_image: true
+      image_style: img322x255
     third_party_settings: {  }
     weight: 0
     region: content

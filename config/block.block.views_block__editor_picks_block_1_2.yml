@@ -1,0 +1,24 @@
+uuid: 327a822a-00f3-4eb7-b76b-ee7ba298a4af
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.editor_picks
+  module:
+    - views
+  theme:
+    - b5subtheme
+id: views_block__editor_picks_block_1_2
+theme: b5subtheme
+region: footer_first
+weight: -6
+provider: null
+plugin: 'views_block:editor_picks-block_1'
+settings:
+  id: 'views_block:editor_picks-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }
