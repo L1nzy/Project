@@ -30,6 +30,7 @@
 //Base
 @import "base/base_styles";
 @import "base/layout_section";
+@import "base/pager";
 
 //Blocks
 @import "blocks/image_gallery";
@@ -42,6 +43,7 @@
 @import "blocks/social_network";
 @import "blocks/subheader_block";
 @import "blocks/featured_block";
+@import "blocks/list_articles";
 
 //Mixins
 @import "mixins/mixins_buttons";

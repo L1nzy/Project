@@ -7,3 +7,37 @@
     flex: 0 1 75%;
   }
 }
+
+.layout--threecol-section {
+  flex-wrap: nowrap;
+  gap: 40px;
+}
+
+.path-food-page,
+.path-entertainment-page,
+.path-travel-page,
+.path-fashion-full-page,
+.path-technology-full-page,
+.path-celebrities-page,
+.path-movies-page,
+.path-tv-full-page,
+.path-music-page,
+.path-games-page {
+  .region-content > .layout--twocol-section.layout--twocol-section--50-50 {
+    & > .layout__region--first {
+      flex: 0 1 calc(100% - 364px);
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    & > .layout__region--second {
+      flex: 0 1 364px;
+      padding: 20px 32px;
+      background-color: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      height: max-content;
+    }
+  }
+}

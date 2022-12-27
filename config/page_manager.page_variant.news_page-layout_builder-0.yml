@@ -188,6 +188,20 @@ variant_settings:
             context_mapping: {  }
             views_label: ''
             items_per_page: none
+          weight: 1
+          additional: {  }
+        ebe0e27d-c7ca-4ffc-b2f3-f74b4337a3a1:
+          uuid: ebe0e27d-c7ca-4ffc-b2f3-f74b4337a3a1
+          region: content
+          configuration:
+            id: 'block_content:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
+            label: Advertisement
+            label_display: '0'
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
+            context_mapping: {  }
           weight: 0
           additional: {  }
       third_party_settings: {  }

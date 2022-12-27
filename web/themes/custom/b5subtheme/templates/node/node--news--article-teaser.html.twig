@@ -81,23 +81,29 @@
 <article{{ attributes.addClass(classes) }}>
 
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content.field_image }}
-
-    <div{{ author_attributes.addClass('node__submitted') }}>
-      {{ content.field_category }}
-      {% set createdDate = node.getCreatedTime|date('d/m/Y') %}
-       - {{ createdDate }}
-      {{ metadata }}
+    <div class="image-preview">
+      {{ content.field_image }}
     </div>
 
-    {{ title_prefix }}
-      {% if label and not page %}
+    <div class="content">
+      {{ content.field_category }}
+
+      <div class="description">
         <h2{{ title_attributes }}>
           <a href="{{ url }}" rel="bookmark">{{ label }}</a>
         </h2>
-      {% endif %}
-    {{ title_suffix }}
+        {{ content.field_description }}
+      </div>
 
-    {{ content.field_description }}
+      <div class="author-and-date">
+        <div{{ author_attributes.addClass('node__submitted') }}>
+          {% set createdDate = node.getCreatedTime|date('d/m/Y') %}
+          <div class="publication_info">
+            {{ author_name }} - {{ createdDate }}
+          </div>
+          {{ metadata }}
+        </div>
+      </div>
+    </div>
   </div>
 </article>
