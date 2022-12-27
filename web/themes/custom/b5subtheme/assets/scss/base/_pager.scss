@@ -1,0 +1,30 @@
+.js-pager__items {
+  .page-link {
+    border: unset;
+    padding: 5px 11px;
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    min-width: 33px;
+    text-align: center;
+    color: $color-black;
+    line-height: 21px;
+
+    &:hover {
+      border: 1px solid $color-black;
+      background-color: unset;
+    }
+  }
+
+  .is-active a,
+  .page-item:first-child .page-link,
+  .page-item:last-child .page-link {
+    background-color: unset;
+    border-radius: 0;
+    border: 1px solid $color-black;
+  }
+
+  .pager__item--last,
+  .pager__item--first {
+    display: none;
+  }
+}

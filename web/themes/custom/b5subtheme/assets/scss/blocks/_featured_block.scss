@@ -141,4 +141,8 @@
     bottom: -20px;
     left: 25%;
   }
+
+  .js-pager__items .page-item:first-child .page-link {
+    border: unset;
+  }
 }

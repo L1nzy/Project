@@ -31,3 +31,10 @@
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
+@mixin textDescription {
+  font-family: Merriweather, sans-serif;
+  margin-bottom: 0;
+  color: $color-text;
+  font-weight: 300;
+}

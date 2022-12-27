@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.standart_news_format
+    - core.entity_view_mode.node.article_teaser
     - node.type.news
     - taxonomy.vocabulary.categories
   content:
@@ -94,7 +94,7 @@ display:
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options: '10'
             items_per_page_options_all: false
             items_per_page_options_all_label: '- All -'
             offset: false
@@ -232,7 +232,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: standart_news_format
+          view_mode: article_teaser
       query:
         type: views_query
         options:
@@ -243,6 +243,8 @@ display:
           query_tags: {  }
       relationships: {  }
       use_ajax: true
+      link_display: '0'
+      link_url: ''
       header: {  }
       footer: {  }
       display_extenders: {  }

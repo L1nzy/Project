@@ -12278,6 +12278,32 @@ img {
   height: max-content;
 }
 
+.js-pager__items .page-link {
+  border: unset;
+  padding: 5px 11px;
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  min-width: 33px;
+  text-align: center;
+  color: #000;
+  line-height: 21px;
+}
+.js-pager__items .page-link:hover {
+  border: 1px solid #000;
+  background-color: unset;
+}
+.js-pager__items .is-active a,
+.js-pager__items .page-item:first-child .page-link,
+.js-pager__items .page-item:last-child .page-link {
+  background-color: unset;
+  border-radius: 0;
+  border: 1px solid #000;
+}
+.js-pager__items .pager__item--last,
+.js-pager__items .pager__item--first {
+  display: none;
+}
+
 .field--name-field-gallary-item {
   width: calc(100vw - 15px);
   left: 50%;
@@ -13097,6 +13123,67 @@ img {
   position: absolute;
   bottom: -20px;
   left: 25%;
+}
+.view-id-featured .js-pager__items .page-item:first-child .page-link {
+  border: unset;
+}
+
+.node--view-mode-article-teaser .node__content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 46px;
+}
+.node--view-mode-article-teaser .node__content img {
+  width: auto;
+  height: auto;
+  max-height: 232px;
+  max-width: 331px;
+  object-fit: cover;
+}
+.node--view-mode-article-teaser .node__content .field--name-field-category {
+  margin-bottom: 8px;
+}
+.node--view-mode-article-teaser .node__content .field--name-field-category a {
+  color: #000;
+  text-decoration: unset;
+  background-color: #ffffff;
+  padding: 5px 6px 3px;
+  border: 1px solid #000;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.node--view-mode-article-teaser .node__content .field--name-field-description p {
+  font-family: Merriweather, sans-serif;
+  margin-bottom: 0;
+  color: #767676;
+  font-weight: 300;
+  margin-bottom: 6px;
+}
+.node--view-mode-article-teaser .node__content h2, .node--view-mode-article-teaser .node__content .h2 {
+  margin-bottom: 6px;
+  line-height: 30px;
+}
+.node--view-mode-article-teaser .node__content h2 span, .node--view-mode-article-teaser .node__content .h2 span {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+}
+.node--view-mode-article-teaser .node__content .username {
+  text-decoration: unset;
+  color: #000;
+  font-family: Fira Sans, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.node--view-mode-article-teaser .node__content .node__submitted {
+  color: #767676;
 }
 
 .region-footer-first {
