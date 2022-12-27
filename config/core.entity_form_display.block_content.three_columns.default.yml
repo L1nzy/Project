@@ -1,0 +1,20 @@
+uuid: 4df431fd-c7cd-4cf8-af28-5adbfa635e5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.three_columns
+id: block_content.three_columns.default
+targetEntityType: block_content
+bundle: three_columns
+mode: default
+content:
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

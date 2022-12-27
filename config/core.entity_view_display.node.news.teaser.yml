@@ -15,7 +15,6 @@ dependencies:
     - field.field.node.news.field_must_read
     - field.field.node.news.field_short_title
     - field.field.node.news.field_title
-    - image.style.img322x255
     - node.type.news
   module:
     - image
@@ -35,9 +34,10 @@ content:
     weight: 2
     region: content
   field_description:
-    type: text_default
+    type: text_trimmed
     label: hidden
-    settings: {  }
+    settings:
+      trim_length: 100
     third_party_settings: {  }
     weight: 3
     region: content
@@ -46,7 +46,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: img322x255
+      image_style: ''
     third_party_settings: {  }
     weight: 0
     region: content

@@ -1,0 +1,74 @@
+uuid: 41608fab-1b8d-47ea-825a-52960d6ede72
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.about_us_block
+  content:
+    - 'block_content:logo:cc8fac9b-9eaf-4b11-b030-840237125bd1'
+    - 'block_content:social_networks:6768540c-c042-4a8f-b929-789f43be8e7c'
+    - 'block_content:titele_description_formated_text:f9d598f6-4ef7-4112-8a6b-d94a4e9f2bd7'
+  module:
+    - block_content
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_threecol_section
+        layout_settings:
+          label: 'three columns'
+          context_mapping: {  }
+          column_widths: 33-34-33
+        components:
+          09ae263e-3d5b-47a0-b102-92fb389ed485:
+            uuid: 09ae263e-3d5b-47a0-b102-92fb389ed485
+            region: second
+            configuration:
+              id: 'block_content:f9d598f6-4ef7-4112-8a6b-d94a4e9f2bd7'
+              label: 'About Us'
+              label_display: visible
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+          8fe0ae5f-6d07-45b3-ad64-d6d59ccfb5dd:
+            uuid: 8fe0ae5f-6d07-45b3-ad64-d6d59ccfb5dd
+            region: third
+            configuration:
+              id: 'block_content:6768540c-c042-4a8f-b929-789f43be8e7c'
+              label: 'Follow Us'
+              label_display: visible
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+          caca8bf8-b557-43d2-9e61-a371a50aec1c:
+            uuid: caca8bf8-b557-43d2-9e61-a371a50aec1c
+            region: first
+            configuration:
+              id: 'block_content:cc8fac9b-9eaf-4b11-b030-840237125bd1'
+              label: Logo
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: block_content.about_us_block.default
+targetEntityType: block_content
+bundle: about_us_block
+mode: default
+content: {  }
+hidden: {  }

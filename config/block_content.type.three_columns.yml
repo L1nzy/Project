@@ -1,0 +1,8 @@
+uuid: 01381d99-2551-4f1a-8d6c-13e2c0efa797
+langcode: en
+status: true
+dependencies: {  }
+id: three_columns
+label: 'three columns'
+revision: 0
+description: ''
