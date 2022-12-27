@@ -15,10 +15,11 @@ dependencies:
     - field.field.node.news.field_must_read
     - field.field.node.news.field_short_title
     - field.field.node.news.field_title
+    - image.style.img300x250
     - node.type.news
   module:
+    - image
     - layout_builder
-    - svg_image
     - text
     - user
 third_party_settings:
@@ -39,10 +40,9 @@ content:
     weight: 0
     region: content
   field_description:
-    type: text_trimmed
+    type: text_default
     label: hidden
-    settings:
-      trim_length: 50
+    settings: {  }
     third_party_settings: {  }
     weight: 3
     region: content
@@ -51,11 +51,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: ''
-      svg_attributes:
-        width: null
-        height: null
-      svg_render_as_image: true
+      image_style: img300x250
     third_party_settings: {  }
     weight: 1
     region: content

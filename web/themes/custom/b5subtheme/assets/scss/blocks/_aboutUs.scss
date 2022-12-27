@@ -1,4 +1,7 @@
-.layout--threecol-section {
+.region-footer-second {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
   padding-top: 20px;
   padding-bottom: 50px;
 
@@ -19,17 +22,19 @@
     font-weight: 300;
   }
 
+  [id="block-logo-6"] {
+    width: 25%;
 
-  .field--name-field-logo {
-    color: $color-black;
+    .field--name-field-logo {
+      color: $color-black;
+    }
+
+    .field--name-field-sublogo {
+      color: $color-gray300;
+    }
   }
 
-  .field--name-field-sublogo {
-    color: $color-gray300;
-  }
-
-
-  .layout__region--second {
+  [id="block-aboutus-2"] {
     width: 50%;
 
     a {
@@ -37,9 +42,13 @@
       text-decoration: unset;
     }
   }
+
+  [id="block-followus-2"] {
+    width: 25%;
+  }
 }
 
-[class *= "layout__region--"] {
+[id="block-followus-2"] {
   .facebook::before {
     width: 9px;
     height: 18px;
@@ -53,13 +62,5 @@
   .twitter::before {
     width: 17px;
     height: 15px;
-  }
-
-  .facebook:hover,
-  .instagram:hover,
-  .twitter:hover {
-    &::before {
-      filter: invert(59%) sepia(78%) saturate(911%) hue-rotate(8deg) brightness(101%) contrast(111%);
-    }
   }
 }

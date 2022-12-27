@@ -1,41 +1,9 @@
-.path-frontpage .region-content > .layout--twocol-section.layout--twocol-section--50-50 {
-  margin-top: 50px;
-  margin-bottom: 48px;
-
+.path-frontpage .layout--twocol-section.layout--twocol-section--50-50 {
   & > .layout__region--first {
     flex: 0 1 25%;
-    padding-left: 20px;
-    padding-right: 20px;
   }
 
   & > .layout__region--second {
     flex: 0 1 75%;
-    padding-left: 20px;
-    padding-right: 20px;
   }
-
-  .layout--twocol-section.layout--twocol-section--50-50 {
-    & > .layout__region--first {
-      flex: 0 1 calc(100% - 340px);
-      padding-left: 20px;
-      padding-right: 20px;
-      gap: 47px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    & > .layout__region--second {
-      flex: 0 1 340px;
-      padding-left: 20px;
-      padding-right: 20px;
-      gap: 47px;
-      display: flex;
-      flex-direction: column;
-    }
-  }
-}
-
-.layout--threecol-section {
-  flex-wrap: nowrap;
-  gap: 40px;
 }

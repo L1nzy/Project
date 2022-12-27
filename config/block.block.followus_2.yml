@@ -1,0 +1,25 @@
+uuid: 92cb36df-92d9-4650-884d-1eb2315c423a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:social_networks:6768540c-c042-4a8f-b929-789f43be8e7c'
+  module:
+    - block_content
+  theme:
+    - b5subtheme
+id: followus_2
+theme: b5subtheme
+region: footer_second
+weight: -4
+provider: null
+plugin: 'block_content:6768540c-c042-4a8f-b929-789f43be8e7c'
+settings:
+  id: 'block_content:6768540c-c042-4a8f-b929-789f43be8e7c'
+  label: 'Follow Us'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
