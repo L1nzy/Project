@@ -1,0 +1,8 @@
+uuid: ae5123e1-0acc-485a-8a1c-6c720ae63284
+langcode: en
+status: true
+dependencies: {  }
+id: about_us_block
+label: 'About us block'
+revision: 0
+description: ''

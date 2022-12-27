@@ -1,0 +1,25 @@
+uuid: ecf31670-7b78-4efe-9c4f-1cc2504dee1f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:three_columns:bfebe9a7-5771-4b68-aaaa-e310bc0451a6'
+  module:
+    - block_content
+  theme:
+    - b5subtheme
+id: homepagethreecolumns
+theme: b5subtheme
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:bfebe9a7-5771-4b68-aaaa-e310bc0451a6'
+settings:
+  id: 'block_content:bfebe9a7-5771-4b68-aaaa-e310bc0451a6'
+  label: 'home page three columns'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

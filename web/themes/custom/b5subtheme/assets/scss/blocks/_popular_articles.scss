@@ -2,7 +2,8 @@
 
 .view-music-festival,
 .view-category-related-block {
-  margin-bottom: 148px;
+  margin-bottom: 100px;
+  margin-top: 50px;
   width: calc(100vw - 15px);
   max-width: 1400px;
   left: 50%;
@@ -164,6 +165,7 @@
 
         a {
           font-size: 15px;
+          font-weight: 600px;
         }
       }
 

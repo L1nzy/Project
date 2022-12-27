@@ -4,18 +4,13 @@ status: true
 dependencies:
   config:
     - page_manager.page.news_page
-    - views.view.celebrities_short
-    - views.view.fashion_short
     - views.view.featured
-    - views.view.food_drink
     - views.view.latest_news
     - views.view.music_festival
-    - views.view.technology_short
     - views.view.top_news
-    - views.view.tv_short
   content:
-    - 'block_content:block_with_advertising:0f939486-355a-4894-abab-f96aa1a6df8f'
-    - 'block_content:networks_analysis_block:bfbffcd1-40e4-4759-9dcf-ea8db9ff3817'
+    - 'block_content:block_with_advertising:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
+    - 'block_content:two_columns:b294ed94-9f15-4efe-a224-7f79a6145e40'
   module:
     - block_content
     - layout_builder
@@ -77,98 +72,19 @@ variant_settings:
             items_per_page: none
           weight: 1
           additional: {  }
-        107899a4-1b33-4142-ba50-fd6988692d71:
-          uuid: 107899a4-1b33-4142-ba50-fd6988692d71
+        73c11c5a-b336-4257-b951-697baf0dc51d:
+          uuid: 73c11c5a-b336-4257-b951-697baf0dc51d
           region: second
           configuration:
-            id: 'views_block:fashion_short-block_1'
-            label: ''
-            label_display: visible
-            provider: views
+            id: 'block_content:b294ed94-9f15-4efe-a224-7f79a6145e40'
+            label: 'home page two columns'
+            label_display: '0'
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
             context_mapping: {  }
-            views_label: ''
-            items_per_page: none
           weight: 2
-          additional: {  }
-        56ed14b3-cf98-4377-9098-c47723fb46cc:
-          uuid: 56ed14b3-cf98-4377-9098-c47723fb46cc
-          region: second
-          configuration:
-            id: 'views_block:tv_short-block_1'
-            label: TV
-            label_display: visible
-            provider: views
-            context_mapping: {  }
-            views_label: TV
-            items_per_page: none
-          weight: 7
-          additional: {  }
-        b5065b53-bfdf-41ef-945e-0091956cf90f:
-          uuid: b5065b53-bfdf-41ef-945e-0091956cf90f
-          region: second
-          configuration:
-            id: 'views_block:food_drink-block_1'
-            label: ''
-            label_display: visible
-            provider: views
-            context_mapping: {  }
-            views_label: ''
-            items_per_page: none
-          weight: 8
-          additional: {  }
-        67538e81-58ec-4d22-893a-e89cbbdeecad:
-          uuid: 67538e81-58ec-4d22-893a-e89cbbdeecad
-          region: second
-          configuration:
-            id: 'views_block:celebrities_short-block_1'
-            label: Celebrities
-            label_display: visible
-            provider: views
-            context_mapping: {  }
-            views_label: Celebrities
-            items_per_page: none
-          weight: 9
-          additional: {  }
-        96adbea2-6e64-48ce-96d1-392c418890fa:
-          uuid: 96adbea2-6e64-48ce-96d1-392c418890fa
-          region: second
-          configuration:
-            id: 'block_content:0f939486-355a-4894-abab-f96aa1a6df8f'
-            label: Advertisement
-            label_display: visible
-            provider: block_content
-            status: true
-            info: ''
-            view_mode: full
-            context_mapping: {  }
-          weight: 6
-          additional: {  }
-        218356a6-bf91-4059-8db0-a18596260009:
-          uuid: 218356a6-bf91-4059-8db0-a18596260009
-          region: second
-          configuration:
-            id: 'block_content:bfbffcd1-40e4-4759-9dcf-ea8db9ff3817'
-            label: 'Stay connected'
-            label_display: visible
-            provider: block_content
-            status: true
-            info: ''
-            view_mode: full
-            context_mapping: {  }
-          weight: 5
-          additional: {  }
-        f111aa55-87ff-4852-999b-7d6a6d5afe32:
-          uuid: f111aa55-87ff-4852-999b-7d6a6d5afe32
-          region: second
-          configuration:
-            id: 'views_block:technology_short-block_1'
-            label: 'Technology '
-            label_display: visible
-            provider: views
-            context_mapping: {  }
-            views_label: 'Technology '
-            items_per_page: none
-          weight: 4
           additional: {  }
       third_party_settings: {  }
     -

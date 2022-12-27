@@ -43,6 +43,10 @@ header nav {
         color: $color-black;
       }
     }
+
+    .nav-item:first-of-type .nav-link::after {
+      display: none;
+    }
   }
 
   .nav-item {
