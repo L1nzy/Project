@@ -115,3 +115,19 @@
     }
   }
 }
+
+@media(max-width: $second-breakpoint) {
+  [class *= "block-views-blocklatest-news-"] {
+    padding: 0;
+    margin-bottom: 30px;
+
+    img {
+      max-height: 371px;
+      width: 100%;
+    }
+
+    .content {
+      margin-left: 20px;
+    }
+  }
+}

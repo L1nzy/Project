@@ -5,6 +5,10 @@
     padding: 0 20px;
   }
 
+  @media(max-width: $second-breakpoint) {
+    padding: 0;
+  }
+
   .view-content {
     display: flex;
     flex-wrap: wrap;
@@ -73,6 +77,11 @@
         height: auto;
         object-fit: cover;
         max-height: unset;
+
+        @media(max-width: $second-breakpoint) {
+          max-width: unset;
+          max-height: 371px;
+        }
       }
 
       .field--name-field-category {
@@ -148,6 +157,10 @@
           margin-bottom: 4px;
         }
 
+        @media(max-width: $second-breakpoint) {
+          margin-left: 20px;
+        }
+
         span {
           font-size: 20px;
           font-weight: 700;
@@ -167,8 +180,14 @@
         }
       }
 
-      .field--name-field-description p {
-        @include textDescription;
+      .field--name-field-description {
+        p {
+          @include textDescription;
+        }
+
+        @media(max-width: $second-breakpoint) {
+          margin-left: 20px;
+        }
       }
 
       .node__submitted {
