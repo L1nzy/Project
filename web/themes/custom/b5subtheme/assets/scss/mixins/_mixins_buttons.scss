@@ -31,6 +31,10 @@
   @media(max-width: $first-breakpoint) {
     font-size: 11px;
   }
+
+  @media(max-width: $second-breakpoint) {
+    font-size: 12px;
+  }
 }
 
 @mixin authoredBy {
@@ -45,6 +49,10 @@
 
   @media(max-width: $first-breakpoint) {
     font-size: 11px;
+  }
+
+  @media(max-width: $second-breakpoint) {
+    font-size: 12px;
   }
 }
 

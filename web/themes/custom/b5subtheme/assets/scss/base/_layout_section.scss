@@ -36,6 +36,14 @@
       gap: 47px;
       display: flex;
       flex-direction: column;
+
+      @media(max-width: $first-breakpoint) {
+        padding-right: 0;
+      }
+
+      @media(max-width: $desktop) {
+        flex: 0 1 calc(100% - 224px);
+      }
     }
 
     & > .layout__region--second {
@@ -45,6 +53,15 @@
       gap: 47px;
       display: flex;
       flex-direction: column;
+
+      @media(max-width: $first-breakpoint) {
+        padding-right: 0;
+        padding-left: 14px;
+      }
+
+      @media(max-width: $desktop) {
+        flex: 0 1 224px;
+      }
     }
   }
 }
