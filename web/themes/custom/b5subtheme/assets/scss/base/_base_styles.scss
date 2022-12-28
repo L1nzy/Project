@@ -17,6 +17,15 @@ h2 {
   @media(max-width: $first-breakpoint) {
     font-size: 23px;
   }
+
+  @media(max-width: $desktop) {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  @media(max-width: $second-breakpoint) {
+    font-size: 28px;
+  }
 }
 
 h2 a {
@@ -43,4 +52,10 @@ h2 span {
 
 img {
   object-fit: cover;
+}
+
+@media(max-width: $second-breakpoint) {
+  .region-content {
+    padding: 0;
+  }
 }

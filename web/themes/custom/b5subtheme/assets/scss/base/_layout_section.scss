@@ -2,6 +2,10 @@
   margin-top: 50px;
   margin-bottom: 48px;
 
+  @media(max-width: $second-breakpoint) {
+    flex-direction: column;
+  }
+
   & > .layout__region--first {
     flex: 0 1 25%;
     padding: 0 20px;
@@ -21,6 +25,10 @@
   }
 
   .layout--twocol-section.layout--twocol-section--50-50 {
+    @media(max-width: $second-breakpoint) {
+      flex-direction: column;
+    }
+
     & > .layout__region--first {
       flex: 0 1 calc(100% - 340px);
       padding-left: 20px;
