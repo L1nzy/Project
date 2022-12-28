@@ -1,6 +1,10 @@
 .path-frontpage [class *= block-views-blockcelebrities-] {
-  h2 {
+  & > h2 {
     margin-bottom: 26px;
+
+    @media(max-width: $second-breakpoint) {
+      padding-left: 20px;
+    }
   }
 
   .view-content {
@@ -9,10 +13,13 @@
     justify-content: space-between;
     gap: 30px;
 
+    @media(max-width: $second-breakpoint) {
+      flex-direction: column;
+    }
+
     .views-row:first-of-type {
       width: 100%;
       max-width: unset;
-      margin-bottom: 28px;
 
       img {
         max-height: 364px;
@@ -26,8 +33,13 @@
 
         a {
           top: -38px;
+          left: unset;
           padding: 8px 12px 7px;
           font-weight: 600;
+
+          @media(max-width: $second-breakpoint) {
+            top: -28px;
+          }
         }
       }
 
@@ -36,9 +48,14 @@
         margin-bottom: 4px;
         line-height: 38.4px;
         letter-spacing: 1px;
+        padding-left: 0;
+
+        @include media_for_h2_big;
 
         span {
           font-size: 32px;
+
+          @include media_for_span_big;
         }
       }
 
@@ -53,15 +70,28 @@
         }
       }
 
-      .field--name-field-description p {
-        text-align: center;
+      .field--name-field-description {
+        display: block;
+        padding-left: 0;
+
+        p {
+          text-align: center;
+          margin: 0 auto;
+        }
       }
     }
 
     .views-row {
       position: relative;
-      width: 50%;
-      max-width: 252px;
+      width: calc(50% - 20px);
+
+      @media(max-width: $first-breakpoint) {
+        width: calc(50% - 15px);
+      }
+
+      @media(max-width: $second-breakpoint) {
+        width: 100%;
+      }
 
       img {
         height: auto;
@@ -69,6 +99,15 @@
         object-fit: cover;
         width: 100%;
         margin-bottom: 23px;
+
+        @media(max-width: $desktop) {
+          margin-bottom: 13px;
+        }
+
+        @media(max-width: $second-breakpoint) {
+          width: 100%;
+          max-height: 366px;
+        }
       }
 
       .field--name-field-category {
@@ -79,6 +118,14 @@
           position: absolute;
           top: -35px;
           @include small-category;
+
+          @media(max-width: $desktop) {
+            top: -25px;
+          }
+
+          @media(max-width: $second-breakpoint) {
+            left: 20px;
+          }
         }
       }
 
@@ -86,17 +133,41 @@
         margin-bottom: 4px;
         line-height: 22px;
 
+        @include media_for_h2;
+
+        @media(max-width: $desktop) {
+          padding-left: 20px;
+        }
+
         span {
+          font-family: Fira Sans, sans-serif;
           font-size: 20px;
           font-weight: 600;
+
+          @include media_for_span;
         }
       }
 
-      .field--name-field-description p {
-        font-family: Merriweather, sans-serif;
-        margin-bottom: 0;
-        color: $color-text;
-        font-weight: 300;
+      .field--name-field-description {
+        p {
+          @include textDescription;
+
+          @media(max-width: $first-breakpoint) {
+            font-size: 12px;
+          }
+        }
+
+        @media(max-width: $first-breakpoint) {
+          display: none;
+        }
+
+        @media(max-width: $desktop) {
+          display: block;
+        }
+
+        @media(max-width: $second-breakpoint) {
+          padding-left: 20px;
+        }
       }
 
       .node__submitted {

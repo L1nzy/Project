@@ -44,6 +44,10 @@
       @media(max-width: $desktop) {
         flex: 0 1 calc(100% - 224px);
       }
+
+      @media(max-width: $second-breakpoint) {
+        padding-left: 0;
+      }
     }
 
     & > .layout__region--second {
@@ -61,6 +65,7 @@
 
       @media(max-width: $desktop) {
         flex: 0 1 224px;
+        padding-left: 0;
       }
     }
   }
