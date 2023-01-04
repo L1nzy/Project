@@ -17,8 +17,8 @@ dependencies:
     - field.field.node.news.field_title
     - node.type.news
   module:
-    - image
     - layout_builder
+    - svg_image
     - text
     - user
 third_party_settings:
@@ -36,7 +36,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_description:
     type: text_trimmed
@@ -44,7 +44,7 @@ content:
     settings:
       trim_length: 100
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_image:
     type: image
@@ -52,6 +52,10 @@ content:
     settings:
       image_link: ''
       image_style: ''
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
     third_party_settings: {  }
     weight: 0
     region: content

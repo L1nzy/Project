@@ -33,6 +33,7 @@ dependencies:
     - layout_builder
     - layout_discovery
     - nextpre
+    - svg_image
     - text
     - user
     - views
