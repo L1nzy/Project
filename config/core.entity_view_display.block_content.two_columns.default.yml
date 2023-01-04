@@ -1,10 +1,9 @@
-uuid: d13feaf5-4529-4a0f-9d53-84a0db15ef72
+uuid: 12b0bab4-4891-4cf1-a68a-052eebb9bfcb
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.two_columns
-    - field.field.block_content.two_columns.body
     - views.view.celebrities_short
     - views.view.fashion_short
     - views.view.food_drink
@@ -16,7 +15,6 @@ dependencies:
   module:
     - block_content
     - layout_builder
-    - text
     - views
 third_party_settings:
   layout_builder:
@@ -30,21 +28,21 @@ third_party_settings:
           context_mapping: {  }
           column_widths: 50-50
         components:
-          442b50c8-db37-4f4f-b7e5-569a3d842521:
-            uuid: 442b50c8-db37-4f4f-b7e5-569a3d842521
+          4861c7f4-3d62-437d-a5ad-b9f314e29096:
+            uuid: 4861c7f4-3d62-437d-a5ad-b9f314e29096
             region: first
             configuration:
               id: 'views_block:fashion_short-block_1'
-              label: ''
+              label: Fashion
               label_display: visible
               provider: views
               context_mapping: {  }
-              views_label: ''
+              views_label: Fashion
               items_per_page: none
             weight: 0
             additional: {  }
-          9246413f-20b3-4d36-9240-2384cc797802:
-            uuid: 9246413f-20b3-4d36-9240-2384cc797802
+          56e4a258-9571-4c9a-81b3-d276883f82e8:
+            uuid: 56e4a258-9571-4c9a-81b3-d276883f82e8
             region: first
             configuration:
               id: 'views_block:technology_short-block_1'
@@ -56,8 +54,8 @@ third_party_settings:
               items_per_page: none
             weight: 1
             additional: {  }
-          44323f22-4776-4b70-871a-b9e758fb5c7f:
-            uuid: 44323f22-4776-4b70-871a-b9e758fb5c7f
+          226c45ed-78a0-4494-98a8-0f068800c40c:
+            uuid: 226c45ed-78a0-4494-98a8-0f068800c40c
             region: first
             configuration:
               id: 'views_block:celebrities_short-block_1'
@@ -69,8 +67,8 @@ third_party_settings:
               items_per_page: none
             weight: 2
             additional: {  }
-          2b18b207-d56d-4bad-ab9e-a38acb6f518f:
-            uuid: 2b18b207-d56d-4bad-ab9e-a38acb6f518f
+          a04e0528-2a9c-4968-ab0e-34e9402846ce:
+            uuid: a04e0528-2a9c-4968-ab0e-34e9402846ce
             region: second
             configuration:
               id: 'block_content:bfbffcd1-40e4-4759-9dcf-ea8db9ff3817'
@@ -83,13 +81,13 @@ third_party_settings:
               context_mapping: {  }
             weight: 0
             additional: {  }
-          3776f58c-cf30-494d-a87c-0fc5d01f75f9:
-            uuid: 3776f58c-cf30-494d-a87c-0fc5d01f75f9
+          f764c47e-9723-4f8f-a325-f107e2d6e146:
+            uuid: f764c47e-9723-4f8f-a325-f107e2d6e146
             region: second
             configuration:
               id: 'block_content:0f939486-355a-4894-abab-f96aa1a6df8f'
-              label: Advertisement
-              label_display: visible
+              label: Advertising300x250
+              label_display: '0'
               provider: block_content
               status: true
               info: ''
@@ -97,21 +95,21 @@ third_party_settings:
               context_mapping: {  }
             weight: 1
             additional: {  }
-          6461ef60-3046-4783-9840-39c1482c6154:
-            uuid: 6461ef60-3046-4783-9840-39c1482c6154
+          ecf497ed-4fbd-41be-af36-c633df6a259f:
+            uuid: ecf497ed-4fbd-41be-af36-c633df6a259f
             region: second
             configuration:
               id: 'views_block:tv_short-block_1'
-              label: TV
+              label: 'tv '
               label_display: visible
               provider: views
               context_mapping: {  }
-              views_label: TV
+              views_label: 'tv '
               items_per_page: none
             weight: 2
             additional: {  }
-          a1a69c24-6c93-497b-9853-034e12841a5f:
-            uuid: a1a69c24-6c93-497b-9853-034e12841a5f
+          743540c7-0745-4413-8e80-a670e2233868:
+            uuid: 743540c7-0745-4413-8e80-a670e2233868
             region: second
             configuration:
               id: 'views_block:food_drink-block_1'
@@ -128,12 +126,5 @@ id: block_content.two_columns.default
 targetEntityType: block_content
 bundle: two_columns
 mode: default
-content:
-  body:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
+content: {  }
 hidden: {  }

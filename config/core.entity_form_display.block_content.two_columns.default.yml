@@ -1,27 +1,14 @@
-uuid: 5c7cc6a5-1622-4146-9b7a-0213b4562c91
+uuid: 53f95b32-b5e5-4119-83b0-663a7610eaeb
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.two_columns
-    - field.field.block_content.two_columns.body
-  module:
-    - text
 id: block_content.two_columns.default
 targetEntityType: block_content
 bundle: two_columns
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 26
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
   info:
     type: string_textfield
     weight: -5

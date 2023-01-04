@@ -1,9 +1,9 @@
-uuid: 08e4f915-a0e1-4433-9641-ffb9a77c0e59
+uuid: d6a72e8a-ccfe-4a93-8f73-0c7af34cd541
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.horizontal_long_format
+    - core.entity_view_mode.node.article_teaser
     - field.field.node.news.comment
     - field.field.node.news.field_categories_for_title
     - field.field.node.news.field_category
@@ -25,10 +25,10 @@ third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
-id: node.news.horizontal_long_format
+id: node.news.article_teaser
 targetEntityType: node
 bundle: news
-mode: horizontal_long_format
+mode: article_teaser
 content:
   field_category:
     type: entity_reference_label
@@ -36,7 +36,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_description:
     type: text_trimmed
@@ -44,7 +44,7 @@ content:
     settings:
       trim_length: 100
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
   field_image:
     type: image
@@ -53,12 +53,12 @@ content:
       image_link: ''
       image_style: ''
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
 hidden:
   comment: true

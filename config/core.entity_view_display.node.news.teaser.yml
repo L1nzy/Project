@@ -17,7 +17,7 @@ dependencies:
     - field.field.node.news.field_title
     - node.type.news
   module:
-    - svg_image
+    - image
     - text
     - user
 id: node.news.teaser
@@ -34,9 +34,10 @@ content:
     weight: 2
     region: content
   field_description:
-    type: text_default
+    type: text_trimmed
     label: hidden
-    settings: {  }
+    settings:
+      trim_length: 100
     third_party_settings: {  }
     weight: 3
     region: content
@@ -46,10 +47,6 @@ content:
     settings:
       image_link: ''
       image_style: ''
-      svg_attributes:
-        width: null
-        height: null
-      svg_render_as_image: true
     third_party_settings: {  }
     weight: 0
     region: content

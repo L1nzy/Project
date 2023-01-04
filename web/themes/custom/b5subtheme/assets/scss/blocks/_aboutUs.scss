@@ -1,4 +1,4 @@
-.layout--threecol-section {
+.layout--threecol-section  {
   padding-top: 20px;
   padding-bottom: 50px;
 
@@ -19,7 +19,6 @@
     font-weight: 300;
   }
 
-
   .field--name-field-logo {
     color: $color-black;
   }
@@ -28,8 +27,7 @@
     color: $color-gray300;
   }
 
-
-  .layout__region--second {
+  .layout__region--second{
     width: 50%;
 
     a {

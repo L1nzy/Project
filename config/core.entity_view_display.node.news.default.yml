@@ -30,7 +30,6 @@ dependencies:
     - block_content
     - comment
     - entity_reference_revisions
-    - image
     - layout_builder
     - layout_discovery
     - nextpre

@@ -1,4 +1,5 @@
-[class *= "block-views-blocklatest-news-"] {
+[class *= "block-views-blocklatest-news-"],
+.view-id-must_read {
   padding-left: 6px;
   padding-right: 6px;
 
@@ -27,6 +28,11 @@
       margin-bottom: 0;
       line-height: 20px;
     }
+
+    &:last-of-type {
+      padding: 0;
+      margin: 0;
+    }
   }
 
   img {
@@ -52,6 +58,22 @@
 
     .node__submitted {
       color: $color-yellow100;
+    }
+  }
+}
+
+.view-id-must_read {
+  img {
+    height: 150px;
+  }
+
+  .node__submitted {
+    display: flex;
+    gap: 14px;
+    color: $color-yellow100;
+
+    .field--name-field-category a {
+      @include authoredBy;
     }
   }
 }
