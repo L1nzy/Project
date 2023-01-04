@@ -34,6 +34,11 @@ content:
     label: hidden
     settings:
       link: true
+  field_description:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 100
     third_party_settings: {  }
     weight: 1
     region: content

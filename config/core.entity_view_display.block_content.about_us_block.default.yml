@@ -1,4 +1,4 @@
-uuid: f677a6b3-4675-47ef-bc51-d19602abe7c6
+uuid: 41608fab-1b8d-47ea-825a-52960d6ede72
 langcode: en
 status: true
 dependencies:
@@ -23,22 +23,8 @@ third_party_settings:
           context_mapping: {  }
           column_widths: 33-34-33
         components:
-          b6a06bda-771d-4ceb-9e83-8967fb777ae0:
-            uuid: b6a06bda-771d-4ceb-9e83-8967fb777ae0
-            region: first
-            configuration:
-              id: 'block_content:cc8fac9b-9eaf-4b11-b030-840237125bd1'
-              label: Logo
-              label_display: '0'
-              provider: block_content
-              status: true
-              info: ''
-              view_mode: full
-              context_mapping: {  }
-            weight: 0
-            additional: {  }
-          b5121b09-e79f-449f-b3ce-842cc792dea7:
-            uuid: b5121b09-e79f-449f-b3ce-842cc792dea7
+          09ae263e-3d5b-47a0-b102-92fb389ed485:
+            uuid: 09ae263e-3d5b-47a0-b102-92fb389ed485
             region: second
             configuration:
               id: 'block_content:f9d598f6-4ef7-4112-8a6b-d94a4e9f2bd7'
@@ -51,13 +37,27 @@ third_party_settings:
               context_mapping: {  }
             weight: 0
             additional: {  }
-          7fbee07e-da4b-4d3d-96aa-9d71ce593179:
-            uuid: 7fbee07e-da4b-4d3d-96aa-9d71ce593179
+          8fe0ae5f-6d07-45b3-ad64-d6d59ccfb5dd:
+            uuid: 8fe0ae5f-6d07-45b3-ad64-d6d59ccfb5dd
             region: third
             configuration:
               id: 'block_content:6768540c-c042-4a8f-b929-789f43be8e7c'
               label: 'Follow Us'
               label_display: visible
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+          caca8bf8-b557-43d2-9e61-a371a50aec1c:
+            uuid: caca8bf8-b557-43d2-9e61-a371a50aec1c
+            region: first
+            configuration:
+              id: 'block_content:cc8fac9b-9eaf-4b11-b030-840237125bd1'
+              label: Logo
+              label_display: '0'
               provider: block_content
               status: true
               info: ''

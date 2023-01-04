@@ -11954,7 +11954,7 @@ header .navbar {
 .field--name-field-logo-icon img {
   width: 45px;
   height: 45px;
-  filter: invert(59%) sepia(78%) saturate(911%) hue-rotate(8deg) brightness(101%) contrast(111%);
+  filter: invert(65%) sepia(55%) saturate(3967%) hue-rotate(15deg) brightness(113%) contrast(107%);
 }
 
 .field--name-field-logo {
@@ -12245,6 +12245,65 @@ img {
   gap: 40px;
 }
 
+.path-food-page .region-content > .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
+.path-entertainment-page .region-content > .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
+.path-travel-page .region-content > .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
+.path-fashion-full-page .region-content > .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
+.path-technology-full-page .region-content > .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
+.path-celebrities-page .region-content > .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
+.path-movies-page .region-content > .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
+.path-tv-full-page .region-content > .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
+.path-music-page .region-content > .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
+.path-games-page .region-content > .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first {
+  flex: 0 1 calc(100% - 364px);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.path-food-page .region-content > .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--second,
+.path-entertainment-page .region-content > .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--second,
+.path-travel-page .region-content > .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--second,
+.path-fashion-full-page .region-content > .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--second,
+.path-technology-full-page .region-content > .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--second,
+.path-celebrities-page .region-content > .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--second,
+.path-movies-page .region-content > .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--second,
+.path-tv-full-page .region-content > .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--second,
+.path-music-page .region-content > .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--second,
+.path-games-page .region-content > .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--second {
+  flex: 0 1 364px;
+  padding: 20px 32px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  height: max-content;
+}
+
+.js-pager__items .page-link {
+  border: unset;
+  padding: 5px 11px;
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  min-width: 33px;
+  text-align: center;
+  color: #000;
+  line-height: 21px;
+}
+.js-pager__items .page-link:hover {
+  border: 1px solid #000;
+  background-color: unset;
+}
+.js-pager__items .is-active a,
+.js-pager__items .page-item:first-child .page-link,
+.js-pager__items .page-item:last-child .page-link {
+  background-color: unset;
+  border-radius: 0;
+  border: 1px solid #000;
+}
+.js-pager__items .pager__item--last,
+.js-pager__items .pager__item--first {
+  display: none;
+}
+
 .field--name-field-gallary-item {
   width: calc(100vw - 15px);
   left: 50%;
@@ -12341,8 +12400,9 @@ img {
   filter: invert(59%) sepia(78%) saturate(911%) hue-rotate(8deg) brightness(101%) contrast(111%);
 }
 
-.view-music-festival {
-  margin-bottom: 148px;
+.view-music-festival,
+.view-category-related-block {
+  margin-bottom: 100px;
   margin-top: 50px;
   width: calc(100vw - 15px);
   max-width: 1400px;
@@ -12351,11 +12411,13 @@ img {
   position: relative;
   overflow: hidden;
 }
-.view-music-festival .view-header {
+.view-music-festival .view-header,
+.view-category-related-block .view-header {
   text-align: center;
   padding-top: 20px;
 }
-.view-music-festival .view-header .td-block-title {
+.view-music-festival .view-header .td-block-title,
+.view-category-related-block .view-header .td-block-title {
   font-family: "Open Sans", arial, sans-serif;
   font-size: 55px;
   font-weight: bold;
@@ -12363,13 +12425,15 @@ img {
   line-height: 1;
   margin-bottom: 48px;
 }
-.view-music-festival .view-header .td-block-title span {
+.view-music-festival .view-header .td-block-title span,
+.view-category-related-block .view-header .td-block-title span {
   padding: 0 20px 10px;
   font-family: Fira Sans, sans-serif;
   font-size: 54px;
   letter-spacing: -2px;
 }
-.view-music-festival .view-header .td-block-title .td-block-speech-bubble {
+.view-music-festival .view-header .td-block-title .td-block-speech-bubble,
+.view-category-related-block .view-header .td-block-title .td-block-speech-bubble {
   font-family: "Open Sans", arial, sans-serif;
   font-size: 12px;
   font-weight: 600;
@@ -12384,7 +12448,8 @@ img {
   top: 16px;
   text-transform: uppercase;
 }
-.view-music-festival .view-header .td-block-title .td-block-speech-bubble:before {
+.view-music-festival .view-header .td-block-title .td-block-speech-bubble:before,
+.view-category-related-block .view-header .td-block-title .td-block-speech-bubble:before {
   content: "";
   position: absolute;
   top: 100%;
@@ -12395,7 +12460,8 @@ img {
   border-width: 6px 6px 0 0;
   border-color: #000 transparent transparent transparent;
 }
-.view-music-festival .view-header .td-block-title .td-block-subtitle {
+.view-music-festival .view-header .td-block-title .td-block-subtitle,
+.view-category-related-block .view-header .td-block-title .td-block-subtitle {
   display: table;
   font-family: "Open Sans", arial, sans-serif;
   font-size: 15px;
@@ -12405,11 +12471,12 @@ img {
   letter-spacing: normal;
   color: #f5b000;
   position: relative;
-  margin: 2px auto;
+  margin: 10px auto;
   text-transform: none;
   max-width: 80%;
 }
-.view-music-festival .view-header .td-block-title .td-block-subtitle:before {
+.view-music-festival .view-header .td-block-title .td-block-subtitle:before,
+.view-category-related-block .view-header .td-block-title .td-block-subtitle:before {
   content: "";
   left: 100%;
   margin: auto 0 auto 20px;
@@ -12420,7 +12487,8 @@ img {
   bottom: 0;
   background-color: #e3e3e3;
 }
-.view-music-festival .view-header .td-block-title .td-block-subtitle:after {
+.view-music-festival .view-header .td-block-title .td-block-subtitle:after,
+.view-category-related-block .view-header .td-block-title .td-block-subtitle:after {
   content: "";
   right: 100%;
   margin: auto 20px auto 20px;
@@ -12431,29 +12499,34 @@ img {
   bottom: 0;
   background-color: #e3e3e3;
 }
-.view-music-festival .view-content {
+.view-music-festival .view-content,
+.view-category-related-block .view-content {
   display: flex;
   gap: 48px;
 }
-.view-music-festival .view-content .views-row {
+.view-music-festival .view-content .views-row,
+.view-category-related-block .view-content .views-row {
   position: relative;
   width: 25%;
   text-align: center;
 }
-.view-music-festival .view-content .views-row img {
+.view-music-festival .view-content .views-row img,
+.view-category-related-block .view-content .views-row img {
   width: 312px;
   height: 312px;
   object-fit: cover;
   margin-bottom: 13px;
 }
-.view-music-festival .view-content .views-row .field--name-field-category {
+.view-music-festival .view-content .views-row .field--name-field-category,
+.view-category-related-block .view-content .views-row .field--name-field-category {
   width: 100%;
   position: absolute;
   text-align: center;
   top: 300px;
   margin: 0 auto;
 }
-.view-music-festival .view-content .views-row .field--name-field-category a {
+.view-music-festival .view-content .views-row .field--name-field-category a,
+.view-category-related-block .view-content .views-row .field--name-field-category a {
   color: #000;
   text-decoration: unset;
   background-color: #ffffff;
@@ -12465,23 +12538,28 @@ img {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-.view-music-festival .view-content .views-row h2, .view-music-festival .view-content .views-row .h2 {
-  line-height: 1.1;
-  max-width: 80%;
-  margin: 0 auto;
+.view-music-festival .view-content .views-row h2, .view-music-festival .view-content .views-row .h2,
+.view-category-related-block .view-content .views-row h2,
+.view-category-related-block .view-content .views-row .h2 {
+  line-height: 22px;
+  padding: 0 20px;
 }
-.view-music-festival .view-content .views-row h2 span, .view-music-festival .view-content .views-row .h2 span {
+.view-music-festival .view-content .views-row h2 span, .view-music-festival .view-content .views-row .h2 span,
+.view-category-related-block .view-content .views-row h2 span,
+.view-category-related-block .view-content .views-row .h2 span {
   font-family: Fira Sans, sans-serif;
   font-size: 20px;
   font-weight: 600;
 }
-.view-music-festival .view-content .views-row .field--name-field-description p {
+.view-music-festival .view-content .views-row .field--name-field-description p,
+.view-category-related-block .view-content .views-row .field--name-field-description p {
   margin: 4px 0;
   line-height: 1.5;
   font-weight: 300;
   color: #767676;
 }
-.view-music-festival .view-content .views-row .node__submitted a {
+.view-music-festival .view-content .views-row .node__submitted a,
+.view-category-related-block .view-content .views-row .node__submitted a {
   text-decoration: unset;
   color: #000;
   font-family: Fira Sans, sans-serif;
@@ -12491,23 +12569,36 @@ img {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-.view-music-festival .view-content .views-row:nth-child(2n) {
+.view-music-festival .view-content .views-row:nth-child(2n),
+.view-category-related-block .view-content .views-row:nth-child(2n) {
   width: 50%;
 }
-.view-music-festival .view-content .views-row:nth-child(2n) img {
+.view-music-festival .view-content .views-row:nth-child(2n) img,
+.view-category-related-block .view-content .views-row:nth-child(2n) img {
   width: 100%;
   max-width: 672px;
   height: 450px;
   margin-bottom: 23px;
 }
-.view-music-festival .view-content .views-row:nth-child(2n) .field--name-field-category {
+.view-music-festival .view-content .views-row:nth-child(2n) .field--name-field-category,
+.view-category-related-block .view-content .views-row:nth-child(2n) .field--name-field-category {
   top: 440px;
 }
-.view-music-festival .view-content .views-row:nth-child(2n) .field--name-field-category a {
+.view-music-festival .view-content .views-row:nth-child(2n) .field--name-field-category a,
+.view-category-related-block .view-content .views-row:nth-child(2n) .field--name-field-category a {
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 600px;
 }
-.view-music-festival .view-content .views-row:nth-child(2n) h2 span, .view-music-festival .view-content .views-row:nth-child(2n) .h2 span {
+.view-music-festival .view-content .views-row:nth-child(2n) h2, .view-music-festival .view-content .views-row:nth-child(2n) .h2,
+.view-category-related-block .view-content .views-row:nth-child(2n) h2,
+.view-category-related-block .view-content .views-row:nth-child(2n) .h2 {
+  line-height: 1.1;
+  max-width: 80%;
+  margin: 0 auto;
+}
+.view-music-festival .view-content .views-row:nth-child(2n) h2 span, .view-music-festival .view-content .views-row:nth-child(2n) .h2 span,
+.view-category-related-block .view-content .views-row:nth-child(2n) h2 span,
+.view-category-related-block .view-content .views-row:nth-child(2n) .h2 span {
   font-size: 32px;
 }
 
@@ -12525,7 +12616,7 @@ img {
 }
 [class*=block-views-blocktop-news-] .view-content .views-row:first-of-type {
   position: absolute;
-  left: 35px;
+  left: 0;
   width: 66.67%;
   max-width: 575px;
   text-align: center;
@@ -12534,102 +12625,6 @@ img {
   display: block;
 }
 [class*=block-views-blocktop-news-] .view-content .views-row:first-of-type .node__submitted a {
-[class*=block-views-blocklatest-news-] {
-  padding-left: 6px;
-  padding-right: 6px;
-}
-[class*=block-views-blocklatest-news-] .views-row {
-  position: relative;
-  padding-bottom: 15px;
-  margin-bottom: 15px;
-}
-[class*=block-views-blocklatest-news-] .views-row::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: -15px;
-  width: 100%;
-  height: 1px;
-  border-width: 0 0 1px 0;
-  border-style: solid;
-  border-color: #eaeaea;
-}
-[class*=block-views-blocklatest-news-] .views-row:first-of-type::after {
-  content: none;
-}
-[class*=block-views-blocklatest-news-] .views-row h2, [class*=block-views-blocklatest-news-] .views-row .h2 {
-  margin-bottom: 0;
-  line-height: 20px;
-}
-[class*=block-views-blocklatest-news-] img {
-  height: 134px;
-  object-fit: cover;
-  margin-bottom: 13px;
-  background-color: #0a6fb4;
-}
-[class*=block-views-blocklatest-news-] .field--name-field-description p {
-  margin-bottom: 0;
-  font-family: Merriweather, sans-serif;
-  color: #767676;
-}
-[class*=block-views-blocklatest-news-] .category-and-date {
-  display: flex;
-  gap: 14px;
-}
-[class*=block-views-blocklatest-news-] .category-and-date .field--name-field-category a {
-  text-decoration: unset;
-  color: #000;
-  font-family: Fira Sans, sans-serif;
-  font-size: 12px;
-  line-height: 1;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-[class*=block-views-blocklatest-news-] .category-and-date .node__submitted {
-  color: #ffcd3f;
-}
-
-[class*=block-views-blockcelebrities-] h2, [class*=block-views-blockcelebrities-] .h2 {
-  margin-bottom: 26px;
-}
-[class*=block-views-blockcelebrities-] .view-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-}
-[class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type {
-  width: 100%;
-  max-width: unset;
-  margin-bottom: 28px;
-}
-[class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type img {
-  max-height: 364px;
-}
-[class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type .field--name-field-category .field__item {
-  display: flex;
-  justify-content: center;
-}
-[class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type .field--name-field-category a {
-  top: -38px;
-  padding: 8px 12px 7px;
-  font-weight: 600;
-}
-[class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type h2, [class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type .h2 {
-  text-align: center;
-  margin-bottom: 4px;
-  line-height: 38.4px;
-  letter-spacing: 1px;
-}
-[class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type h2 span, [class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type .h2 span {
-  font-size: 32px;
-}
-[class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type .node__submitted {
-  display: block;
-  text-align: center;
-}
-[class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type .node__submitted a {
   text-decoration: unset;
   color: #000;
   font-family: Fira Sans, sans-serif;
@@ -12675,30 +12670,6 @@ img {
   width: 100%;
 }
 [class*=block-views-blocktop-news-] .view-content .views-row .field--name-field-category a {
-  font-weight: 400;
-}
-[class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type .field--name-field-description p {
-  text-align: center;
-}
-[class*=block-views-blockcelebrities-] .view-content .views-row {
-  position: relative;
-  width: 50%;
-  max-width: 252px;
-}
-[class*=block-views-blockcelebrities-] .view-content .views-row img {
-  height: auto;
-  max-height: 126px;
-  object-fit: cover;
-  width: 100%;
-  margin-bottom: 23px;
-}
-[class*=block-views-blockcelebrities-] .view-content .views-row .field--name-field-category {
-  position: absolute;
-  width: 100%;
-}
-[class*=block-views-blockcelebrities-] .view-content .views-row .field--name-field-category a {
-  position: absolute;
-  top: -35px;
   color: #000;
   text-decoration: unset;
   background-color: #ffffff;
@@ -12729,22 +12700,196 @@ img {
 [class*=block-views-blocktop-news-] .view-content .views-row .node__submitted {
   display: none;
 }
+
+[class*=block-views-blocklatest-news-],
+.view-id-must_read {
+  padding-left: 6px;
+  padding-right: 6px;
 }
-[class*=block-views-blockcelebrities-] .view-content .views-row h2, [class*=block-views-blockcelebrities-] .view-content .views-row .h2 {
+[class*=block-views-blocklatest-news-] .views-row,
+.view-id-must_read .views-row {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+[class*=block-views-blocklatest-news-] .views-row::after,
+.view-id-must_read .views-row::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -15px;
+  width: 100%;
+  height: 1px;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #eaeaea;
+}
+[class*=block-views-blocklatest-news-] .views-row:first-of-type::after,
+.view-id-must_read .views-row:first-of-type::after {
+  content: none;
+}
+[class*=block-views-blocklatest-news-] .views-row h2, [class*=block-views-blocklatest-news-] .views-row .h2,
+.view-id-must_read .views-row h2,
+.view-id-must_read .views-row .h2 {
+  margin-bottom: 0;
+  line-height: 20px;
+}
+[class*=block-views-blocklatest-news-] .views-row:last-of-type,
+.view-id-must_read .views-row:last-of-type {
+  padding: 0;
+  margin: 0;
+}
+[class*=block-views-blocklatest-news-] img,
+.view-id-must_read img {
+  height: 134px;
+  object-fit: cover;
+  margin-bottom: 13px;
+  background-color: #0a6fb4;
+}
+[class*=block-views-blocklatest-news-] .field--name-field-description p,
+.view-id-must_read .field--name-field-description p {
+  margin-bottom: 0;
+  font-family: Merriweather, sans-serif;
+  color: #767676;
+}
+[class*=block-views-blocklatest-news-] .category-and-date,
+.view-id-must_read .category-and-date {
+  display: flex;
+  gap: 14px;
+}
+[class*=block-views-blocklatest-news-] .category-and-date .field--name-field-category a,
+.view-id-must_read .category-and-date .field--name-field-category a {
+  text-decoration: unset;
+  color: #000;
+  font-family: Fira Sans, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+[class*=block-views-blocklatest-news-] .category-and-date .node__submitted,
+.view-id-must_read .category-and-date .node__submitted {
+  color: #ffcd3f;
+}
+
+.view-id-must_read img {
+  height: 150px;
+}
+.view-id-must_read .node__submitted {
+  display: flex;
+  gap: 14px;
+  color: #ffcd3f;
+}
+.view-id-must_read .node__submitted .field--name-field-category a {
+  text-decoration: unset;
+  color: #000;
+  font-family: Fira Sans, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.path-frontpage [class*=block-views-blockcelebrities-] h2, .path-frontpage [class*=block-views-blockcelebrities-] .h2 {
+  margin-bottom: 26px;
+}
+.path-frontpage [class*=block-views-blockcelebrities-] .view-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+.path-frontpage [class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type {
+  width: 100%;
+  max-width: unset;
+  margin-bottom: 28px;
+}
+.path-frontpage [class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type img {
+  max-height: 364px;
+}
+.path-frontpage [class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type .field--name-field-category .field__item {
+  display: flex;
+  justify-content: center;
+}
+.path-frontpage [class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type .field--name-field-category a {
+  top: -38px;
+  padding: 8px 12px 7px;
+  font-weight: 600;
+}
+.path-frontpage [class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type h2, .path-frontpage [class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type .h2 {
+  text-align: center;
+  margin-bottom: 4px;
+  line-height: 38.4px;
+  letter-spacing: 1px;
+}
+.path-frontpage [class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type h2 span, .path-frontpage [class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type .h2 span {
+  font-size: 32px;
+}
+.path-frontpage [class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type .node__submitted {
+  display: block;
+  text-align: center;
+}
+.path-frontpage [class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type .node__submitted a {
+  text-decoration: unset;
+  color: #000;
+  font-family: Fira Sans, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.path-frontpage [class*=block-views-blockcelebrities-] .view-content .views-row:first-of-type .field--name-field-description p {
+  text-align: center;
+}
+.path-frontpage [class*=block-views-blockcelebrities-] .view-content .views-row {
+  position: relative;
+  width: 50%;
+  max-width: 252px;
+}
+.path-frontpage [class*=block-views-blockcelebrities-] .view-content .views-row img {
+  height: auto;
+  max-height: 126px;
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: 23px;
+}
+.path-frontpage [class*=block-views-blockcelebrities-] .view-content .views-row .field--name-field-category {
+  position: absolute;
+  width: 100%;
+}
+.path-frontpage [class*=block-views-blockcelebrities-] .view-content .views-row .field--name-field-category a {
+  position: absolute;
+  top: -35px;
+  color: #000;
+  text-decoration: unset;
+  background-color: #ffffff;
+  padding: 5px 6px 3px;
+  border: 1px solid #000;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.path-frontpage [class*=block-views-blockcelebrities-] .view-content .views-row h2, .path-frontpage [class*=block-views-blockcelebrities-] .view-content .views-row .h2 {
   margin-bottom: 4px;
   line-height: 22px;
 }
-[class*=block-views-blockcelebrities-] .view-content .views-row h2 span, [class*=block-views-blockcelebrities-] .view-content .views-row .h2 span {
+.path-frontpage [class*=block-views-blockcelebrities-] .view-content .views-row h2 span, .path-frontpage [class*=block-views-blockcelebrities-] .view-content .views-row .h2 span {
   font-size: 20px;
   font-weight: 600;
 }
-[class*=block-views-blockcelebrities-] .view-content .views-row .field--name-field-description p {
+.path-frontpage [class*=block-views-blockcelebrities-] .view-content .views-row .field--name-field-description p {
   font-family: Merriweather, sans-serif;
   margin-bottom: 0;
   color: #767676;
   font-weight: 300;
 }
-[class*=block-views-blockcelebrities-] .view-content .views-row .node__submitted {
+.path-frontpage [class*=block-views-blockcelebrities-] .view-content .views-row .node__submitted {
   display: none;
 }
 
@@ -12864,6 +13009,55 @@ img {
 
 .field--name-field-networks {
   max-width: 300px;
+}
+
+main .layout--onecol {
+  padding: 80px 0;
+  text-align: center;
+  width: calc(100vw - 15px);
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  background-color: #f9f9f9;
+  margin-bottom: 80px;
+}
+main .layout--onecol .field--name-field-title {
+  color: #111111;
+  font-family: Fira Sans, sans-serif;
+  font-size: 38px;
+  line-height: 1.3;
+  font-weight: 800;
+  text-transform: none;
+  margin-bottom: 19px;
+}
+main .layout--onecol .field--name-field-description {
+  width: 50%;
+  margin: 0 auto;
+}
+main .layout--onecol .field--name-field-description p {
+  margin-bottom: 24px;
+  font-family: Merriweather, sans-serif;
+  line-height: 1.5;
+  font-style: normal;
+  font-weight: 300;
+  color: #767676;
+}
+main .layout--onecol .field--name-field-taxonomy-category {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+main .layout--onecol .field--name-field-taxonomy-category a {
+  color: #000;
+  text-decoration: unset;
+  background-color: #ffffff;
+  padding: 5px 6px 3px;
+  border: 1px solid #000;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .view-id-featured {
@@ -13010,6 +13204,67 @@ img {
   position: absolute;
   bottom: -20px;
   left: 25%;
+}
+.view-id-featured .js-pager__items .page-item:first-child .page-link {
+  border: unset;
+}
+
+.node--view-mode-article-teaser .node__content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 46px;
+}
+.node--view-mode-article-teaser .node__content img {
+  width: auto;
+  height: auto;
+  max-height: 232px;
+  max-width: 331px;
+  object-fit: cover;
+}
+.node--view-mode-article-teaser .node__content .field--name-field-category {
+  margin-bottom: 8px;
+}
+.node--view-mode-article-teaser .node__content .field--name-field-category a {
+  color: #000;
+  text-decoration: unset;
+  background-color: #ffffff;
+  padding: 5px 6px 3px;
+  border: 1px solid #000;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.node--view-mode-article-teaser .node__content .field--name-field-description p {
+  font-family: Merriweather, sans-serif;
+  margin-bottom: 0;
+  color: #767676;
+  font-weight: 300;
+  margin-bottom: 6px;
+}
+.node--view-mode-article-teaser .node__content h2, .node--view-mode-article-teaser .node__content .h2 {
+  margin-bottom: 6px;
+  line-height: 30px;
+}
+.node--view-mode-article-teaser .node__content h2 span, .node--view-mode-article-teaser .node__content .h2 span {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+}
+.node--view-mode-article-teaser .node__content .username {
+  text-decoration: unset;
+  color: #000;
+  font-family: Fira Sans, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.node--view-mode-article-teaser .node__content .node__submitted {
+  color: #767676;
 }
 
 .region-footer-first {

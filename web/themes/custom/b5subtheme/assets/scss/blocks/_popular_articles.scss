@@ -1,7 +1,8 @@
 @import "../mixins/mixins_buttons";
 
-.view-music-festival {
-  margin-bottom: 148px;
+.view-music-festival,
+.view-category-related-block {
+  margin-bottom: 100px;
   margin-top: 50px;
   width: calc(100vw - 15px);
   max-width: 1400px;
@@ -67,7 +68,7 @@
         letter-spacing: normal;
         color: $color-yellow;
         position: relative;
-        margin: 2px auto;
+        margin: 10px auto;
         text-transform: none;
         max-width: 80%;
 
@@ -127,9 +128,8 @@
       }
 
       h2 {
-        line-height: 1.1;
-        max-width: 80%;
-        margin: 0 auto;
+        line-height: 22px;
+        padding: 0 20px;
 
         span {
           font-family: Fira Sans,sans-serif;
@@ -165,12 +165,18 @@
 
         a {
           font-size: 15px;
-          font-weight: 600;
+          font-weight: 600px;
         }
       }
 
-      h2 span {
-        font-size: 32px;
+      h2 {
+        line-height: 1.1;
+        max-width: 80%;
+        margin: 0 auto;
+
+        span {
+          font-size: 32px;
+        }
       }
     }
   }

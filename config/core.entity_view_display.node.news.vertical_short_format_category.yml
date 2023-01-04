@@ -39,9 +39,10 @@ content:
     weight: 2
     region: content
   field_description:
-    type: text_default
+    type: text_trimmed
     label: hidden
-    settings: {  }
+    settings:
+      trim_length: 100
     third_party_settings: {  }
     weight: 1
     region: content
