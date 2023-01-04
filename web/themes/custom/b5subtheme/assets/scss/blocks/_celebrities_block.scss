@@ -135,7 +135,7 @@
 
         @include media_for_h2;
 
-        @media(max-width: $desktop) {
+        @media(max-width: $second-breakpoint) {
           padding-left: 20px;
         }
 

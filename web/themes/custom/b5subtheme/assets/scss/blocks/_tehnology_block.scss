@@ -21,7 +21,14 @@
     gap: 20px;
 
     @media(max-width: $second-breakpoint) {
-      gap: 10px;
+      .node__content,
+      .content-side {
+        width: 100%;
+      }
+
+      .node__content {
+        max-width: 212px;
+      }
     }
 
     img {
@@ -39,6 +46,7 @@
 
       @media(max-width: $second-breakpoint) {
         max-width: 212px;
+        width: 100%;
       }
     }
 
