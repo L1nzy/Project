@@ -1,0 +1,29 @@
+.button-to-top {
+  cursor: pointer;
+  position: fixed;
+  bottom: -50px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: $color-blue;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease-in-out;
+
+  &.active {
+    bottom: 4px;
+  }
+
+  .icon-menu-up::before {
+      content: '';
+      background-image: url("../assets/images/icons/arrow-right.png");
+      transform: rotate(-90deg);
+      display: block;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 25px;
+      height: 25px;
+  }
+}
