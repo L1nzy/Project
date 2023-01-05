@@ -100,11 +100,11 @@ third_party_settings:
             region: second
             configuration:
               id: 'views_block:tv_short-block_1'
-              label: 'tv '
+              label: TV
               label_display: visible
               provider: views
               context_mapping: {  }
-              views_label: 'tv '
+              views_label: TV
               items_per_page: none
             weight: 2
             additional: {  }
