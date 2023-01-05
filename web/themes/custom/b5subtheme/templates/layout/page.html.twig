@@ -96,7 +96,7 @@ set footer_classes = ' ' ~
    %}
 
 
-  <div class="{{ b5_top_container }}">
+  <div class="custom-container">
     {% if page.breadcrumb %}
       {{ page.breadcrumb }}
     {% endif %}
@@ -123,11 +123,11 @@ set footer_classes = ' ' ~
 </main>
 
 {% if page.footer %}
-<div class="{{ b5_top_container }}">
+<div class="footer-container">
   {{ page.footer_first }}
 </div>
 
-<div class="{{ b5_top_container }}">
+<div class="footer-container">
   {{ page.footer_second }}
 </div>
 

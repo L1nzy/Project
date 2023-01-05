@@ -1,6 +1,13 @@
 [class *= "block-views-blocktop-news-"] {
   margin-bottom: 48px;
-  padding: 0 20px;
+
+  @media (max-width: $first-breakpoint) {
+    padding: 0 20px;
+  }
+
+  @media(max-width: $second-breakpoint) {
+    padding: 0;
+  }
 
   .view-content {
     display: flex;
@@ -14,8 +21,20 @@
       position: absolute;
       left: 0;
       width: 66.67%;
-      max-width: 575px;
+      max-width: 595px;
+      padding-right: 40px;
       text-align: center;
+
+      @media (max-width: $first-breakpoint) {
+        padding-right: 25px;
+      }
+
+      @media(max-width: $second-breakpoint) {
+        position: relative;
+        width: 100%;
+        max-width: unset;
+        padding-right: 0;
+      }
 
       .node__submitted {
         display: block;
@@ -27,12 +46,29 @@
 
       h2 {
         line-height: 1.2;
+
+        @media(max-width: $first-breakpoint) {
+          margin-bottom: 8px;
+          line-height: 28px;
+        }
+
+        @media(max-width: 1024px) {
+          line-height: 24px;
+        }
       }
 
       h2 span {
         font-size: 32px;
         font-weight: 600;
         letter-spacing: -1px;
+
+        @media(max-width: $first-breakpoint) {
+          font-size: 24px;
+        }
+
+        @media(max-width: $desktop) {
+          font-size: 20px;
+        }
       }
 
       img {
@@ -40,6 +76,12 @@
         width: 100%;
         height: auto;
         object-fit: cover;
+        max-height: unset;
+
+        @media(max-width: $second-breakpoint) {
+          max-width: unset;
+          max-height: 371px;
+        }
       }
 
       .field--name-field-category {
@@ -48,7 +90,16 @@
         a {
           position: relative;
           bottom: 35px;
+          left: auto;
+
+          @media(max-width: $desktop) {
+            bottom: 25px;
+          }
         }
+      }
+
+      .field--name-field-description p {
+        margin: 0 auto;
       }
     }
 
@@ -57,10 +108,26 @@
       width: 33.33%;
       max-width: 268px;
 
+      @media(max-width: $second-breakpoint) {
+        width: 100%;
+        max-width: unset;
+      }
+
       img {
         width: 267px;
         height: 133px;
         margin-bottom: 23px;
+
+        @media(max-width: $desktop) {
+          margin-bottom: 13px;
+          max-height: 113px;
+        }
+
+        @media(max-width: $second-breakpoint) {
+          max-height: 359px;
+          height: auto;
+          width: 100%;
+        }
       }
 
       .field--name-field-category {
@@ -71,24 +138,56 @@
           @include small-category;
           position: absolute;
           bottom: 13px;
+
+          @media(max-width: $desktop) {
+            bottom: 3px;
+          }
+
+          @media(max-width: $second-breakpoint) {
+            left: 20px;
+          }
         }
       }
 
       h2 {
         line-height: 22px;
 
+        @media (max-width: $first-breakpoint) {
+          line-height: 17px;
+          margin-bottom: 4px;
+        }
+
+        @media(max-width: $second-breakpoint) {
+          margin-left: 20px;
+        }
+
         span {
           font-size: 20px;
           font-weight: 700;
           font-family: 'Fira Sans', sans-serif;
+
+          @media (max-width: $first-breakpoint) {
+            font-size: 16px;
+          }
+
+          @media(max-width: $desktop) {
+            font-size: 15px;
+          }
+
+          @media(max-width: $second-breakpoint) {
+            font-size: 18px;
+          }
         }
       }
 
-      .field--name-field-description p {
-        line-height: 1.5;
-        font-weight: 300;
-        color: $color-text;
-        margin-bottom: 0;
+      .field--name-field-description {
+        p {
+          @include textDescription;
+        }
+
+        @media(max-width: $second-breakpoint) {
+          margin-left: 20px;
+        }
       }
 
       .node__submitted {

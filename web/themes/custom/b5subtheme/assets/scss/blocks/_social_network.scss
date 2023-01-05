@@ -85,9 +85,22 @@
       text-transform: uppercase;
       color: $color-black;
     }
+
+    @media(max-width: $desktop) {
+      display: none;
+    }
+
+    @media(max-width: $second-breakpoint) {
+      display: inline-block;
+    }
   }
 }
 
 .field--name-field-networks {
   max-width: 300px;
+
+  @media(max-width: $second-breakpoint) {
+    max-width: unset;
+    padding: 0 20px;
+  }
 }

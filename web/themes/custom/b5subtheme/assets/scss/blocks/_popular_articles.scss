@@ -10,10 +10,20 @@
   transform: translateX(-50%);
   position: relative;
   overflow: hidden;
+  padding: 0 24px;
+
+  @media(max-width: $second-breakpoint) {
+    padding: unset;
+  }
+
+  @media(max-width: $second-breakpoint) {
+    margin-bottom: 0;
+  }
 
   .view-header {
     text-align: center;
     padding-top: 20px;
+    overflow: hidden;
 
     .td-block-title {
       font-family: 'Open Sans', arial, sans-serif;
@@ -28,6 +38,18 @@
         font-family: Fira Sans, sans-serif;
         font-size: 54px;
         letter-spacing: -2px;
+
+        @media(max-width: $first-breakpoint) {
+          font-size: 46px;
+        }
+
+        @media(max-width: $desktop) {
+          font-size: 40px;
+        }
+
+        @media(max-width: $second-breakpoint) {
+          font-size: 32px;
+        }
       }
 
       .td-block-speech-bubble {
@@ -72,6 +94,10 @@
         text-transform: none;
         max-width: 80%;
 
+        @media(max-width: $second-breakpoint) {
+          font-size: 13px;
+        }
+
         &:before {
           content: '';
           left: 100%;
@@ -103,46 +129,94 @@
     display: flex;
     gap: 48px;
 
+    @media(max-width: $desktop) {
+      gap: 20px;
+    }
+
+    @media(max-width: $second-breakpoint) {
+      flex-direction: column;
+      gap: 40px;
+    }
+
     .views-row {
       position: relative;
       width: 25%;
       text-align: center;
+
+      @media(max-width: $second-breakpoint) {
+        width: 100%;
+      }
 
       img {
         width: 312px;
         height: 312px;
         object-fit: cover;
         margin-bottom: 13px;
+
+        @media(max-width: $first-breakpoint) {
+          width: 246px;
+          height: 246px;
+        }
+
+        @media(max-width: $desktop) {
+          width: 232px;
+          height: 232px;
+        }
+
+        @media(max-width: $second-breakpoint) {
+          width: 100%;
+          height: auto;
+          max-height: 360px;
+        }
       }
 
       .field--name-field-category {
         width: 100%;
         position: absolute;
         text-align: center;
-        top: 300px;
-        margin: 0 auto;
+
+        .field__item {
+          display: flex;
+          justify-content: center;
+        }
 
         a {
           @include small-category;
+          bottom: 3px;
+          position: absolute;
         }
       }
 
       h2 {
         line-height: 22px;
-        padding: 0 20px;
+        padding: 0 10px;
+
+        @include media_for_h2;
+
+        @media(max-width: $second-breakpoint) {
+          @include media_for_h2_big;
+        }
 
         span {
           font-family: Fira Sans,sans-serif;
           font-size: 20px;
           font-weight: 600;
+
+          @include media_for_span;
+
+          @media(max-width: $second-breakpoint) {
+            @include media_for_span_big;
+          }
         }
       }
 
-      .field--name-field-description p {
-        margin: 4px 0;
-        line-height: 1.5;
-        font-weight: 300;
-        color: $color-text;
+      .field--name-field-description {
+        width: unset;
+
+        p {
+         margin: 4px auto;
+         @include textDescription;
+        }
       }
 
       .node__submitted a {
@@ -153,29 +227,53 @@
     .views-row:nth-child(2n) {
       width: 50%;
 
+      @media(max-width: $second-breakpoint) {
+        width: 100%;
+      }
+
       img {
         width: 100%;
         max-width: 672px;
         height: 450px;
         margin-bottom: 23px;
+
+        @media(max-width: $first-breakpoint) {
+          height: 348px;
+        }
+
+        @media(max-width: $desktop) {
+          height: 321px;
+        }
+
+        @media(max-width: $second-breakpoint) {
+          width: 100%;
+          max-width: unset;
+          height: auto;
+          max-height: 360px;
+        }
       }
 
       .field--name-field-category {
-        top: 440px;
-
         a {
           font-size: 15px;
           font-weight: 600px;
+          bottom: 12px;
+
+          @media(max-width: $first-breakpoint) {
+            @include small-category;
+          }
         }
       }
 
       h2 {
         line-height: 1.1;
-        max-width: 80%;
         margin: 0 auto;
+
+        @include media_for_h2_big;
 
         span {
           font-size: 32px;
+          @include media_for_span_big;
         }
       }
     }

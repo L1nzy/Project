@@ -9,6 +9,14 @@
   font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;
+
+  @media(max-width: $desktop) {
+    font-size: 9px;
+  }
+
+  @media(max-width: $second-breakpoint) {
+    font-size: 11px;
+  }
 }
 
 @mixin date {
@@ -19,6 +27,14 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   color: $color-text;
+
+  @media(max-width: $first-breakpoint) {
+    font-size: 11px;
+  }
+
+  @media(max-width: $second-breakpoint) {
+    font-size: 12px;
+  }
 }
 
 @mixin authoredBy {
@@ -30,11 +46,29 @@
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
+
+  @media(max-width: $first-breakpoint) {
+    font-size: 11px;
+  }
+
+  @media(max-width: $second-breakpoint) {
+    font-size: 12px;
+  }
 }
 
 @mixin textDescription {
   font-family: Merriweather, sans-serif;
   margin-bottom: 0;
+  font-size: $base-size;
   color: $color-text;
   font-weight: 300;
+  width: 90%;
+
+  @media(max-width: $first-breakpoint) {
+    font-size: 11px;
+  }
+
+  @media(max-width: $second-breakpoint) {
+    font-size: 14px;
+  }
 }

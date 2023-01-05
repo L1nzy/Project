@@ -1,0 +1,79 @@
+.custom-container,
+.footer-container {
+  max-width: 1232px;
+  margin: 0 auto;
+}
+
+@media (max-width: $first-breakpoint) {
+  .custom-container,
+  .footer-container {
+    max-width: unset;
+  }
+}
+
+@mixin media_for_h2 {
+  @media(max-width: $first-breakpoint) {
+    line-height: 17.6px;
+    margin-bottom: 6px;
+  }
+
+  @media(max-width: $desktop) {
+    line-height: 16.5px;
+  }
+
+  @media(max-width: $second-breakpoint) {
+    line-height: 11px;
+  }
+}
+
+@mixin media_for_span {
+  @media(max-width: $first-breakpoint) {
+    font-size: 16px;
+  }
+
+  @media(max-width: $desktop) {
+    font-size: 15px;
+  }
+
+  @media(max-width: $second-breakpoint) {
+    font-size: 16px;
+  }
+}
+
+@mixin media_for_h2_big {
+  @media(max-width: $first-breakpoint) {
+    line-height: 28.8px;
+  }
+
+  @media(max-width: $second-breakpoint) {
+    line-height: 19.8px;
+  }
+}
+
+@mixin media_for_span_big {
+  @media(max-width: $first-breakpoint) {
+    font-size: 24px;
+  }
+
+  @media(max-width: $desktop) {
+    font-size: 20px;
+  }
+
+  @media(max-width: $second-breakpoint) {
+    font-size: 18px;
+  }
+}
+
+@mixin standard_text {
+  @media(max-width: $first-breakpoint) {
+    font-size: 14px;
+  }
+
+  @media(max-width: $desktop) {
+    font-size: 12px;
+  }
+
+  @media(max-width: $second-breakpoint) {
+    font-size: 16px;
+  }
+}

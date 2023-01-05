@@ -13,6 +13,19 @@ h2 {
   font-weight: 800;
   letter-spacing: 1px;
   margin-bottom: 16px;
+
+  @media(max-width: $first-breakpoint) {
+    font-size: 23px;
+  }
+
+  @media(max-width: $desktop) {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  @media(max-width: $second-breakpoint) {
+    font-size: 28px;
+  }
 }
 
 h2 a {
@@ -31,6 +44,19 @@ h2 span {
   color: $color-black;
   transition: all 0.2s ease;
   font-weight: 800;
+
+  @media(max-width: $first-breakpoint) {
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  @media(max-width: $desktop) {
+    font-size: 13px;
+  }
+
+  @media(max-width: $second-breakpoint) {
+    font-size: 16px;
+  }
 }
 
 .field--name-field-img {
@@ -39,4 +65,10 @@ h2 span {
 
 img {
   object-fit: cover;
+}
+
+@media(max-width: $second-breakpoint) {
+  .region-content {
+    padding: 0;
+  }
 }

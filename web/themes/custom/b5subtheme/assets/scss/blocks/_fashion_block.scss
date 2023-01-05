@@ -1,4 +1,8 @@
 [class *= "block-views-blockfashion-short-block-"] {
+  @media(max-width: $desktop) {
+    padding: 0 20px;
+  }
+
   h2 {
     margin-bottom: 16px;
   }
@@ -8,8 +12,16 @@
     flex-wrap: wrap;
     gap: 20px;
 
+    @media(max-width: $second-breakpoint) {
+      flex-direction: column;
+    }
+
     .views-row {
       width: calc(50% - 20px);
+
+      @media(max-width: $second-breakpoint) {
+        width: 100%;
+      }
 
       h2 {
         line-height: 24px;
@@ -17,27 +29,40 @@
         font-family: Merriweather, sans-serif;
         font-weight: 800;
         margin-bottom: 10px;
+
+        @media(max-width: $first-breakpoint) {
+          line-height: 19.6px;
+        }
+
+        @media(max-width: $desktop) {
+          line-height: 18.2px;
+        }
+
+        @media(max-width: $second-breakpoint) {
+          line-height: 24px;
+        }
       }
 
       .username {
-        text-decoration: unset;
-        color: $color-black;
-        font-family: Fira Sans,sans-serif;
-        font-size: 12px;
-        line-height: 1;
-        font-weight: 400;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+        @include authoredBy;
 
         &::after {
           content: '-';
           padding-left: 5px;
           color: $color-text;
         }
+
+        @media(max-width: $desktop) {
+          display: none;
+        }
+
+        @media(max-width: $second-breakpoint) {
+          display: inline-block;
+        }
       }
 
       .node__submitted {
-        color: $color-text;
+        @include date;
       }
     }
   }
