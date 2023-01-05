@@ -22,5 +22,7 @@
     font-weight: 500;
     line-height: 30px;
     text-decoration: none;
+
+    @include standard_text;
   }
 }

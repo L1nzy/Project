@@ -1,10 +1,12 @@
-.custom-container {
+.custom-container,
+.footer-container {
   max-width: 1232px;
   margin: 0 auto;
 }
 
 @media (max-width: $first-breakpoint) {
-  .custom-container {
+  .custom-container,
+  .footer-container {
     max-width: unset;
   }
 }
@@ -59,5 +61,19 @@
 
   @media(max-width: $second-breakpoint) {
     font-size: 18px;
+  }
+}
+
+@mixin standard_text {
+  @media(max-width: $first-breakpoint) {
+    font-size: 14px;
+  }
+
+  @media(max-width: $desktop) {
+    font-size: 12px;
+  }
+
+  @media(max-width: $second-breakpoint) {
+    font-size: 16px;
   }
 }
