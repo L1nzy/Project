@@ -23,3 +23,10 @@ function b5subtheme_preprocess_taxonomy_term(&$variables) {
   }
 
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter() for comment-form.
+ */
+function b5subtheme_form_comment_comment_form_alter(&$form, &$form_state, $form_id) {
+  $form['actions']['submit']['#value'] = t('Post comment');
+}
