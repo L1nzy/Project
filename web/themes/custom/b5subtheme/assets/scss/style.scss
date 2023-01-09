@@ -27,12 +27,13 @@
 @import "variables/breakpoints_variable";
 @import "variables/fonts_variables";
 
-//Base
+//Base.
 @import "base/base_styles";
 @import "base/layout_section";
 @import "base/buttons";
 @import "base/pager";
 @import "base/breakpoint";
+@import "base/author";
 
 //Blocks
 @import "blocks/image_gallery";

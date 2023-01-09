@@ -12,14 +12,6 @@
     font-size: 0;
   }
 
-  .facebook:hover::before,
-  .instagram:hover::before,
-  .twitter:hover::before,
-  .youtube:hover::before, {
-    opacity: 0.8;
-    filter: none !important;
-  }
-
   .facebook::before,
   .instagram::before,
   .twitter::before,
@@ -67,7 +59,26 @@
   align-items: center;
   font-weight: 500;
   text-transform: capitalize;
+
+
 }
+.advertisment .field--name-field-share-link,
+.advertisment .field--name-field-icon,
+.content-and-sidebar .field--name-field-icon,
+.view-author-info .views-field-field-social-networks img {
+  .facebook:hover::before,
+  .instagram:hover::before,
+  .twitter:hover::before,
+  .youtube:hover::before, {
+    opacity: 0.8;
+    filter: none;
+  }
+}
+
+.view-author-info .views-field-field-social-networks img:hover {
+  filter: invert(59%) sepia(78%) saturate(911%) hue-rotate(8deg) brightness(101%) contrast(111%);
+}
+
 .field--name-field-share-link::before {
   content: '';
   background-image: url("../assets/images/share.svg");
