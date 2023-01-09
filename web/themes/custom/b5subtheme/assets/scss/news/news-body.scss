@@ -173,6 +173,37 @@
     }
   }
 
+  .content-and-sidebar {
+    .layout__region--first {
+      .block-field-blocknodenewsfield-description,
+      .field--name-field-description {
+        font-family: Merriweather, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 26px;
+      }
+
+      .field--name-field-paragraph-title,
+      .field--name-field-description {
+        padding: 0 8%;
+
+
+      }
+      .field--name-field-paragraph-title {
+        font-family: Fira Sans, sans-serif;
+        font-size: 27px;
+        line-height: 38px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+      .field--name-field-image {
+        max-width: 844px;
+        max-height: 551px;
+      }
+    }
+  }
+
   }
 }
 
