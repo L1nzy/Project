@@ -21,14 +21,21 @@ use Drupal\paragraphs\ParagraphsBehaviorBase;
 class ImageAndTextBehavior extends ParagraphsBehaviorBase {
 
   /**
-   * {@inheritdoc}
+   * @param \Drupal\paragraphs\Entity\ParagraphsType $paragraphs_type
+   *
+   * @return bool
    */
   public static function isApplicable(ParagraphsType $paragraphs_type) {
     return $paragraphs_type->id() == 'image_and_text';
   }
 
   /**
-   * Extends the paragraph render array with behavior.
+   * @param array $build
+   * @param \Drupal\paragraphs\Entity\Paragraph $paragraph
+   * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
+   * @param $view_mode
+   *
+   * @return void
    */
   public function view(array &$build, Paragraph $paragraph, EntityViewDisplayInterface $display, $view_mode) {
     $image_position = $paragraph->getBehaviorSetting($this->getPluginId(), 'image_position', 'left');
@@ -36,7 +43,11 @@ class ImageAndTextBehavior extends ParagraphsBehaviorBase {
   }
 
   /**
-   * {@inheritdoc}
+   * @param \Drupal\paragraphs\ParagraphInterface $paragraph
+   * @param array $form
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *
+   * @return array
    */
   public function buildBehaviorForm(ParagraphInterface $paragraph, array &$form, FormStateInterface $form_state) {
     $form['image_position'] = [
