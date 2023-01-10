@@ -11,11 +11,13 @@
     .form-type-textarea {
       label {
         text-transform: uppercase;
+
         &::after {
           display: none;
         }
       }
     }
+
     .filter-wrapper {
       display: none;
     }
@@ -26,13 +28,16 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+
     .field--name-comment-body {
       flex-basis: 100%;
     }
+
     .field--name-field-user-name,
     .field--name-field-user-email,
     .field--name-field-website {
       flex-basis: 32%;
+
       .form-item {
         margin-top: 0;
       }
@@ -40,6 +45,7 @@
 
     .field--name-field-save-me {
       flex-basis: 100%;
+
       .form-item {
         margin-top: 0;
       }
@@ -49,8 +55,9 @@
       & input:last-child {
         display: none;
       }
+
       .btn {
-        background-color: #f5b000;
+        background-color: $color-yellow;
         padding: 12px 18px 11px;
         font-family: Fira Sans, sans-serif;
         font-size: 11px;
@@ -63,7 +70,7 @@
         transition: background-color .4s;
 
         &:hover {
-          background-color: #222222;
+          background-color: $color-black222;
         }
       }
     }

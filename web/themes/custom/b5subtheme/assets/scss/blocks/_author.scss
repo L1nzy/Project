@@ -1,12 +1,15 @@
 .view-author-info {
   margin: 40px 0;
+
   .views-row {
     position: relative;
     padding-left: 150px;
+
     .views-field-user-picture {
       position: absolute;
       top: 0;
       left: 0;
+
       & img {
         border-radius: 50%;
       }
@@ -18,9 +21,10 @@
         font-size: 28px;
         font-weight: 800;
         text-decoration: none;
-        color: #222222;
+        color: $color-black222;
+
         &:hover {
-          color: #ffcd3f;
+          color: $color-yellow100;
         }
       }
     }
@@ -31,10 +35,11 @@
       font-style: italic;
       line-height: 21px;
       font-weight: 400;
-      color: #222222;
+      color: $color-black222;
       text-decoration: none;
+
       &:hover {
-        color: #ffcd3f;
+        color: $color-yellow100;
       }
     }
 
@@ -53,7 +58,5 @@
         background-size: cover;
       }
     }
-
-
   }
 }

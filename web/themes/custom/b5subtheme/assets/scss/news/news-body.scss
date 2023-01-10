@@ -1,8 +1,10 @@
 .node--view-mode-full {
   position: relative;
+
   .node__content {
     position: relative;
     max-width: 1160px;
+
     .news-hero .layout__region {
       display: flex;
       flex-direction: row;
@@ -22,6 +24,7 @@
       .block-field-blocknodenewsfield-image {
         position: absolute;
         z-index: -1;
+
         & img {
           display: block;
           position: relative;
@@ -29,6 +32,7 @@
           height: 700px;
           object-fit: cover;
         }
+
         &:after {
           content: '';
           position: absolute;
@@ -40,12 +44,16 @@
           z-index: 5;
         }
       }
+
       .block-field-blocknodenewsfield-categories-for-title {
         padding-bottom: 16px;
+
         .field--name-field-categories-for-title {
           display: flex;
+
           .field__item {
             margin-right: 10px;
+
             a {
               text-decoration: none;
               .field--name-name {
@@ -55,6 +63,7 @@
                 color: $color-white;
                 text-decoration: none;
                 text-transform: capitalize;
+
                 &:hover {
                   color:$color-yellow;
                 }
@@ -85,6 +94,7 @@
               border: 1px solid rgba(255, 255, 255, 0.3);
               text-decoration: none;
               color: $color-white;
+
               &:hover {
                 border: 1px solid $color-white;
               }
@@ -98,6 +108,7 @@
         display: flex;
         justify-content: center;
         flex-basis: 100vw;
+
         .field--name-title {
           font-family: Fira Sans, sans-serif;
           font-size: 40px;
@@ -105,15 +116,15 @@
           font-weight: 600;
         }
       }
-      .block-field-blockuseruseruser-picture {
-        img {
-          width: 26px;
-          height: 26px;
-          object-fit: cover;
-          margin: 6px;
-          border-radius: 50%;
-        }
+
+      .block-field-blockuseruseruser-picture img {
+        width: 26px;
+        height: 26px;
+        object-fit: cover;
+        margin: 6px;
+        border-radius: 50%;
       }
+
       .block-field-blocknodenewsuid {
         .field--name-uid a {
           color: $color-white;
@@ -125,6 +136,7 @@
           letter-spacing: 1px;
           text-decoration: none;
           margin: 0 5px;
+
           &:before {
             content: 'By';
             color: $color-white;
@@ -132,17 +144,20 @@
             text-transform: capitalize;
             margin: 0 3px;
           }
+
           &:after {
             content: '-';
             color: $color-white;
             pointer-events: none;
             margin: 0 5px;
           }
+
           &:hover {
             color:$color-yellow;
           }
         }
       }
+
       .block-field-blocknodenewscreated {
         padding-bottom: 16px;
         color: $color-white;
@@ -161,6 +176,7 @@
         color: $color-gray200;
         font-size: 10px;
         text-align: center;
+
         &:before, &:after {
           content: '-';
         }
@@ -186,9 +202,8 @@
         .field--name-field-paragraph-title,
         .field--name-field-description {
           padding: 0 8%;
-
-
         }
+
         .field--name-field-paragraph-title {
           font-family: Fira Sans, sans-serif;
           font-size: 27px;
@@ -197,6 +212,7 @@
           margin-bottom: 20px;
           font-weight: 700;
         }
+
         .field--name-field-image {
           max-width: 844px;
           max-height: 551px;
@@ -206,19 +222,23 @@
 
     .article__footer {
       padding-bottom: 20px;
+
       .block-block-content h2 {
         padding-top: 20px;
         margin: 0 0 5px 0;
         color: $color-gray200;
         font-size: 10px;
         text-align: center;
+
         &:before, &:after {
           content: '-';
         }
       }
+
       .view-you-might-also-like {
         width: 1392px;
         position: relative;
+
         .td-block-title {
           font-family: Fira Sans, sans-serif;
           font-size: 54px;
@@ -284,7 +304,7 @@
             width: 1500px;
             top: 3px;
             bottom: 0;
-            background-color: #e3e3e3;
+            background-color: $color-gray-e3;
           }
 
           &:after {
@@ -296,7 +316,7 @@
             width: 1500px;
             top: 3px;
             bottom: 0;
-            background-color: #e3e3e3;
+            background-color: $color-gray-e3;
           }
         }
 
@@ -362,21 +382,19 @@
             }
 
             h2 {
+              @include media_for_h2;
               line-height: 22px;
               padding: 0 10px;
-
-              @include media_for_h2;
 
               @media(max-width: $second-breakpoint) {
                 @include media_for_h2_big;
               }
 
               span {
+                @include media_for_span;
                 font-family: Fira Sans,sans-serif;
                 font-size: 20px;
                 font-weight: 600;
-
-                @include media_for_span;
 
                 @media(max-width: $second-breakpoint) {
                   @include media_for_span_big;
@@ -453,8 +471,6 @@
           }
         }
       }
-
-
     }
   }
 }
