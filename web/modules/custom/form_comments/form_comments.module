@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Implements hook_form_FORM_ID_alter() for comment-form.
+ */
+function b5subtheme_form_comment_comment_form_alter(&$form, &$form_state, $form_id) {
+  $form['comment_body']['widget']['0']['#attributes']['placeholder'] = 'Comment:';
+  $form['field_user_name']['widget']['0']['value']['#attributes']['placeholder'] = t('Name:*');
+  $form['field_user_email']['widget']['0']['value']['#attributes']['placeholder'] = t('Email:*');
+  $form['field_website']['widget']['0']['value']['#attributes']['placeholder'] = t('Website:');
+}
