@@ -16,7 +16,7 @@
       left: 50%;
       width: calc(100vw - 15px);
       transform: translateX(-49%);
-      color: #ffffff;
+      color: $color-white;
       line-height: 1;
 
       .block-field-blocknodenewsfield-image {
@@ -52,11 +52,11 @@
                 font-family: Merriweather, sans-serif;
                 font-size: 12px;
                 font-weight: 300;
-                color: #ffffff;
+                color: $color-white;
                 text-decoration: none;
                 text-transform: capitalize;
                 &:hover {
-                  color: #ffcd3f;
+                  color:$color-yellow;
                 }
               }
             }
@@ -84,9 +84,9 @@
               letter-spacing: 1px;
               border: 1px solid rgba(255, 255, 255, 0.3);
               text-decoration: none;
-              color: #ffffff;
+              color: $color-white;
               &:hover {
-                border: 1px solid #ffffff;
+                border: 1px solid $color-white;
               }
             }
           }
@@ -116,7 +116,7 @@
       }
       .block-field-blocknodenewsuid {
         .field--name-uid a {
-          color: #ffffff;
+          color: $color-white;
           font-family: Fira Sans, sans-serif;
           font-size: 12px;
           line-height: 30px;
@@ -127,25 +127,25 @@
           margin: 0 5px;
           &:before {
             content: 'By';
-            color: #ffffff;
+            color: $color-white;
             pointer-events: none;
             text-transform: capitalize;
             margin: 0 3px;
           }
           &:after {
             content: '-';
-            color: #ffffff;
+            color: $color-white;
             pointer-events: none;
             margin: 0 5px;
           }
           &:hover {
-            color: #ffcd3f;
+            color:$color-yellow;
           }
         }
       }
       .block-field-blocknodenewscreated {
         padding-bottom: 16px;
-        color: #ffffff;
+        color: $color-white;
         font-family: Fira Sans, sans-serif;
         font-size: 12px;
         line-height: 30px;
@@ -158,7 +158,7 @@
       h2 {
         padding-top: 20px;
         margin: 0;
-        color: #767676;
+        color: $color-gray200;
         font-size: 10px;
         text-align: center;
         &:before, &:after {
@@ -209,7 +209,7 @@
       .block-block-content h2 {
         padding-top: 20px;
         margin: 0 0 5px 0;
-        color: #767676;
+        color: $color-gray200;
         font-size: 10px;
         text-align: center;
         &:before, &:after {
