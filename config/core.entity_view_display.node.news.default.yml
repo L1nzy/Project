@@ -34,7 +34,6 @@ dependencies:
     - layout_builder
     - layout_discovery
     - nextpre
-    - svg_image
     - text
     - user
     - views
@@ -48,6 +47,18 @@ third_party_settings:
         layout_settings:
           label: 'Header baner'
           context_mapping: {  }
+          custom_id: ''
+          custom_classes: news-hero
+          custom_class_choose: {  }
+          custom_styles: ''
+          custom_data_attributes: ''
+          regions:
+            content:
+              region_id: ''
+              region_class_choose: {  }
+              region_classes: ''
+              region_styles: ''
+              region_data: ''
         components:
           1b3c5bc3-bcb6-4094-a1e3-8c1cbbd8e0f3:
             uuid: 1b3c5bc3-bcb6-4094-a1e3-8c1cbbd8e0f3
@@ -211,6 +222,18 @@ third_party_settings:
         layout_settings:
           label: 'Advertisment  block'
           context_mapping: {  }
+          custom_id: ''
+          custom_classes: advertisment
+          custom_class_choose: {  }
+          custom_styles: ''
+          custom_data_attributes: ''
+          regions:
+            content:
+              region_id: ''
+              region_class_choose: {  }
+              region_classes: ''
+              region_styles: ''
+              region_data: ''
         components:
           24137371-ff60-4d9d-80b6-a9ada355e1f7:
             uuid: 24137371-ff60-4d9d-80b6-a9ada355e1f7
@@ -247,6 +270,24 @@ third_party_settings:
           label: ' content and sidebar'
           context_mapping: {  }
           column_widths: 50-50
+          custom_id: ''
+          custom_classes: content-and-sidebar
+          custom_class_choose: {  }
+          custom_styles: ''
+          custom_data_attributes: ''
+          regions:
+            first:
+              region_id: ''
+              region_class_choose: {  }
+              region_classes: ''
+              region_styles: ''
+              region_data: ''
+            second:
+              region_id: ''
+              region_class_choose: {  }
+              region_classes: ''
+              region_styles: ''
+              region_data: ''
         components:
           c0bcafcc-7671-40af-ae85-b4e11a915ba7:
             uuid: c0bcafcc-7671-40af-ae85-b4e11a915ba7
@@ -375,8 +416,8 @@ third_party_settings:
               nextlink_class: ''
             weight: 5
             additional: {  }
-          abe3db02-427d-4e72-856f-13c73ded0e12:
-            uuid: abe3db02-427d-4e72-856f-13c73ded0e12
+          c86d9a31-993a-4878-90f2-14533136cd6e:
+            uuid: c86d9a31-993a-4878-90f2-14533136cd6e
             region: second
             configuration:
               id: 'views_block:must_read-block_1'
@@ -394,20 +435,19 @@ third_party_settings:
         layout_settings:
           label: content
           context_mapping: {  }
+          custom_id: ''
+          custom_classes: article__footer
+          custom_class_choose: {  }
+          custom_styles: ''
+          custom_data_attributes: ''
+          regions:
+            content:
+              region_id: ''
+              region_class_choose: {  }
+              region_classes: ''
+              region_styles: ''
+              region_data: ''
         components:
-          4086d3f7-b5cb-4810-80a5-da9d2e358bca:
-            uuid: 4086d3f7-b5cb-4810-80a5-da9d2e358bca
-            region: content
-            configuration:
-              id: 'views_block:you_might_also_like-block_1'
-              label: ''
-              label_display: '0'
-              provider: views
-              context_mapping: {  }
-              views_label: ''
-              items_per_page: none
-            weight: 1
-            additional: {  }
           de22ef83-633b-4445-a72f-dd86ed6991b8:
             uuid: de22ef83-633b-4445-a72f-dd86ed6991b8
             region: content
@@ -421,6 +461,19 @@ third_party_settings:
               view_mode: full
               context_mapping: {  }
             weight: 0
+            additional: {  }
+          4086d3f7-b5cb-4810-80a5-da9d2e358bca:
+            uuid: 4086d3f7-b5cb-4810-80a5-da9d2e358bca
+            region: content
+            configuration:
+              id: 'views_block:you_might_also_like-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
             additional: {  }
         third_party_settings: {  }
 id: node.news.default

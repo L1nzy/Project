@@ -17,8 +17,9 @@ dependencies:
     - field.field.node.news.field_title
     - node.type.news
   module:
+    - image
     - layout_builder
-    - svg_image
+    - text
     - user
 third_party_settings:
   layout_builder:
@@ -29,11 +30,6 @@ targetEntityType: node
 bundle: news
 mode: vertical_long_format
 content:
-  field_category:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
   field_description:
     type: text_trimmed
     label: hidden
@@ -48,10 +44,6 @@ content:
     settings:
       image_link: ''
       image_style: ''
-      svg_attributes:
-        width: null
-        height: null
-      svg_render_as_image: true
     third_party_settings: {  }
     weight: 0
     region: content
@@ -63,8 +55,8 @@ content:
 hidden:
   comment: true
   field_categories_for_title: true
+  field_category: true
   field_content: true
-  field_description: true
   field_editor_picks: true
   field_link_on_comments: true
   field_must_read: true

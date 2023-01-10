@@ -4,7 +4,8 @@
 
   .facebook,
   .instagram,
-  .twitter {
+  .twitter,
+  .youtube {
     position: relative;
     width: 30px;
     height: 30px;
@@ -13,7 +14,8 @@
 
   .facebook::before,
   .instagram::before,
-  .twitter::before {
+  .twitter::before,
+  .youtube::before {
     content: '';
     position: absolute;
     top: 10px;
@@ -38,6 +40,58 @@
     width: 14px;
     height: 12px;
   }
+
+  .youtube::before {
+    background-image: url("../assets/images/social_network/youtube.svg");
+    width: 14px;
+    height: 12px;
+    background-size: cover;
+  }
+}
+
+.field--name-field-share-link {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.advertisment .field--name-field-share-link,
+.advertisment .field--name-field-icon,
+.content-and-sidebar .field--name-field-icon,
+.view-author-info .views-field-field-social-networks img {
+  .facebook:hover::before,
+  .instagram:hover::before,
+  .twitter:hover::before,
+  .youtube:hover::before, {
+    opacity: 0.8;
+    filter: none;
+  }
+}
+
+.view-author-info .views-field-field-social-networks img:hover {
+  filter: invert(59%) sepia(78%) saturate(911%) hue-rotate(8deg) brightness(101%) contrast(111%);
+}
+
+.field--name-field-share-link::before {
+  content: '';
+  background-image: url("../assets/images/share.svg");
+  width: 14px;
+  height: 12px;
+  background-size: cover;
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  background-repeat: no-repeat;
+}
+
+.content-and-sidebar .block-block-content {
+  display: flex;
+  justify-content: end;
 }
 
 header {
