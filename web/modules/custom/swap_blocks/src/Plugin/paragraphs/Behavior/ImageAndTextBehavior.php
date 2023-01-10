@@ -11,6 +11,8 @@ use Drupal\paragraphs\ParagraphInterface;
 use Drupal\paragraphs\ParagraphsBehaviorBase;
 
 /**
+ * Some short description.
+ *
  * @ParagraphsBehavior(
  *   id = "dlog_paragraphs_image_and_text",
  *   label = @Translation("Image and text settings"),
@@ -21,35 +23,29 @@ use Drupal\paragraphs\ParagraphsBehaviorBase;
 class ImageAndTextBehavior extends ParagraphsBehaviorBase {
 
   /**
-   * @param \Drupal\paragraphs\Entity\ParagraphsType $paragraphs_type
-   *
-   * @return bool
+   * {@inheritdoc}
    */
   public static function isApplicable(ParagraphsType $paragraphs_type) {
     return $paragraphs_type->id() == 'image_and_text';
   }
 
   /**
-   * @param array $build
-   * @param \Drupal\paragraphs\Entity\Paragraph $paragraph
-   * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
-   * @param $view_mode
-   *
-   * @return void
+   * {@inheritdoc}
    */
-  public function view(array &$build, Paragraph $paragraph, EntityViewDisplayInterface $display, $view_mode) {
-    $image_position = $paragraph->getBehaviorSetting($this->getPluginId(), 'image_position', 'left');
-    $build['#attributes']['class'][] = Html::getClass('paragraph-' . 'image-position-' . $image_position);
+  public function view(array &$build, Paragraph $paragraph,
+                       EntityViewDisplayInterface $display, $view_mode) {
+    $image_position = $paragraph->getBehaviorSetting($this->getPluginId(),
+      'image_position', 'left');
+    $build['#attributes']['class'][] = Html::getClass('paragraph-'
+      . 'image-position-' . $image_position);
   }
 
   /**
-   * @param \Drupal\paragraphs\ParagraphInterface $paragraph
-   * @param array $form
-   * @param \Drupal\Core\Form\FormStateInterface $form_state
-   *
-   * @return array
+   * {@inheritdoc}
    */
-  public function buildBehaviorForm(ParagraphInterface $paragraph, array &$form, FormStateInterface $form_state) {
+  public function buildBehaviorForm(ParagraphInterface $paragraph,
+                                    array &$form,
+                                    FormStateInterface $form_state) {
     $form['image_position'] = [
       '#type' => 'select',
       '#title' => $this->t('Image position'),
@@ -57,7 +53,8 @@ class ImageAndTextBehavior extends ParagraphsBehaviorBase {
         'left' => $this->t('Left'),
         'right' => $this->t('Right'),
       ],
-      '#default_value' => $paragraph->getBehaviorSetting($this->getPluginId(), 'image_position', 'left'),
+      '#default_value' => $paragraph->getBehaviorSetting($this->getPluginId(),
+        'image_position', 'left'),
     ];
 
     return $form;
