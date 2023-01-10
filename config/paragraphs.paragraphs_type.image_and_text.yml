@@ -1,0 +1,14 @@
+uuid: 4855ca0f-416d-498e-96a7-b590a04a2803
+langcode: en
+status: true
+dependencies:
+  module:
+    - swap_blocks
+id: image_and_text
+label: 'Image and text'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  dlog_paragraphs_image_and_text:
+    enabled: true

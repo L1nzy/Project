@@ -16,7 +16,7 @@
       z-index: 5;
       top: 0;
       left: 50%;
-      width: calc(100vw - 15px);
+      width: 100vw;
       transform: translateX(-49%);
       color: $color-white;
       line-height: 1;
@@ -301,7 +301,7 @@
             margin: auto 0 auto 20px;
             position: absolute;
             height: 1px;
-            width: 1500px;
+            width: 600px;
             top: 3px;
             bottom: 0;
             background-color: $color-gray-e3;
@@ -313,7 +313,7 @@
             margin: auto 20px auto 20px;
             position: absolute;
             height: 1px;
-            width: 1500px;
+            width: 600px;
             top: 3px;
             bottom: 0;
             background-color: $color-gray-e3;

@@ -1,0 +1,30 @@
+.node--view-mode-full .node__content .content-and-sidebar .layout__region--first [class *= "paragraph-image-position-"],
+[class *= "paragraph-image-position-"] {
+  display: flex;
+  margin-bottom: 20px;
+
+  .field--name-field-image {
+    flex: 0 0 25%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .field--name-field-description {
+    flex: 0 0 75%;
+    padding-right: 0;
+    padding-left: 20px;
+    margin: 0;
+  }
+}
+
+.node--view-mode-full .node__content .content-and-sidebar .layout__region--first .paragraph-image-position-right,
+.paragraph-image-position-right {
+  flex-direction: row-reverse;
+
+  .field--name-field-description {
+    padding-left: 0;
+    padding-right: 20px;
+  }
+}
