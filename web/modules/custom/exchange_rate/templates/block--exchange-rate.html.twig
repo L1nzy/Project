@@ -1,0 +1,10 @@
+{# exchange_rate/templates/my-template.html.twig #}
+
+<table>
+  {% for key in data  %}
+    <tr>
+      <td>{{ key.cc }}</td>
+      <td>{{ key.rate }}</td>
+    </tr>
+  {% endfor %}
+</table>
