@@ -28,3 +28,9 @@
     padding-right: 20px;
   }
 }
+
+@media(max-width: $second-breakpoint) {
+  .paragraph-mobile-hide {
+    display: none !important;
+  }
+}

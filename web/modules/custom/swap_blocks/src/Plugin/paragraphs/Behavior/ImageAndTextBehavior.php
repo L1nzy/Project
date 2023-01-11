@@ -33,10 +33,17 @@ class ImageAndTextBehavior extends ParagraphsBehaviorBase {
    * {@inheritdoc}
    */
   public function view(array &$build, Paragraph $paragraph, EntityViewDisplayInterface $display, $view_mode) {
-    $image_position = $paragraph->getBehaviorSetting($this->getPluginId(),
-      'image_position', 'left');
-    $build['#attributes']['class'][] =
-      Html::getClass('paragraph-' . 'image-position-' . $image_position);
+    $image_position = $paragraph->getBehaviorSetting($this->getPluginId(), 'image_position', 'left');
+    $build['#attributes']['class'][] = Html::getClass('paragraph-' . 'image-position-' . $image_position);
+
+    $hide_for_mobile = $paragraph->getBehaviorSetting($this->getPluginId(), 'hide_for_mobile', 0);
+
+    if ($hide_for_mobile == 0) {
+      $build['#attributes']['class'][] = Html::getClass('paragraph-' . 'mobile-' . 'visible');
+    }
+    else {
+      $build['#attributes']['class'][] = Html::getClass('paragraph-' . 'mobile-' . 'hide');
+    }
   }
 
   /**
@@ -52,6 +59,12 @@ class ImageAndTextBehavior extends ParagraphsBehaviorBase {
       ],
       '#default_value' => $paragraph->getBehaviorSetting($this->getPluginId(),
         'image_position', 'left'),
+    ];
+
+    $form['hide_for_mobile'] = [
+      '#type' => 'checkbox',
+      '#title' => t('Hide for the mobile'),
+      '#default_value' => $paragraph->getBehaviorSetting($this->getPluginId(), 'hide_for_mobile', 0),
     ];
 
     return $form;
