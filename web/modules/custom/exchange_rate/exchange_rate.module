@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Implements hook_theme().
+ */
+
+/**
+ * {@inheritdoc}
+ */
+function exchange_rate_theme($existing, $type, $theme, $path) {
+  return [
+    'block--exchange-rate' => [
+      'variables' => ['data' => NULL],
+    ],
+  ];
+}

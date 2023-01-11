@@ -1,0 +1,5 @@
+name: Exchange rate
+description: Exchange rate block
+core_version_requirement: ^9
+package: Custom
+type: module
