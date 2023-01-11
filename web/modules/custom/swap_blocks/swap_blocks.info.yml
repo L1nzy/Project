@@ -1,0 +1,7 @@
+name: Swap blocks
+description: Provides an opportunity to choose the placement of the image on the left or right side
+core_version_requirement: ^9
+package: Custom
+type: module
+dependencies:
+  - paragraphs:paragraphs
