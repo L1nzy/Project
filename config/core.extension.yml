@@ -29,6 +29,7 @@ module:
   history: 0
   image: 0
   layout_builder: 0
+  layout_custom_section_classes: 0
   layout_discovery: 0
   link: 0
   media: 0
@@ -48,6 +49,7 @@ module:
   shortcut: 0
   standard: 0
   statistics: 0
+  swap_blocks: 0
   system: 0
   taxonomy: 0
   text: 0

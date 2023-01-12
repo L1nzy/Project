@@ -1,0 +1,62 @@
+.view-author-info {
+  margin: 40px 0;
+
+  .views-row {
+    position: relative;
+    padding-left: 150px;
+
+    .views-field-user-picture {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      & img {
+        border-radius: 50%;
+      }
+    }
+
+    .views-field-name {
+      .username {
+        font-family: Fira Sans, sans-serif;
+        font-size: 28px;
+        font-weight: 800;
+        text-decoration: none;
+        color: $color-black222;
+
+        &:hover {
+          color: $color-yellow100;
+        }
+      }
+    }
+
+    .views-field-field-link-at-site a {
+      font-family: Fira Sans, sans-serif;
+      font-size: 12px;
+      font-style: italic;
+      line-height: 21px;
+      font-weight: 400;
+      color: $color-black222;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-yellow100;
+      }
+    }
+
+    .views-field-field-description {
+      font-family: Merriweather, sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 300;
+    }
+
+    .views-field-field-social-networks {
+      .field-content img {
+        margin-right: 25px;
+        width: 14px;
+        height: 14px;
+        background-size: cover;
+      }
+    }
+  }
+}

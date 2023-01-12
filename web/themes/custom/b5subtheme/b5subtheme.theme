@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Provides custom hooks for the bootstrap sub theme.
+ */
+
 use Drupal\taxonomy\TermInterface;
 
 /**
@@ -21,5 +26,15 @@ function b5subtheme_preprocess_taxonomy_term(&$variables) {
       $variables['new_links'] = $links;
     }
   }
+}
 
+/**
+ * Implements hook_form_FORM_ID_alter() for comment form.
+ */
+function b5subtheme_form_comment_comment_form_alter(&$form, &$form_state, $form_id) {
+  $form['comment_body']['widget']['0']['value']['#attributes']['placeholder'] = t('Comment:');
+  $form['field_user_name']['widget']['0']['value']['#attributes']['placeholder'] = t('Name:*');
+  $form['field_user_email']['widget']['0']['value']['#attributes']['placeholder'] = t('Email:*');
+  $form['field_website']['widget']['0']['value']['#attributes']['placeholder'] = t('Website:');
+  $form['actions']['submit']['#value'] = t('Post comment');
 }

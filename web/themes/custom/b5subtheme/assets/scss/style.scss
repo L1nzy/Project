@@ -27,12 +27,14 @@
 @import "variables/breakpoints_variable";
 @import "variables/fonts_variables";
 
-//Base
+//Base.
 @import "base/base_styles";
 @import "base/layout_section";
 @import "base/buttons";
 @import "base/pager";
 @import "base/breakpoint";
+@import "base/paragraph";
+
 
 //Blocks
 @import "blocks/image_gallery";
@@ -46,6 +48,8 @@
 @import "blocks/subheader_block";
 @import "blocks/featured_block";
 @import "blocks/list_articles";
+@import "blocks/author";
+@import "blocks/comment";
 
 //Mixins
 @import "mixins/mixins_buttons";
@@ -56,3 +60,6 @@
 
 //Mixins
 @import "mixins/mixins_buttons";
+
+// News.
+@import "news/news-body";

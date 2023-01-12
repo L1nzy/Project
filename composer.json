@@ -21,6 +21,8 @@
         "drupal/core-composer-scaffold": "^9.3",
         "drupal/core-project-message": "^9.3",
         "drupal/core-recommended": "^9.3",
+        "drupal/devel": "^5.1",
+        "drupal/layout_custom_section_classes": "^1.0",
         "drupal/nextpre": "^9.0",
         "drupal/page_manager": "^4.0@RC",
         "drupal/paragraphs": "^1.15",
