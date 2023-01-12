@@ -19,7 +19,7 @@ class ExchangeRate extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    $url = 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchangenew?json';
+    $url = \Drupal::config('exchange_rate.admin_settings')->get('url');
     $client = \Drupal::httpClient();
     $request = $client->get($url);
     $response = $request->getBody();
