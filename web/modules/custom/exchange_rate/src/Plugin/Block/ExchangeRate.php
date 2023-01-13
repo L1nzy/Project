@@ -19,15 +19,16 @@ use Drupal\exchange_rate\BlockServices;
 class ExchangeRate extends BlockBase implements ContainerFactoryPluginInterface {
 
   /**
+   * Variable to service.
+   *
    * @var \Drupal\exchange_rate\BlockServices
    */
   protected $service;
 
   /**
-   * @param array $configuration
-   * @param string $plugin_id
-   * @param mixed $plugin_definition
-   * @param  \Drupal\exchange_rate\BlockServices $service
+   * Filling in the basic constructor.
+   *
+   * {@inheritdoc}
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, BlockServices $service) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
