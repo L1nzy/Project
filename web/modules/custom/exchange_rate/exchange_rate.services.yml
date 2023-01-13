@@ -1,0 +1,4 @@
+services:
+  exchange_rate.api_connector:
+    class: Drupal\exchange_rate\BlockServices
+    arguments: ['@http_client','@config.factory']
