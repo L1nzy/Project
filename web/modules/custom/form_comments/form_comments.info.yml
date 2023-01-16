@@ -1,0 +1,4 @@
+name: Form comment
+description: Form alter for the comments form
+core_version_requirement: ^9
+type: module
