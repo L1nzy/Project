@@ -9,8 +9,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\exchange_rate\ExchangeRateFunctionality;
 
 /**
- * A form that receives a request to receive a JSON file,
- * and selects the currencies that must be output.
+ * A form that receives a request to receive a JSON file and selects the currencies that must be output.
  *
  * @package Drupal\exchange_rate\Form
  */

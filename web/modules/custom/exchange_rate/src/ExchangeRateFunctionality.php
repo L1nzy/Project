@@ -26,7 +26,7 @@ class ExchangeRateFunctionality {
   protected $factory;
 
   /**
-   * @var string Exchange rate block id.
+   * Exchange rate block id.
    */
   protected string $id = 'exchange_rate.admin_settings';
 
@@ -64,7 +64,7 @@ class ExchangeRateFunctionality {
         }
       }
 
-      $endResult = array_filter($data, function ($key) use ($currencyData, $data) {
+      $endResult = array_filter($data, function ($key) use ($currencyData) {
         if (in_array($key->cc, $currencyData, TRUE)) {
           return TRUE;
         }
