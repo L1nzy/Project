@@ -27,6 +27,8 @@ class ExchangeRateFunctionality {
 
   /**
    * Exchange rate block id.
+   *
+   * @var string
    */
   protected string $id = 'exchange_rate.admin_settings';
 
@@ -80,7 +82,7 @@ class ExchangeRateFunctionality {
   /**
    * Get currencies list with json file.
    */
-  public function getСurrencies() {
+  public function getCurrencies() {
     $array = $this->getJson();
     $data = [];
 

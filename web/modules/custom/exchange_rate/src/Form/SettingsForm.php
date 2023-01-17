@@ -9,7 +9,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\exchange_rate\ExchangeRateFunctionality;
 
 /**
- * A form that receives a request to receive a JSON file and selects the currencies that must be output.
+ * A form that receives a request to receive a JSON file.
  *
  * @package Drupal\exchange_rate\Form
  */
@@ -23,7 +23,9 @@ class SettingsForm extends ConfigFormBase {
   protected $showExchangeRateForm;
 
   /**
-   * @var stringExchangerateformid
+   * Exchange rate form id.
+   *
+   * @var string
    */
   protected string $id = 'exchange_rate.admin_settings';
 
@@ -81,7 +83,7 @@ class SettingsForm extends ConfigFormBase {
     ];
 
     $options = [];
-    $currency = $this->showExchangeRateForm->getСurrencies();
+    $currency = $this->showExchangeRateForm->getCurrencies();
 
     foreach ($currency as &$value) {
       $options[$value] = $value;
