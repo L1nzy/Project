@@ -14,7 +14,6 @@ dependencies:
     - 'block_content:networks_analysis_block:bfbffcd1-40e4-4759-9dcf-ea8db9ff3817'
   module:
     - block_content
-    - exchange_rate
     - layout_builder
     - views
 third_party_settings:
@@ -121,17 +120,6 @@ third_party_settings:
               views_label: ''
               items_per_page: none
             weight: 3
-            additional: {  }
-          a3e94a63-01cf-45ad-938d-f68b0eb7709c:
-            uuid: a3e94a63-01cf-45ad-938d-f68b0eb7709c
-            region: second
-            configuration:
-              id: exchange_rate
-              label: 'Exchange rate block'
-              label_display: '0'
-              provider: exchange_rate
-              context_mapping: {  }
-            weight: 4
             additional: {  }
         third_party_settings: {  }
 id: block_content.two_columns.default

@@ -5,7 +5,7 @@ namespace Drupal\exchange_rate\Plugin\Block;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Drupal\exchange_rate\BlockServices;
+use Drupal\exchange_rate\ExchangeRateFunctionality;
 
 /**
  * Provides a 'Exchange rate' Block.
@@ -21,18 +21,18 @@ class ExchangeRate extends BlockBase implements ContainerFactoryPluginInterface 
   /**
    * Variable to service.
    *
-   * @var \Drupal\exchange_rate\BlockServices
+   * @var \Drupal\exchange_rate\ExchangeRateFunctionality
    */
-  protected $service;
+  protected $showExchangeRateBlock;
 
   /**
    * Filling in the basic constructor.
    *
    * {@inheritdoc}
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, BlockServices $service) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, ExchangeRateFunctionality $showExchangeRateBlock) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
-    $this->service = $service;
+    $this->showExchangeRateBlock = $showExchangeRateBlock;
   }
 
   /**
@@ -51,7 +51,7 @@ class ExchangeRate extends BlockBase implements ContainerFactoryPluginInterface 
    * {@inheritdoc}
    */
   public function build() {
-    $list = $this->service->getUrl();
+    $list = $this->showExchangeRateBlock->getUrl();
 
     return [
       '#theme' => 'block--exchange-rate',
