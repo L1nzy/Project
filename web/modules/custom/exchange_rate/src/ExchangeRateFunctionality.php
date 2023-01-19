@@ -61,7 +61,13 @@ class ExchangeRateFunctionality {
    */
   protected function getJson() {
     try {
-      $url = $this->factory->get($this->id)->get('url') ?: 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchangenew?json';
+      $range = $this->factory->get($this->id)->get('range');
+
+      $endDate = date("Ymd");
+      $startDate = date('Ymd', strtotime($endDate . '- ' . $range . 'days'));
+      $endpoint = '?start=' . $startDate . '&end=%20' . $endDate . '&sort=exchangedate&order=desc&json';
+
+      $url = $this->factory->get($this->id)->get('url') . $endpoint;
       $request = $this->client->get($url);
       $result = $request->getBody()->getContents();
       return json_decode($result);

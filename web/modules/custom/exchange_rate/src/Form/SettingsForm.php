@@ -2,7 +2,6 @@
 
 namespace Drupal\exchange_rate\Form;
 
-use Drupal;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
@@ -77,6 +76,17 @@ class SettingsForm extends ConfigFormBase {
       '#default_value' => $config->get('url'),
     ];
 
+    $form['settings']['range'] = [
+      '#type' => 'textfield',
+      '#attributes' => [
+        ' type' => 'number',
+        ' min' => '1',
+      ],
+      '#title' => 'Period of time during which currencies are showing',
+      '#maxlength' => 3,
+      '#default_value' => $config->get('range'),
+    ];
+
     $form['settings']['request'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('request for form validity'),
@@ -120,6 +130,7 @@ class SettingsForm extends ConfigFormBase {
 
     $this->config($this->id)
       ->set('url', $form_state->getValue('url'))
+      ->set('range', $form_state->getValue('range'))
       ->set('request', $form_state->getValue('request'))
       ->set('currency', $form_state->getValue('currency'))
       ->save();
@@ -127,7 +138,7 @@ class SettingsForm extends ConfigFormBase {
     $result = $this->showExchangeRateForm->deletedCurrencies();
 
     foreach ($result as &$value) {
-      Drupal::messenger()->addMessage($this->t('Was deleted currency :' . $value), 'status', TRUE);
+      \Drupal::messenger()->addMessage($this->t('Was deleted currency :' . $value), 'status', TRUE);
     }
 
     parent::submitForm($form, $form_state);
