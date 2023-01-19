@@ -2,6 +2,7 @@
 
 namespace Drupal\exchange_rate\Form;
 
+use Drupal;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
@@ -102,12 +103,33 @@ class SettingsForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
+  public function validateForm(array &$form, FormStateInterface $form_state) {
+    if (strlen($form_state->getValue('url')) == 0) {
+      $form_state->setErrorByName(
+        'url',
+        $this->t('The field URL can not be empty.')
+      );
+    }
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+    $this->showExchangeRateForm->getPreviouseCurrencies();
+
     $this->config($this->id)
       ->set('url', $form_state->getValue('url'))
       ->set('request', $form_state->getValue('request'))
       ->set('currency', $form_state->getValue('currency'))
       ->save();
+
+    $result = $this->showExchangeRateForm->deletedCurrencies();
+
+    foreach ($result as &$value) {
+      Drupal::messenger()->addMessage($this->t('Was deleted currency :' . $value), 'status', TRUE);
+    }
+
     parent::submitForm($form, $form_state);
   }
 
