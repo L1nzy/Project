@@ -1,4 +1,4 @@
 services:
   exchange_rate.api_connector:
     class: Drupal\exchange_rate\ExchangeRateFunctionality
-    arguments: ['@http_client', '@config.factory', '@logger.factory']
+    arguments: ['@http_client', '@config.factory', '@logger.factory', '@messenger']
