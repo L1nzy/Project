@@ -135,11 +135,7 @@ class SettingsForm extends ConfigFormBase {
       ->set('currency', $form_state->getValue('currency'))
       ->save();
 
-    $result = $this->showExchangeRateForm->deletedCurrencies();
-
-    foreach ($result as &$value) {
-      \Drupal::messenger()->addMessage($this->t('Was deleted currency :' . $value), 'status', TRUE);
-    }
+    $this->showExchangeRateForm->deletedCurrencies();
 
     parent::submitForm($form, $form_state);
   }
