@@ -56,6 +56,7 @@ class ExchangeRateFunctionality {
    */
   private $entity;
 
+  /**
    * Include the messenger service.
    *
    * @var \Drupal\Core\Messenger\MessengerInterface
@@ -65,7 +66,7 @@ class ExchangeRateFunctionality {
   /**
    * {@inheritdoc}
    */
-  public function __construct(ClientInterface $client, ConfigFactoryInterface $factory, LoggerChannelFactoryInterface $loggerFactory, ExchangeRateEntity $entit, MessengerInterface $messenger) {
+  public function __construct(ClientInterface $client, ConfigFactoryInterface $factory, LoggerChannelFactoryInterface $loggerFactory, ExchangeRateEntity $entity, MessengerInterface $messenger) {
     $this->client = $client;
     $this->factory = $factory;
     $this->loggerFactory = $loggerFactory;

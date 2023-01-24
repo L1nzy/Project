@@ -135,7 +135,7 @@ class SettingsForm extends ConfigFormBase {
       ->set('currency', $form_state->getValue('currency'))
       ->save();
 
-    $this->showExchangeRateForm->deletedCurrencies();
+    $this->exchangeRateFunctionality->deletedCurrencies();
 
     parent::submitForm($form, $form_state);
   }

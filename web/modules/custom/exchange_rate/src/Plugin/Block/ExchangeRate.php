@@ -57,7 +57,7 @@ class ExchangeRate extends BlockBase implements ContainerFactoryPluginInterface 
     $listCurrencies = [];
 
     foreach ($currency as &$variable) {
-      $listCurrencies[] = $this->showExchangeRateBlock->getOneCurrency($variable, $array);
+      $listCurrencies[] = $this->showExchangeRateBlock->getOneCurrency($variable, $list);
     }
 
     return [
