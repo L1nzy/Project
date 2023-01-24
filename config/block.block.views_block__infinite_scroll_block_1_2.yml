@@ -12,7 +12,7 @@ dependencies:
 id: views_block__infinite_scroll_block_1_2
 theme: b5subtheme
 region: content
-weight: 0
+weight: -4
 provider: null
 plugin: 'views_block:infinite_scroll-block_1'
 settings:

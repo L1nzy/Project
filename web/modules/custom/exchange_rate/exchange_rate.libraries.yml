@@ -1,0 +1,8 @@
+module-chart-js:
+  js:
+    js/chart.js: {}
+    /libraries/chart.js/dist/chart.umd.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
