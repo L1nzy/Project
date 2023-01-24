@@ -40,7 +40,7 @@ class ExchangeRateEntity {
     foreach ($listCurrencies as &$value) {
       foreach ($savedCurrencies as &$item) {
         if ($value->cc == $item->cc && $value->rate == $item->rate && $value->exchangedate == $item->exchangedate) {
-          $entity = \Drupal::entityTypeManager()->getStorage('node')->load((integer) $item->id);
+          $entity = $this->typeManger->getStorage('node')->load((integer) $item->id);
           $entity->delete();
         }
       }
@@ -66,13 +66,13 @@ class ExchangeRateEntity {
    */
   public function getEntityRate() {
     $list = [];
-    $storage = \Drupal::entityTypeManager()->getStorage('node');
+    $storage = $this->typeManger->getStorage('node');
     $query = $storage->getQuery()
       ->condition('type', 'currencies_rate')
       ->execute();
 
     foreach ($query as &$value) {
-      $node = \Drupal::entityTypeManager()->getStorage('node')->load((integer) $value);
+      $node = $this->typeManger->getStorage('node')->load((integer) $value);
 
       $list[] = (object) [
         "id" => $value,
@@ -89,13 +89,13 @@ class ExchangeRateEntity {
    * Deletes all currencies in the content.
    */
   protected function deleteEntityRate() {
-    $storage = \Drupal::entityTypeManager()->getStorage('node');
+    $storage = $this->typeManger->getStorage('node');
     $query = $storage->getQuery()
       ->condition('type', 'currencies_rate')
       ->execute();
 
     foreach ($query as &$value) {
-      $entity = \Drupal::entityTypeManager()->getStorage('node')->load((integer) $value);
+      $entity = $this->typeManger->getStorage('node')->load((integer) $value);
       $entity->delete();
     }
   }
