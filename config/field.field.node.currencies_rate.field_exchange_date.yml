@@ -1,0 +1,19 @@
+uuid: 24b7f9e1-0267-4c41-8fcc-9754e1c45922
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_exchange_date
+    - node.type.currencies_rate
+id: node.currencies_rate.field_exchange_date
+field_name: field_exchange_date
+entity_type: node
+bundle: currencies_rate
+label: 'Exchange date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

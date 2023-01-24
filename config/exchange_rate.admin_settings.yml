@@ -2,10 +2,7 @@ url: 'https://bank.gov.ua/NBU_Exchange/exchange_site'
 request: 1
 currency:
   AUD: AUD
-  USD: USD
-  XDR: XDR
-  EUR: EUR
-  BDT: 0
+  MDL: MDL
   AMD: 0
   CAD: 0
   CNY: 0
@@ -41,6 +38,7 @@ currency:
   TND: 0
   EGP: 0
   GBP: 0
+  USD: 0
   UZS: 0
   BYN: 0
   TMT: 0
@@ -54,12 +52,14 @@ currency:
   BRL: 0
   DOP: 0
   XAU: 0
+  XDR: 0
   XAG: 0
   XPT: 0
   XPD: 0
+  EUR: 0
   AZN: 0
   SAR: 0
   TWD: 0
   DZD: 0
-  MDL: 0
-range: '4'
+  BDT: 0
+range: '3'

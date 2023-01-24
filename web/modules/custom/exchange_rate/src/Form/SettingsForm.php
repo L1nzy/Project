@@ -20,23 +20,23 @@ class SettingsForm extends ConfigFormBase {
    *
    * @var \Drupal\exchange_rate\ExchangeRateFunctionality
    */
-  protected $showExchangeRateForm;
+  protected $exchangeRateFunctionality;
 
   /**
    * Exchange rate form id.
    *
    * @var string
    */
-  protected string $id = 'exchange_rate.admin_settings';
+  protected string $settingName = 'exchange_rate.admin_settings';
 
   /**
    * Constructs a new SettingsForm object.
    *
    * {@inheritdoc}
    */
-  public function __construct(ConfigFactoryInterface $config_factory, ExchangeRateFunctionality $showExchangeRateForm) {
+  public function __construct(ConfigFactoryInterface $config_factory, ExchangeRateFunctionality $exchangeRateFunctionality) {
     parent::__construct($config_factory);
-    $this->showExchangeRateForm = $showExchangeRateForm;
+    $this->exchangeRateFunctionality = $exchangeRateFunctionality;
   }
 
   /**
@@ -54,7 +54,7 @@ class SettingsForm extends ConfigFormBase {
    */
   protected function getEditableConfigNames() {
     return [
-      $this->id,
+      $this->settingName,
     ];
   }
 
@@ -69,7 +69,7 @@ class SettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config($this->id);
+    $config = $this->config($this->settingName);
     $form['settings']['url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Url'),
@@ -94,7 +94,7 @@ class SettingsForm extends ConfigFormBase {
     ];
 
     $options = [];
-    $currency = $this->showExchangeRateForm->getCurrencies();
+    $currency = $this->exchangeRateFunctionality->getCurrencies();
 
     foreach ($currency as &$value) {
       $options[$value] = $value;
@@ -114,7 +114,7 @@ class SettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
-    if (strlen($form_state->getValue('url')) == 0) {
+    if (empty(trim($form_state->getValue('url')))) {
       $form_state->setErrorByName(
         'url',
         $this->t('The field URL can not be empty.')
@@ -126,16 +126,16 @@ class SettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $this->showExchangeRateForm->getPreviouseCurrencies();
+    $this->exchangeRateFunctionality->getPreviouseCurrencies();
 
-    $this->config($this->id)
+    $this->config($this->settingName)
       ->set('url', $form_state->getValue('url'))
       ->set('range', $form_state->getValue('range'))
       ->set('request', $form_state->getValue('request'))
       ->set('currency', $form_state->getValue('currency'))
       ->save();
 
-    $result = $this->showExchangeRateForm->deletedCurrencies();
+    $result = $this->exchangeRateFunctionality->deletedCurrencies();
 
     foreach ($result as &$value) {
       \Drupal::messenger()->addMessage($this->t('Was deleted currency :' . $value), 'status', TRUE);
