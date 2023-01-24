@@ -7,6 +7,7 @@ use GuzzleHttp\Exception\RequestException;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\Core\Messenger\MessengerInterface;
 
 /**
  * The block which shows the exchange rate.
@@ -55,14 +56,21 @@ class ExchangeRateFunctionality {
    */
   private $entity;
 
+   * Include the messenger service.
+   *
+   * @var \Drupal\Core\Messenger\MessengerInterface
+   */
+  protected $messenger;
+
   /**
    * {@inheritdoc}
    */
-  public function __construct(ClientInterface $client, ConfigFactoryInterface $factory, LoggerChannelFactoryInterface $loggerFactory, ExchangeRateEntity $entity) {
+  public function __construct(ClientInterface $client, ConfigFactoryInterface $factory, LoggerChannelFactoryInterface $loggerFactory, ExchangeRateEntity $entit, MessengerInterface $messenger) {
     $this->client = $client;
     $this->factory = $factory;
     $this->loggerFactory = $loggerFactory;
     $this->entity = $entity;
+    $this->messenger = $messenger;
   }
 
   /**
@@ -175,7 +183,11 @@ class ExchangeRateFunctionality {
     $arrOldCurrency = array_keys($this->previouseCurrencies);
     $arrNewCurrency = array_keys($currency);
 
-    return array_diff($arrOldCurrency, $arrNewCurrency);
+    $result = array_diff($arrOldCurrency, $arrNewCurrency);
+
+    foreach ($result as &$value) {
+      $this->messenger->addMessage('Was deleted currency :' . $value);
+    }
   }
 
   /**
