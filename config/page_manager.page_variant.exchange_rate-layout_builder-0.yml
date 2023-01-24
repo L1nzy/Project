@@ -1,0 +1,60 @@
+uuid: f2634fcb-4839-478f-922c-028aa13d0e0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.exchange_rate
+  module:
+    - exchange_rate
+    - layout_builder
+id: exchange_rate-layout_builder-0
+label: 'Layout Builder'
+weight: 0
+variant: layout_builder
+variant_settings:
+  id: layout_builder
+  label: null
+  weight: 0
+  uuid: 439bd475-cf73-4874-aaea-5eabc3f16ef9
+  sections:
+    -
+      layout_id: layout_twocol_section
+      layout_settings:
+        label: 'two columns'
+        context_mapping: {  }
+        column_widths: 50-50
+        custom_id: ''
+        custom_classes: ''
+        custom_class_choose: {  }
+        custom_styles: ''
+        custom_data_attributes: ''
+        regions:
+          first:
+            region_id: ''
+            region_class_choose: {  }
+            region_classes: ''
+            region_styles: ''
+            region_data: ''
+          second:
+            region_id: ''
+            region_class_choose: {  }
+            region_classes: ''
+            region_styles: ''
+            region_data: ''
+      components:
+        988e18fe-6a85-46e5-9320-ce24b2dd7bd2:
+          uuid: 988e18fe-6a85-46e5-9320-ce24b2dd7bd2
+          region: first
+          configuration:
+            id: exchange_rate
+            label: 'Exchange rate block'
+            label_display: visible
+            provider: exchange_rate
+            context_mapping: {  }
+          weight: 0
+          additional: {  }
+      third_party_settings: {  }
+page: exchange_rate
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

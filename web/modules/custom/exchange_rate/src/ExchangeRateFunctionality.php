@@ -93,22 +93,16 @@ class ExchangeRateFunctionality {
    */
   public function getUrl() {
     $data = $this->getJson();
-    $currencyData = [];
     $defaultCurrencyData = ['USD', 'EUR', 'PLN', 'GBP'];
-    $currency = $this->factory->get($this->id)->get('currency');
     $request = $this->factory->get($this->id)->get('request');
 
     try {
       if ($request) {
-        foreach ($currency as $key => &$variable) {
-          if ($variable != 0) {
-            $currencyData[] = $key;
-          }
-        }
+        $result = $this->getSelectedCurrencies();
 
-        if (count($currencyData) >= 1) {
-          $endResult = array_filter($data, function ($key) use ($currencyData) {
-            if (in_array($key->cc, $currencyData, TRUE)) {
+        if (count($result) >= 1) {
+          $endResult = array_filter($data, function ($key) use ($result) {
+            if (in_array($key->cc, $result, TRUE)) {
               return TRUE;
             }
             return FALSE;
@@ -163,6 +157,22 @@ class ExchangeRateFunctionality {
   }
 
   /**
+   * Function with getting selected currencies.
+   */
+  public function getSelectedCurrencies() {
+    $currencyData = [];
+    $currency = $this->factory->get($this->id)->get('currency');
+
+    foreach ($currency as $key => &$variable) {
+      if ($variable != 0) {
+        $currencyData[] = $key;
+      }
+    }
+
+    return array_unique($currencyData);
+  }
+
+  /**
    * Generates an error message.
    */
   public function logMessage($message) {
@@ -199,6 +209,27 @@ class ExchangeRateFunctionality {
     foreach ($result as &$value) {
       $this->messenger->addMessage('Was deleted currency :' . $value);
     }
+  }
+
+  /**
+   * The function returns an array of one currency period of time.
+   */
+  public function getOneCurrency($nameCurrency) {
+    $array = $this->getUrl();
+    $arrayCurrency = [];
+
+    if (!empty($nameCurrency)) {
+      foreach ($array as &$variable) {
+        if ($variable->cc == strtoupper($nameCurrency)) {
+          $arrayCurrency[] = $variable;
+        }
+      }
+    }
+    else {
+      return [];
+    }
+
+    return $arrayCurrency;
   }
 
 }
