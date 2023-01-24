@@ -1,10 +1,14 @@
 {# exchange_rate/templates/my-template.html.twig #}
+<div>
+  <canvas id="myChart" width="870" height="435"></canvas>
+</div>
 
 <table>
   {% for key in data  %}
     <tr>
       <td>{{ key.cc }}</td>
       <td>{{ key.rate }}</td>
+      <td>{{ key.calcdate }}</td>
     </tr>
   {% endfor %}
 </table>

@@ -76,6 +76,17 @@ class SettingsForm extends ConfigFormBase {
       '#default_value' => $config->get('url'),
     ];
 
+    $form['settings']['range'] = [
+      '#type' => 'textfield',
+      '#attributes' => [
+        ' type' => 'number',
+        ' min' => '1',
+      ],
+      '#title' => 'Period of time during which currencies are showing',
+      '#maxlength' => 3,
+      '#default_value' => $config->get('range'),
+    ];
+
     $form['settings']['request'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('request for form validity'),
@@ -102,12 +113,30 @@ class SettingsForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
+  public function validateForm(array &$form, FormStateInterface $form_state) {
+    if (strlen($form_state->getValue('url')) == 0) {
+      $form_state->setErrorByName(
+        'url',
+        $this->t('The field URL can not be empty.')
+      );
+    }
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+    $this->showExchangeRateForm->getPreviouseCurrencies();
+
     $this->config($this->id)
       ->set('url', $form_state->getValue('url'))
+      ->set('range', $form_state->getValue('range'))
       ->set('request', $form_state->getValue('request'))
       ->set('currency', $form_state->getValue('currency'))
       ->save();
+
+    $this->showExchangeRateForm->deletedCurrencies();
+
     parent::submitForm($form, $form_state);
   }
 

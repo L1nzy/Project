@@ -51,11 +51,31 @@ class ExchangeRate extends BlockBase implements ContainerFactoryPluginInterface 
    * {@inheritdoc}
    */
   public function build() {
+    // List of all currencies.
     $list = $this->showExchangeRateBlock->getUrl();
+
+    $currency = $this->showExchangeRateBlock->getSelectedCurrencies();
+    $listCurrencies = [];
+
+    foreach ($currency as &$variable) {
+      $listCurrencies[] = $this->showExchangeRateBlock->getOneCurrency($variable);
+    }
 
     return [
       '#theme' => 'block--exchange-rate',
       '#data' => $list,
+      '#exchange_var' => $listCurrencies,
+      '#attached' => [
+        'library' => [
+          'exchange_rate/module-chart-js',
+        ],
+        'drupalSettings' => [
+          'exchange_rate' => [
+            'title' => $this->t('title'),
+            'currency' => $listCurrencies,
+          ],
+        ],
+      ],
     ];
   }
 
