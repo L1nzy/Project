@@ -1,7 +1,7 @@
 services:
   exchange_rate.api_connector:
     class: Drupal\exchange_rate\ExchangeRateFunctionality
-    arguments: ['@http_client', '@config.factory', '@logger.factory', '@exchange_rate.entity_save_rate']
+    arguments: ['@http_client', '@config.factory', '@logger.factory', '@exchange_rate.entity_save_rate', '@messenger']
   exchange_rate.entity_save_rate:
     class: Drupal\exchange_rate\ExchangeRateEntity
     arguments:
