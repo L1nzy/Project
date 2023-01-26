@@ -184,7 +184,7 @@ class ExchangeRateFunctionality {
       $range = $this->factory->get($this->settingName)->get('range');
       $endAlias = $this->formationUrl($url, $range);
       $request = $this->client->get($endAlias);
-      $result = json_decode($request->getBody()->getContents());
+      json_decode($request->getBody()->getContents());
       return TRUE;
     }
     catch (\Exception $exception) {
