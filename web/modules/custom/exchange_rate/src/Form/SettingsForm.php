@@ -74,6 +74,14 @@ class SettingsForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Url'),
       '#default_value' => $config->get('url'),
+      '#ajax' => [
+        'callback' => '::validationCheck',
+        'wrapper' => 'edit-output',
+        'event' => 'change',
+        'progress' => [
+          'type' => 'throbber',
+        ],
+      ],
     ];
 
     $form['settings']['range'] = [
@@ -93,6 +101,13 @@ class SettingsForm extends ConfigFormBase {
       '#default_value' => $config->get('request'),
     ];
 
+    $form['settings']['group'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'id' => 'edit-output',
+      ],
+    ];
+
     $options = [];
     $currency = $this->exchangeRateFunctionality->getCurrencies();
 
@@ -100,12 +115,38 @@ class SettingsForm extends ConfigFormBase {
       $options[$value] = $value;
     }
 
-    $form['settings']['currency'] = [
+    $form['settings']['group']['currency'] = [
       '#type' => 'checkboxes',
       '#title' => 'Currencies that will be displayed',
       '#options' => $options,
       '#default_value' => $config->get('currency') ?? [],
     ];
+
+    $input = $form_state->getUserInput();
+
+    if (array_key_exists('url', $input)) {
+      $url = trim($input['url']);
+      $isValid = $this->exchangeRateFunctionality->isValid($url);
+
+      if (empty(strlen($url))) {
+        $form['settings']['group']['currency'] = [
+          '#type' => 'checkboxes',
+          '#options' => [],
+          '#default_value' => FALSE,
+        ];
+      }
+      elseif (!$isValid) {
+        $form['settings']['group']['currency'] = [
+          '#type' => 'checkboxes',
+          '#options' => [],
+          '#default_value' => FALSE,
+        ];
+      }
+      else {
+        $this->exchangeRateFunctionality->showCurrenciesApi();
+      }
+
+    }
 
     return parent::buildForm($form, $form_state);
   }
@@ -114,12 +155,21 @@ class SettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
-    if (empty(trim($form_state->getValue('url')))) {
-      $form_state->setErrorByName(
-        'url',
-        $this->t('The field URL can not be empty.')
-      );
+    $url = trim($form_state->getValue('url'));
+
+    if (empty($url)) {
+      $form_state->setErrorByName('url', $this->t('The field URL can not be empty.'));
     }
+    if (!$this->exchangeRateFunctionality->isValid($url)) {
+      $form_state->setErrorByName('url', $this->t('The field URL is not valid.'));
+    }
+  }
+
+  /**
+   * Returns a form with checkboxes.
+   */
+  public function validationCheck(array &$form, FormStateInterface $form_state): array {
+    return $form['settings']['group'];
   }
 
   /**
