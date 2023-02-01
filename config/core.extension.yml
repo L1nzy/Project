@@ -19,6 +19,7 @@ module:
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
+  edit_title: 0
   editor: 0
   entity_reference_revisions: 0
   exchange_rate: 0

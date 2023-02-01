@@ -75,21 +75,29 @@ class ExchangeRateFunctionality {
   }
 
   /**
+   * Function with formation url for query to the api.
+   */
+  public function formationUrl($url, $range) {
+    $endDrupalDate = new DrupalDateTime('-' . $range . ' day');
+    $endDate = $endDrupalDate->format('Ymd');
+    $startDrupalDate = new DrupalDateTime();
+    $startDate = $startDrupalDate->format('Ymd');
+
+    $endpoint = '?start=' . $endDate . '&end=%20' . $startDate . '&sort=exchangedate&order=desc&json';
+
+    return $url . $endpoint;
+  }
+
+  /**
    * Returns the parsed file JSON.
    */
   protected function getJson() {
     try {
       $range = $this->factory->get($this->settingName)->get('range');
+      $endAlias = $this->factory->get($this->settingName)->get('url');
+      $endAlias = $this->formationUrl($endAlias, $range);
 
-      $endDrupalDate = new DrupalDateTime('-' . $range . ' day');
-      $endDate = $endDrupalDate->format('Ymd');
-      $startDrupalDate = new DrupalDateTime();
-      $startDate = $startDrupalDate->format('Ymd');
-
-      $endpoint = '?start=' . $endDate . '&end=%20' . $startDate . '&sort=exchangedate&order=desc&json';
-
-      $url = $this->factory->get($this->settingName)->get('url') . $endpoint;
-      $request = $this->client->get($url);
+      $request = $this->client->get($endAlias);
       $result = $request->getBody()->getContents();
       return json_decode($result);
     }
@@ -142,7 +150,7 @@ class ExchangeRateFunctionality {
       $data[] = $value->cc;
     }
 
-    return $data;
+    return array_unique($data);
   }
 
   /**
@@ -166,6 +174,51 @@ class ExchangeRateFunctionality {
    */
   public function logMessage($message) {
     $this->loggerFactory->get('exchange_rate')->notice($message);
+  }
+
+  /**
+   * A function that returns a valid or invalid address field in a form.
+   */
+  public function isValid($url) {
+    try {
+      $range = $this->factory->get($this->settingName)->get('range');
+      $endAlias = $this->formationUrl($url, $range);
+      $request = $this->client->get($endAlias);
+      json_decode($request->getBody()->getContents());
+      return TRUE;
+    }
+    catch (\Exception $exception) {
+      $this->logMessage('The field URL is not valid.');
+      $this->logMessage($exception->getMessage());
+      $url = $this->factory->get($this->settingName)->get('url');
+
+      if (empty(strlen($url))) {
+        $this->messenger->addWarning('The field URL can not be empty.');
+      }
+      else {
+        $this->messenger->addWarning('The field URL is not valid.');
+      }
+
+      return FALSE;
+    }
+  }
+
+  /**
+   * The function return list currencies with api.
+   */
+  public function showCurrenciesApi() {
+    $url = $this->factory->get($this->settingName)->get('url');
+    $endAlias = $this->formationUrl($url, 0);
+    $request = $this->client->get($endAlias);
+    $json = json_decode($request->getBody()->getContents());
+    $rezult = [];
+
+    foreach ($json as &$item) {
+      $str = 'Currency name: ' . $item->cc . ' currency rate: ' . $item->rate . ' exchange date: ' . $item->exchangedate;
+      $this->messenger->addMessage($str);
+    }
+
+    return $rezult;
   }
 
   /**
