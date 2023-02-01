@@ -33,7 +33,7 @@
         for (let i = 0; i < Currencies.length; i++) {
           let dataFirst = {
             label: Currencies[i][0],
-            data: Currencies[i][1],
+            data: Currencies[i][1].reverse(),
             lineTension: 0,
             fill: false,
             borderColor: color[i]
@@ -43,7 +43,7 @@
         }
 
         let speedData = {
-          labels: Currencies[0][2],
+          labels: Currencies[0][2].reverse(),
           datasets: objectCurrensies
         };
 

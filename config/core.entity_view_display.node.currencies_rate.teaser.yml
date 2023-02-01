@@ -1,0 +1,26 @@
+uuid: 458591de-b7e2-4fa8-a669-a2915b2fd602
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.currencies_rate.field_cc
+    - field.field.node.currencies_rate.field_exchange_date
+    - field.field.node.currencies_rate.field_rate
+    - node.type.currencies_rate
+  module:
+    - user
+id: node.currencies_rate.teaser
+targetEntityType: node
+bundle: currencies_rate
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_cc: true
+  field_exchange_date: true
+  field_rate: true

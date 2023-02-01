@@ -1,0 +1,21 @@
+uuid: d462876b-d8fd-48ca-8f20-6104403496a0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_exchange_date
+field_name: field_exchange_date
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 91a0be50-11b4-45ec-a445-e9cf5b590d56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rate
+    - node.type.currencies_rate
+id: node.currencies_rate.field_rate
+field_name: field_rate
+entity_type: node
+bundle: currencies_rate
+label: Rate
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

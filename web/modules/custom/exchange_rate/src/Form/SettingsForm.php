@@ -20,23 +20,23 @@ class SettingsForm extends ConfigFormBase {
    *
    * @var \Drupal\exchange_rate\ExchangeRateFunctionality
    */
-  protected $showExchangeRateForm;
+  protected $exchangeRateFunctionality;
 
   /**
    * Exchange rate form id.
    *
    * @var string
    */
-  protected string $id = 'exchange_rate.admin_settings';
+  protected string $settingName = 'exchange_rate.admin_settings';
 
   /**
    * Constructs a new SettingsForm object.
    *
    * {@inheritdoc}
    */
-  public function __construct(ConfigFactoryInterface $config_factory, ExchangeRateFunctionality $showExchangeRateForm) {
+  public function __construct(ConfigFactoryInterface $config_factory, ExchangeRateFunctionality $exchangeRateFunctionality) {
     parent::__construct($config_factory);
-    $this->showExchangeRateForm = $showExchangeRateForm;
+    $this->exchangeRateFunctionality = $exchangeRateFunctionality;
   }
 
   /**
@@ -54,7 +54,7 @@ class SettingsForm extends ConfigFormBase {
    */
   protected function getEditableConfigNames() {
     return [
-      $this->id,
+      $this->settingName,
     ];
   }
 
@@ -69,11 +69,19 @@ class SettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config($this->id);
+    $config = $this->config($this->settingName);
     $form['settings']['url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Url'),
       '#default_value' => $config->get('url'),
+      '#ajax' => [
+        'callback' => '::validationCheck',
+        'wrapper' => 'edit-output',
+        'event' => 'change',
+        'progress' => [
+          'type' => 'throbber',
+        ],
+      ],
     ];
 
     $form['settings']['range'] = [
@@ -93,19 +101,52 @@ class SettingsForm extends ConfigFormBase {
       '#default_value' => $config->get('request'),
     ];
 
+    $form['settings']['group'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'id' => 'edit-output',
+      ],
+    ];
+
     $options = [];
-    $currency = $this->showExchangeRateForm->getCurrencies();
+    $currency = $this->exchangeRateFunctionality->getCurrencies();
 
     foreach ($currency as &$value) {
       $options[$value] = $value;
     }
 
-    $form['settings']['currency'] = [
+    $form['settings']['group']['currency'] = [
       '#type' => 'checkboxes',
       '#title' => 'Currencies that will be displayed',
       '#options' => $options,
       '#default_value' => $config->get('currency') ?? [],
     ];
+
+    $input = $form_state->getUserInput();
+
+    if (array_key_exists('url', $input)) {
+      $url = trim($input['url']);
+      $isValid = $this->exchangeRateFunctionality->isValid($url);
+
+      if (empty(strlen($url))) {
+        $form['settings']['group']['currency'] = [
+          '#type' => 'checkboxes',
+          '#options' => [],
+          '#default_value' => FALSE,
+        ];
+      }
+      elseif (!$isValid) {
+        $form['settings']['group']['currency'] = [
+          '#type' => 'checkboxes',
+          '#options' => [],
+          '#default_value' => FALSE,
+        ];
+      }
+      else {
+        $this->exchangeRateFunctionality->showCurrenciesApi();
+      }
+
+    }
 
     return parent::buildForm($form, $form_state);
   }
@@ -114,28 +155,37 @@ class SettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
-    if (strlen($form_state->getValue('url')) == 0) {
-      $form_state->setErrorByName(
-        'url',
-        $this->t('The field URL can not be empty.')
-      );
+    $url = trim($form_state->getValue('url'));
+
+    if (empty($url)) {
+      $form_state->setErrorByName('url', $this->t('The field URL can not be empty.'));
     }
+    if (!$this->exchangeRateFunctionality->isValid($url)) {
+      $form_state->setErrorByName('url', $this->t('The field URL is not valid.'));
+    }
+  }
+
+  /**
+   * Returns a form with checkboxes.
+   */
+  public function validationCheck(array &$form, FormStateInterface $form_state): array {
+    return $form['settings']['group'];
   }
 
   /**
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $this->showExchangeRateForm->getPreviouseCurrencies();
+    $this->exchangeRateFunctionality->getPreviouseCurrencies();
 
-    $this->config($this->id)
+    $this->config($this->settingName)
       ->set('url', $form_state->getValue('url'))
       ->set('range', $form_state->getValue('range'))
       ->set('request', $form_state->getValue('request'))
       ->set('currency', $form_state->getValue('currency'))
       ->save();
 
-    $this->showExchangeRateForm->deletedCurrencies();
+    $this->exchangeRateFunctionality->deletedCurrencies();
 
     parent::submitForm($form, $form_state);
   }

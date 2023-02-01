@@ -1,105 +1,78 @@
-uuid: aa3b8cd9-b9f1-4c12-a5e8-4a17c2df2634
+uuid: 59add5d1-10d0-4093-be74-0ce368a3ea6b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.article.body
-    - field.field.node.article.comment
-    - field.field.node.article.field_image
-    - field.field.node.article.field_seo_title
-    - field.field.node.article.field_tags
-    - image.style.thumbnail
-    - node.type.article
+    - field.field.node.currencies_rate.field_cc
+    - field.field.node.currencies_rate.field_exchange_date
+    - field.field.node.currencies_rate.field_rate
+    - node.type.currencies_rate
   module:
-    - comment
-    - image
     - path
-    - text
-_core:
-  default_config_hash: Pzq9mzrsfoPf775qgEU_SUbHSro9pv1ga-Euh1Ykd_k
-id: node.article.default
+id: node.currencies_rate.default
 targetEntityType: node
-bundle: article
+bundle: currencies_rate
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 1
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
-  comment:
-    type: comment_default
-    weight: 8
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 5
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_image:
-    type: image_image
-    weight: 3
-    region: content
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-  field_seo_title:
+  field_cc:
     type: string_textfield
-    weight: 0
+    weight: 123
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_tags:
-    type: entity_reference_autocomplete_tags
-    weight: 2
+  field_exchange_date:
+    type: string_textfield
+    weight: 127
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
       size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_rate:
+    type: number
+    weight: 126
+    region: content
+    settings:
       placeholder: ''
     third_party_settings: {  }
   path:
     type: path
-    weight: 9
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 6
+    weight: 15
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 10
+    weight: 120
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 7
+    weight: 16
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 11
+    weight: -5
     region: content
     settings:
       size: 60
@@ -107,7 +80,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 5
     region: content
     settings:
       match_operator: CONTAINS

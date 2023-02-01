@@ -6,6 +6,7 @@ use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
+use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\Core\Messenger\MessengerInterface;
 
 /**
@@ -32,7 +33,7 @@ class ExchangeRateFunctionality {
    *
    * @var string
    */
-  protected string $id = 'exchange_rate.admin_settings';
+  protected string $settingName = 'exchange_rate.admin_settings';
 
   /**
    * Logger Factory.
@@ -49,6 +50,13 @@ class ExchangeRateFunctionality {
   private $previouseCurrencies = [];
 
   /**
+   * Variable entity for saving exchange rate.
+   *
+   * @var \Drupal\exchange_rate\ExchangeRateEntity
+   */
+  private $entity;
+
+  /**
    * Include the messenger service.
    *
    * @var \Drupal\Core\Messenger\MessengerInterface
@@ -58,11 +66,26 @@ class ExchangeRateFunctionality {
   /**
    * {@inheritdoc}
    */
-  public function __construct(ClientInterface $client, ConfigFactoryInterface $factory, LoggerChannelFactoryInterface $loggerFactory, MessengerInterface $messenger) {
+  public function __construct(ClientInterface $client, ConfigFactoryInterface $factory, LoggerChannelFactoryInterface $loggerFactory, ExchangeRateEntity $entity, MessengerInterface $messenger) {
     $this->client = $client;
     $this->factory = $factory;
     $this->loggerFactory = $loggerFactory;
+    $this->entity = $entity;
     $this->messenger = $messenger;
+  }
+
+  /**
+   * Function with formation url for query to the api.
+   */
+  public function formationUrl($url, $range) {
+    $endDrupalDate = new DrupalDateTime('-' . $range . ' day');
+    $endDate = $endDrupalDate->format('Ymd');
+    $startDrupalDate = new DrupalDateTime();
+    $startDate = $startDrupalDate->format('Ymd');
+
+    $endpoint = '?start=' . $endDate . '&end=%20' . $startDate . '&sort=exchangedate&order=desc&json';
+
+    return $url . $endpoint;
   }
 
   /**
@@ -70,14 +93,11 @@ class ExchangeRateFunctionality {
    */
   protected function getJson() {
     try {
-      $range = $this->factory->get($this->id)->get('range');
+      $range = $this->factory->get($this->settingName)->get('range');
+      $endAlias = $this->factory->get($this->settingName)->get('url');
+      $endAlias = $this->formationUrl($endAlias, $range);
 
-      $endDate = date("Ymd");
-      $startDate = date('Ymd', strtotime($endDate . '- ' . $range . 'days'));
-      $endpoint = '?start=' . $startDate . '&end=%20' . $endDate . '&sort=exchangedate&order=desc&json';
-
-      $url = $this->factory->get($this->id)->get('url') . $endpoint;
-      $request = $this->client->get($url);
+      $request = $this->client->get($endAlias);
       $result = $request->getBody()->getContents();
       return json_decode($result);
     }
@@ -85,7 +105,6 @@ class ExchangeRateFunctionality {
       $this->logMessage('Problem with connecting to the server or empty link on JSON file');
       return [];
     }
-
   }
 
   /**
@@ -94,41 +113,28 @@ class ExchangeRateFunctionality {
   public function getUrl() {
     $data = $this->getJson();
     $defaultCurrencyData = ['USD', 'EUR', 'PLN', 'GBP'];
-    $request = $this->factory->get($this->id)->get('request');
+    $request = $this->factory->get($this->settingName)->get('request');
+    $list = [];
 
-    try {
-      if ($request) {
-        $result = $this->getSelectedCurrencies();
+    if ($request) {
+      $result = $this->getSelectedCurrencies();
 
-        if (count($result) >= 1) {
-          $endResult = array_filter($data, function ($key) use ($result) {
-            if (in_array($key->cc, $result, TRUE)) {
-              return TRUE;
-            }
-            return FALSE;
-          });
-        }
-        else {
-          $endResult = array_filter($data, function ($key) use ($defaultCurrencyData) {
-            if (in_array($key->cc, $defaultCurrencyData, TRUE)) {
-              return TRUE;
-            }
-            return FALSE;
-          });
-
-          $this->logMessage('None of the currencies was selected, the default list of currencies will be displayed');
-        }
-
-        return $endResult;
+      if (!empty($result)) {
+        $list = $result;
       }
       else {
-        $this->logMessage('The request link to the server has been disabled');
-        return [];
+        $list = $defaultCurrencyData;
+        $this->logMessage('None of the currencies was selected, the default list of currencies will be displayed');
       }
 
+      $endResult = array_filter($data, function ($key) use ($list) {
+        return in_array($key->cc, $list, TRUE);
+      });
+
+      return $endResult;
     }
-    catch (RequestException $e) {
-      $this->logMessage('Impossible get the list of currencies');
+    else {
+      $this->logMessage('The request link to the server has been disabled');
       return [];
     }
   }
@@ -140,20 +146,11 @@ class ExchangeRateFunctionality {
     $array = $this->getJson();
     $data = [];
 
-    try {
-      foreach ($array as &$value) {
-        foreach ($value as $key => &$item) {
-          if ($key == 'cc') {
-            $data[] = $item;
-          }
-        }
-      }
-    }
-    catch (RequestException $e) {
-      $this->logMessage('Impossible get the list of currencies');
+    foreach ($array as &$value) {
+      $data[] = $value->cc;
     }
 
-    return $data;
+    return array_unique($data);
   }
 
   /**
@@ -161,7 +158,7 @@ class ExchangeRateFunctionality {
    */
   public function getSelectedCurrencies() {
     $currencyData = [];
-    $currency = $this->factory->get($this->id)->get('currency');
+    $currency = $this->factory->get($this->settingName)->get('currency');
 
     foreach ($currency as $key => &$variable) {
       if ($variable != 0) {
@@ -180,10 +177,55 @@ class ExchangeRateFunctionality {
   }
 
   /**
+   * A function that returns a valid or invalid address field in a form.
+   */
+  public function isValid($url) {
+    try {
+      $range = $this->factory->get($this->settingName)->get('range');
+      $endAlias = $this->formationUrl($url, $range);
+      $request = $this->client->get($endAlias);
+      json_decode($request->getBody()->getContents());
+      return TRUE;
+    }
+    catch (\Exception $exception) {
+      $this->logMessage('The field URL is not valid.');
+      $this->logMessage($exception->getMessage());
+      $url = $this->factory->get($this->settingName)->get('url');
+
+      if (empty(strlen($url))) {
+        $this->messenger->addWarning('The field URL can not be empty.');
+      }
+      else {
+        $this->messenger->addWarning('The field URL is not valid.');
+      }
+
+      return FALSE;
+    }
+  }
+
+  /**
+   * The function return list currencies with api.
+   */
+  public function showCurrenciesApi() {
+    $url = $this->factory->get($this->settingName)->get('url');
+    $endAlias = $this->formationUrl($url, 0);
+    $request = $this->client->get($endAlias);
+    $json = json_decode($request->getBody()->getContents());
+    $rezult = [];
+
+    foreach ($json as &$item) {
+      $str = 'Currency name: ' . $item->cc . ' currency rate: ' . $item->rate . ' exchange date: ' . $item->exchangedate;
+      $this->messenger->addMessage($str);
+    }
+
+    return $rezult;
+  }
+
+  /**
    * Get a list with previous currencies.
    */
   public function getPreviouseCurrencies() {
-    $currency = $this->factory->get($this->id)->get('currency');
+    $currency = $this->factory->get($this->settingName)->get('currency');
     $this->previouseCurrencies = $currency;
   }
 
@@ -191,18 +233,9 @@ class ExchangeRateFunctionality {
    * Returned which currencies were deleted.
    */
   public function deletedCurrencies() {
-    $currency = $this->factory->get($this->id)->get('currency');
-    $oldCurrencies = $this->previouseCurrencies;
-    $arrOldCurrency = [];
-    $arrNewCurrency = [];
-
-    foreach ($oldCurrencies as $key => &$item) {
-      $arrOldCurrency[] = $key;
-    }
-
-    foreach ($currency as $key => &$item) {
-      $arrNewCurrency[] = $key;
-    }
+    $currency = $this->factory->get($this->settingName)->get('currency');
+    $arrOldCurrency = array_keys($this->previouseCurrencies);
+    $arrNewCurrency = array_keys($currency);
 
     $result = array_diff($arrOldCurrency, $arrNewCurrency);
 
@@ -214,12 +247,11 @@ class ExchangeRateFunctionality {
   /**
    * The function returns an array of one currency period of time.
    */
-  public function getOneCurrency($nameCurrency) {
-    $array = $this->getUrl();
+  public function getOneCurrency($nameCurrency, $nameArray) {
     $arrayCurrency = [];
 
     if (!empty($nameCurrency)) {
-      foreach ($array as &$variable) {
+      foreach ($nameArray as &$variable) {
         if ($variable->cc == strtoupper($nameCurrency)) {
           $arrayCurrency[] = $variable;
         }
@@ -230,6 +262,61 @@ class ExchangeRateFunctionality {
     }
 
     return $arrayCurrency;
+  }
+
+  /**
+   * Added settings for showing currencies and use API or content for showing.
+   */
+  public function saveCurrencies() {
+    $range = $this->factory->get($this->settingName)->get('range');
+
+    $startDrupalDate = new DrupalDateTime('-' . $range . ' day');
+    $startDate = $startDrupalDate->format('Ymd');
+    $todayDrupalDate = new DrupalDateTime();
+    $todayDate = $todayDrupalDate->format('Ymd');
+
+    $currenciesOfContent = $this->entity->getEntityRate();
+    $isValid = FALSE;
+    $currency = $this->getSelectedCurrencies();
+    $validDate = 0;
+
+    foreach ($currenciesOfContent as &$value) {
+      foreach ($currency as &$item) {
+        if ($value->exchangedate == (string) $startDate && $value->cc == $item) {
+          $validDate++;
+        }
+      }
+    }
+
+    foreach ($currenciesOfContent as &$value) {
+      if ($value->exchangedate == (string) $todayDate) {
+        $isValid = TRUE;
+        break;
+      }
+    }
+
+    if ($isValid && count($currency) == $validDate) {
+      $allCurrenciesOfContent = $this->getSelectedCurrencies();
+
+      $endResult = array_filter($currenciesOfContent, function ($key) use ($allCurrenciesOfContent) {
+        return in_array($key->cc, $allCurrenciesOfContent, TRUE);
+      });
+
+      $dateList = [];
+
+      for ($i = 0; $i < $range; $i++) {
+        $drupalDate = new DrupalDateTime('-' . $i . ' day');
+        $dateList[] = $drupalDate->format('Y.m.d');
+      }
+
+      return array_filter($endResult, function ($key) use ($dateList) {
+        return in_array($key->exchangedate, $dateList, TRUE);
+      });
+    }
+    else {
+      $this->entity->createEntityRate($this->getUrl());
+      return $this->getUrl();
+    }
   }
 
 }
