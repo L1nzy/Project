@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @file
+ * Module for rewriting title in articles.
+ */
+
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_FORM_alter().
+ */
+function edit_title_form_alter(&$form, FormStateInterface $form_state, $form_id): void {
+  if ($form_id == "node_article_form") {
+    $form['title'] = [
+      '#access' => FALSE,
+    ];
+    $form['#entity_builders'][] = 'edit_node_title';
+  }
+}
+
+/**
+ * Rewrote node title.
+ */
+function edit_node_title($type_entity, NodeInterface $node, array $form, FormStateInterface $form_state) {
+  if ($node->getType() == 'article') {
+    $entities = $node->referencedEntities();
+
+    $created = $node->get('created')->value;
+    $date = DrupalDateTime::createFromTimestamp($created);
+
+    foreach ($entities as $entity) {
+      if ($entity->getEntityTypeId() == "taxonomy_term") {
+        $category = $entity->getName();
+      }
+    }
+
+    $node->set('title', $category . ' - ' . $date->format('d/m/Y'));
+  }
+
+}

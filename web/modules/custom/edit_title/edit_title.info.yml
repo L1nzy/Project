@@ -1,0 +1,5 @@
+name: Edit title
+description: The module which autofill field title.
+core_version_requirement: ^9
+package: Custom
+type: module
