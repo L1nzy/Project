@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Module for rewriting title in articles.
  * @file
+ * Module for rewriting title in articles.
  */
 
 use Drupal\Core\Datetime\DrupalDateTime;
