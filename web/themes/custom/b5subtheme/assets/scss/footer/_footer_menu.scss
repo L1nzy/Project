@@ -1,3 +1,16 @@
+.footer-container {
+  background-color: $color-blue-light;
+}
+
+[class *= "region-footer-"] {
+  max-width: 1232px;
+  margin: 0 auto;
+
+  @media (max-width: $first-breakpoint) {
+    max-width: unset;
+  }
+}
+
 .bg-secondary {
   background-color: $color-black !important;
   padding: 0;

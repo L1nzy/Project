@@ -3,19 +3,24 @@
   "version": "1.0.0",
   "description": "[Bootstrap 5](https://www.drupal.org/project/bootstrap5) subtheme.",
   "main": "gulpfile.js",
-  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "find node_modules/ -name '*.info' -type f -delete"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Stefvanlooveren <stefvanlooveren.me>",
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "bootstrap-icons": "^1.5.0",
+    "@popperjs/core": "^2.9.2"
+  },
   "devDependencies": {
-    "browser-sync": "^2.27.10",
+    "browser-sync": "^2.26.14",
     "gulp": "^4.0.2",
-    "gulp-livereload": "^4.0.2",
-    "gulp-notify": "^4.0.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-sass": "^5.1.0",
-    "sass": "^1.56.2"
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-watch": "^5.0.1",
+    "gulp-uglify": "^3.0.2"
   }
 }

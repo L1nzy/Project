@@ -1,7 +1,8 @@
 @import "../mixins/mixins_buttons";
 
 .view-music-festival,
-.view-category-related-block {
+.view-category-related-block,
+.view-you-might-also-like {
   margin-bottom: 100px;
   margin-top: 50px;
   width: calc(100vw - 15px);
@@ -277,5 +278,21 @@
         }
       }
     }
+  }
+}
+
+.view-you-might-also-like .view-content .views-row {
+  width: unset;
+  display: flex;
+  gap: 34px;
+
+  .views-col {
+    width: 25%;
+    max-width: 322px;
+  }
+
+  img {
+    width: 100%;
+    max-height: 225px;
   }
 }

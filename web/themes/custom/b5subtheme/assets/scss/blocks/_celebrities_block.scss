@@ -15,6 +15,7 @@
 
     @media(max-width: $second-breakpoint) {
       flex-direction: column;
+      margin-bottom: 35px;
     }
 
     .views-row:first-of-type {

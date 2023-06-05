@@ -19,10 +19,8 @@ module:
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
-  edit_title: 0
   editor: 0
   entity_reference_revisions: 0
-  exchange_rate: 0
   field: 0
   field_ui: 0
   file: 0
@@ -51,7 +49,6 @@ module:
   shortcut: 0
   standard: 0
   statistics: 0
-  swap_blocks: 0
   system: 0
   taxonomy: 0
   text: 0

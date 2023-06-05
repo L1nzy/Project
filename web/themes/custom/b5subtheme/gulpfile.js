@@ -1,21 +1,91 @@
-import gulp from "gulp";
-import {path} from "./gulp/config/path.js";
-import {scss} from './gulp/task/scss.js'
-import {server} from './gulp/task/server.js'
-import {plugins} from './gulp/config/plugins.js';
-import reload from "gulp-livereload";
+let gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    browserSync = require('browser-sync').create(),
+    uglify = require('gulp-uglify');
 
-global.app = {
-  path,
-  gulp,
-  plugins
+const paths = {
+    scss: {
+        src: './assets/scss/style.scss',
+        dest: './css',
+        watch: './assets/scss/**/*.scss'
+    },
+    js: {
+        bootstrap_src: './node_modules/bootstrap/dist/js/bootstrap.min.js',
+        bootstrap_dest: './assets/js/bootstrap',
+        popper: './node_modules/@popperjs/core/dist/umd/popper.min.js',
+        popper_dest: './assets/js/popper',
+        theme_src: './assets/js/src/*.js',
+        theme_dest: './assets/js'
+    },
+    twig: {
+        watch: './templates/**/*.twig'
+    },
+};
+
+// Compresss theme JS
+function buildjs() {
+    return gulp
+        .src([paths.js.theme_src])
+        .pipe(gulp.dest(paths.js.theme_dest))
+        .pipe(browserSync.stream());
 }
 
-function watcher () {
-  reload.listen();
-  gulp.watch(path.watch.scss,scss)
+// Compile sass into CSS & auto-inject into browsers
+function compile() {
+    var sassOptions = {
+        outputStyle: 'expanded',
+        indentType: 'space',
+        indentWidth: 2,
+        linefeed: 'lf'
+    };
+
+    return gulp
+        .src([paths.scss.src], { sourcemaps: true })
+        // .src([paths.scss.src])
+        .pipe(sass(sassOptions).on('error', sass.logError))
+        .pipe(autoprefixer())
+        // .pipe(gulp.dest(paths.scss.dest))
+        .pipe(gulp.dest([paths.scss.dest], { sourcemaps: true }))
+        .pipe(browserSync.stream());
 }
 
-const mainTask = gulp.parallel(scss)
-const dev = gulp.series(mainTask,gulp.parallel(watcher,server))
-gulp.task('default',dev)
+// Move the Bootstrap JavaScript files into our js/bootstrap folder.
+function move_bootstrap_js_files() {
+    return gulp
+        .src([paths.js.bootstrap_src])
+        .pipe(gulp.dest(paths.js.bootstrap_dest))
+        .pipe(browserSync.stream());
+}
+
+// Move the Popper JavaScript files into our js/popper folder.
+function move_popper_js_files() {
+    return gulp
+        .src([paths.js.popper])
+        .pipe(gulp.dest(paths.js.popper_dest))
+        .pipe(browserSync.stream());
+}
+
+// Watching scss files.
+function watch() {
+
+    browserSync.init({
+        proxy: "bs4.localhost:8888",
+        open: false
+    });
+
+    // gulp.watch([paths.js.theme_src], buildjs).on('change', browserSync.reload);
+    gulp.watch([paths.js.theme_src], buildjs);
+    gulp.watch([paths.scss.watch], compile);
+    gulp.watch([paths.twig.watch]).on('change', browserSync.reload);
+}
+
+const build = gulp.series(buildjs, compile, move_bootstrap_js_files, move_popper_js_files, gulp.parallel(watch));
+
+exports.buildjs = buildjs;
+exports.compile = compile;
+exports.move_bootstrap_js_files = move_bootstrap_js_files;
+exports.move_popper_js_files = move_popper_js_files;
+exports.watch = watch;
+
+exports.default = build;

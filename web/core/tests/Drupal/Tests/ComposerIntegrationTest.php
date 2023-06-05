@@ -144,7 +144,7 @@ class ComposerIntegrationTest extends UnitTestCase {
       ['.eslintrc.json', 'assets/scaffold/files/eslintrc.json'],
       ['.ht.router.php', 'assets/scaffold/files/ht.router.php'],
       ['.htaccess', 'assets/scaffold/files/htaccess'],
-      ['example..gitignore', 'assets/scaffold/files/example..gitignore'],
+      ['example.gitignore', 'assets/scaffold/files/example.gitignore'],
       ['index.php', 'assets/scaffold/files/index.php'],
       ['INSTALL.txt', 'assets/scaffold/files/drupal.INSTALL.txt'],
       ['README.md', 'assets/scaffold/files/drupal.README.md'],

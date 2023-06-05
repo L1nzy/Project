@@ -38,10 +38,6 @@ header nav {
 
     .nav-link.active {
       color: $color-yellow;
-
-      @media (max-width: $mobile) {
-        color: $color-black;
-      }
     }
 
     .nav-item:first-of-type .nav-link::after {

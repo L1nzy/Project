@@ -22,7 +22,6 @@ dependencies:
     - views.view.must_read
     - views.view.you_might_also_like
   content:
-    - 'block_content:block_with_advertising:0f939486-355a-4894-abab-f96aa1a6df8f'
     - 'block_content:block_with_advertising:d8f0f40a-4a1a-4fd8-a4d4-9493710b4806'
     - 'block_content:block_with_advertising:fe920d2b-5455-4ad7-a753-2281d8d3efd1'
     - 'block_content:social_networks:972383ed-e8cb-44ad-8c12-c0b6d6f320ab'
@@ -216,62 +215,12 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 7
             additional: {  }
-          a7cb39d9-0f6c-419b-ac18-0a222592ac84:
-            uuid: a7cb39d9-0f6c-419b-ac18-0a222592ac84
-            region: content
-            configuration:
-              id: 'field_block:node:news:field_image'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: image
-                label: hidden
-                settings:
-                  image_link: ''
-                  image_style: ''
-                  image_loading:
-                    attribute: lazy
-                third_party_settings: {  }
-            weight: 8
-            additional: {  }
-          409f5826-9c88-4e86-bfa8-f6c14d613004:
-            uuid: 409f5826-9c88-4e86-bfa8-f6c14d613004
-            region: content
-            configuration:
-              id: 'field_block:node:news:field_link_on_comments'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: image
-                label: hidden
-                settings:
-                  image_link: ''
-                  image_style: ''
-                  image_loading:
-                    attribute: lazy
-                third_party_settings: {  }
-            weight: 9
-            additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_onecol
         layout_settings:
           label: 'Advertisment  block'
           context_mapping: {  }
-          custom_id: ''
-          custom_classes: advertisment
-          custom_class_choose: {  }
-          custom_styles: ''
-          custom_data_attributes: ''
-          regions:
-            content:
-              region_id: ''
-              region_class_choose: {  }
-              region_classes: ''
-              region_styles: ''
-              region_data: ''
         components:
           24137371-ff60-4d9d-80b6-a9ada355e1f7:
             uuid: 24137371-ff60-4d9d-80b6-a9ada355e1f7
@@ -293,7 +242,7 @@ third_party_settings:
             configuration:
               id: 'block_content:fe920d2b-5455-4ad7-a753-2281d8d3efd1'
               label: Advertisment
-              label_display: visible
+              label_display: '0'
               provider: block_content
               status: true
               info: ''
@@ -308,24 +257,6 @@ third_party_settings:
           label: ' content and sidebar'
           context_mapping: {  }
           column_widths: 50-50
-          custom_id: ''
-          custom_classes: content-and-sidebar
-          custom_class_choose: {  }
-          custom_styles: ''
-          custom_data_attributes: ''
-          regions:
-            first:
-              region_id: ''
-              region_class_choose: {  }
-              region_classes: ''
-              region_styles: ''
-              region_data: ''
-            second:
-              region_id: ''
-              region_class_choose: {  }
-              region_classes: ''
-              region_styles: ''
-              region_data: ''
         components:
           c0bcafcc-7671-40af-ae85-b4e11a915ba7:
             uuid: c0bcafcc-7671-40af-ae85-b4e11a915ba7
@@ -392,20 +323,6 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 4
             additional: {  }
-          411340c7-9fec-4511-af16-9140861ba770:
-            uuid: 411340c7-9fec-4511-af16-9140861ba770
-            region: second
-            configuration:
-              id: 'block_content:0f939486-355a-4894-abab-f96aa1a6df8f'
-              label: Advertisement
-              label_display: visible
-              provider: block_content
-              status: true
-              info: ''
-              view_mode: full
-              context_mapping: {  }
-            weight: 1
-            additional: {  }
           edf098e7-1b2b-4697-9517-cc4ddf603321:
             uuid: edf098e7-1b2b-4697-9517-cc4ddf603321
             region: first
@@ -454,8 +371,8 @@ third_party_settings:
               nextlink_class: ''
             weight: 5
             additional: {  }
-          c86d9a31-993a-4878-90f2-14533136cd6e:
-            uuid: c86d9a31-993a-4878-90f2-14533136cd6e
+          460afe25-9b39-40eb-885a-ba84afe1167e:
+            uuid: 460afe25-9b39-40eb-885a-ba84afe1167e
             region: second
             configuration:
               id: 'views_block:must_read-block_1'
@@ -465,7 +382,7 @@ third_party_settings:
               context_mapping: {  }
               views_label: 'Must read'
               items_per_page: none
-            weight: 2
+            weight: 1
             additional: {  }
         third_party_settings: {  }
       -
@@ -473,19 +390,20 @@ third_party_settings:
         layout_settings:
           label: content
           context_mapping: {  }
-          custom_id: ''
-          custom_classes: article__footer
-          custom_class_choose: {  }
-          custom_styles: ''
-          custom_data_attributes: ''
-          regions:
-            content:
-              region_id: ''
-              region_class_choose: {  }
-              region_classes: ''
-              region_styles: ''
-              region_data: ''
         components:
+          4086d3f7-b5cb-4810-80a5-da9d2e358bca:
+            uuid: 4086d3f7-b5cb-4810-80a5-da9d2e358bca
+            region: content
+            configuration:
+              id: 'views_block:you_might_also_like-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional: {  }
           de22ef83-633b-4445-a72f-dd86ed6991b8:
             uuid: de22ef83-633b-4445-a72f-dd86ed6991b8
             region: content
@@ -499,19 +417,6 @@ third_party_settings:
               view_mode: full
               context_mapping: {  }
             weight: 0
-            additional: {  }
-          4086d3f7-b5cb-4810-80a5-da9d2e358bca:
-            uuid: 4086d3f7-b5cb-4810-80a5-da9d2e358bca
-            region: content
-            configuration:
-              id: 'views_block:you_might_also_like-block_1'
-              label: ''
-              label_display: '0'
-              provider: views
-              context_mapping: {  }
-              views_label: ''
-              items_per_page: none
-            weight: 1
             additional: {  }
         third_party_settings: {  }
 id: node.news.default
@@ -559,8 +464,6 @@ content:
     settings:
       image_link: ''
       image_style: ''
-      image_loading:
-        attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content
@@ -570,8 +473,6 @@ content:
     settings:
       image_link: ''
       image_style: ''
-      image_loading:
-        attribute: lazy
     third_party_settings: {  }
     weight: 5
     region: content

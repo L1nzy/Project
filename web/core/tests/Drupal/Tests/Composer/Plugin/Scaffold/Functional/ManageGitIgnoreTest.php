@@ -9,11 +9,11 @@ use Drupal\Tests\Composer\Plugin\Scaffold\ExecTrait;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests to see whether ..gitignore files are correctly managed.
+ * Tests to see whether .gitignore files are correctly managed.
  *
  * The purpose of this test file is to run a scaffold operation and
  * confirm that the files that were scaffolded are added to the
- * repository's ..gitignore file.
+ * repository's .gitignore file.
  *
  * @group Scaffold
  */
@@ -85,7 +85,7 @@ class ManageGitIgnoreTest extends TestCase {
     $sut = $this->fixturesDir . '/' . $fixture_name;
     $replacements = ['SYMLINK' => 'false', 'PROJECT_ROOT' => $this->projectRoot];
     $this->fixtures->cloneFixtureProjects($this->fixturesDir, $replacements);
-    // ..gitignore files will not be managed unless there is a git repository.
+    // .gitignore files will not be managed unless there is a git repository.
     $this->mustExec('git init', $sut);
     // Add some user info so git does not complain.
     $this->mustExec('git config user.email "test@example.com"', $sut);
@@ -98,15 +98,15 @@ class ManageGitIgnoreTest extends TestCase {
   }
 
   /**
-   * Tests scaffold command correctly manages the ..gitignore file.
+   * Tests scaffold command correctly manages the .gitignore file.
    */
   public function testManageGitIgnore() {
     // Note that the drupal-composer-drupal-project fixture does not
-    // have any configuration settings related to ..gitignore management.
+    // have any configuration settings related to .gitignore management.
     $sut = $this->createSutWithGit('drupal-composer-drupal-project');
     $this->assertFileDoesNotExist($sut . '/docroot/autoload.php');
     $this->assertFileDoesNotExist($sut . '/docroot/index.php');
-    $this->assertFileDoesNotExist($sut . '/docroot/sites/..gitignore');
+    $this->assertFileDoesNotExist($sut . '/docroot/sites/.gitignore');
     // Run the scaffold command.
     $this->fixtures->runScaffold($sut);
     $this->assertFileExists($sut . '/docroot/autoload.php');
@@ -125,29 +125,29 @@ class ManageGitIgnoreTest extends TestCase {
 /update.php
 /web.config
 EOT;
-    // At this point we should have a ..gitignore file, because although we did
-    // not explicitly ask for ..gitignore tracking, the vendor directory is not
-    // tracked, so the default in that instance is to manage ..gitignore files.
-    $this->assertScaffoldedFile($sut . '/docroot/..gitignore', FALSE, $expected);
-    $this->assertScaffoldedFile($sut . '/docroot/sites/..gitignore', FALSE, 'example.settings.local.php');
-    $this->assertScaffoldedFile($sut . '/docroot/sites/default/..gitignore', FALSE, 'default.services.yml');
+    // At this point we should have a .gitignore file, because although we did
+    // not explicitly ask for .gitignore tracking, the vendor directory is not
+    // tracked, so the default in that instance is to manage .gitignore files.
+    $this->assertScaffoldedFile($sut . '/docroot/.gitignore', FALSE, $expected);
+    $this->assertScaffoldedFile($sut . '/docroot/sites/.gitignore', FALSE, 'example.settings.local.php');
+    $this->assertScaffoldedFile($sut . '/docroot/sites/default/.gitignore', FALSE, 'default.services.yml');
     $expected = <<<EOT
-M docroot/..gitignore
-?? docroot/sites/..gitignore
-?? docroot/sites/default/..gitignore
+M docroot/.gitignore
+?? docroot/sites/.gitignore
+?? docroot/sites/default/.gitignore
 EOT;
     // Check to see whether there are any untracked files. We expect that
-    // only the ..gitignore files themselves should be untracked.
+    // only the .gitignore files themselves should be untracked.
     $stdout = $this->mustExec('git status --porcelain', $sut);
     $this->assertEquals(trim($expected), trim($stdout));
   }
 
   /**
-   * Tests scaffold command does not manage the ..gitignore file when disabled.
+   * Tests scaffold command does not manage the .gitignore file when disabled.
    */
   public function testUnmanagedGitIgnoreWhenDisabled() {
     // Note that the drupal-drupal fixture has a configuration setting
-    // `".gitignore": false,` which disables ..gitignore file handling.
+    // `"gitignore": false,` which disables .gitignore file handling.
     $sut = $this->createSutWithGit('drupal-drupal');
     $this->assertFileDoesNotExist($sut . '/docroot/autoload.php');
     $this->assertFileDoesNotExist($sut . '/docroot/index.php');
@@ -155,44 +155,44 @@ EOT;
     $this->fixtures->runScaffold($sut);
     $this->assertFileExists($sut . '/autoload.php');
     $this->assertFileExists($sut . '/index.php');
-    $this->assertFileDoesNotExist($sut . '/..gitignore');
-    $this->assertFileDoesNotExist($sut . '/docroot/sites/default/..gitignore');
+    $this->assertFileDoesNotExist($sut . '/.gitignore');
+    $this->assertFileDoesNotExist($sut . '/docroot/sites/default/.gitignore');
   }
 
   /**
    * Tests appending to an unmanaged file, and confirm it is not .gitignored.
    *
    * If we append to an unmanaged (not scaffolded) file, and we are managing
-   * ..gitignore files, then we expect that the unmanaged file should not be
-   * added to the ..gitignore file, because unmanaged files should be committed.
+   * .gitignore files, then we expect that the unmanaged file should not be
+   * added to the .gitignore file, because unmanaged files should be committed.
    */
   public function testAppendToEmptySettingsIsUnmanaged() {
     $sut = $this->createSutWithGit('drupal-drupal-append-settings');
     $this->assertFileDoesNotExist($sut . '/autoload.php');
     $this->assertFileDoesNotExist($sut . '/index.php');
-    $this->assertFileDoesNotExist($sut . '/sites/..gitignore');
+    $this->assertFileDoesNotExist($sut . '/sites/.gitignore');
     // Run the scaffold command.
     $this->fixtures->runScaffold($sut);
     $this->assertFileExists($sut . '/autoload.php');
     $this->assertFileExists($sut . '/index.php');
 
-    $this->assertScaffoldedFile($sut . '/sites/..gitignore', FALSE, 'example.sites.php');
-    $this->assertScaffoldedFileDoesNotContain($sut . '/sites/..gitignore', 'settings.php');
+    $this->assertScaffoldedFile($sut . '/sites/.gitignore', FALSE, 'example.sites.php');
+    $this->assertScaffoldedFileDoesNotContain($sut . '/sites/.gitignore', 'settings.php');
   }
 
   /**
-   * Tests scaffold command disables ..gitignore management when git not present.
+   * Tests scaffold command disables .gitignore management when git not present.
    *
    * The scaffold operation should still succeed if there is no 'git'
    * executable.
    */
   public function testUnmanagedGitIgnoreWhenGitNotAvailable() {
     // Note that the drupal-composer-drupal-project fixture does not have any
-    // configuration settings related to ..gitignore management.
+    // configuration settings related to .gitignore management.
     $sut = $this->createSutWithGit('drupal-composer-drupal-project');
-    $this->assertFileDoesNotExist($sut . '/docroot/sites/default/..gitignore');
+    $this->assertFileDoesNotExist($sut . '/docroot/sites/default/.gitignore');
     $this->assertFileDoesNotExist($sut . '/docroot/index.php');
-    $this->assertFileDoesNotExist($sut . '/docroot/sites/..gitignore');
+    $this->assertFileDoesNotExist($sut . '/docroot/sites/.gitignore');
     // Confirm that 'git' is available (n.b. if it were not, createSutWithGit()
     // would fail).
     $output = [];
@@ -250,7 +250,7 @@ Scaffolding files for fixtures/drupal-composer-drupal-project:
 EOT;
     $this->assertEquals($expected, $status . "\n\n" . implode("\n", $output));
     $this->assertFileExists($sut . '/docroot/index.php');
-    $this->assertFileDoesNotExist($sut . '/docroot/sites/default/..gitignore');
+    $this->assertFileDoesNotExist($sut . '/docroot/sites/default/.gitignore');
   }
 
 }
